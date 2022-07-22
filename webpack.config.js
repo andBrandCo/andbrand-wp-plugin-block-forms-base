@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
 		config: {
 			projectDir: __dirname, // Current project directory absolute path.
 			projectUrl: 'eightshift.com', // Used for providing browsersync functionality.
-			projectPath: 'wp-content/plugins/eightshift-forms', // Project path relative to project root.
+			projectPath: 'wp-content/plugins/andbrand-wp-plugin-block-forms-base', // Project path relative to project root.
 		},
 		overrides: [
 			'browserSyncPlugin'

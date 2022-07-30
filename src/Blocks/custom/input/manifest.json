@@ -2,7 +2,7 @@
 	"blockName": "input",
 	"title": "Input",
 	"description" : "A simple data input field (text, e-mail, numbers, URLs, etc.)",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-input"
 	},
@@ -22,6 +22,6 @@
 		"input": "input"
 	},
 	"parent": [
-		"eightshift-forms/form"
+		"andbrand-block-forms-base/form"
 	]
 }

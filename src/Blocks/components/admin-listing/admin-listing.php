@@ -3,10 +3,10 @@
 /**
  * Template for admin listing page.
  *
- * @package EightshiftForms\Blocks.
+ * @package AndbrandWpPluginBlockFormsBase\Blocks.
  */
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
 
 $manifest = Components::getManifest(__DIR__);
 $manifestSection = Components::getManifest(dirname(__DIR__, 1) . '/admin-settings-section');
@@ -44,21 +44,21 @@ $layoutClass = Components::classnames([
 						<?php if ($adminListingType !== 'trash' && $adminListingTrashLink) { ?>
 							<a href="<?php echo esc_url($adminListingTrashLink); ?>" class="<?php echo esc_attr("{$sectionClass}__link"); ?>">
 								<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m5 4.75 1.712 12.14a1 1 0 0 0 .99.86h5.596a1 1 0 0 0 .99-.86L16 4.75m-12 0h13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12.5 4.25a2 2 0 1 0-4 0" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M9 8v6m3-6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
-								<?php echo esc_html__('Deleted forms', 'eightshift-forms'); ?>
+								<?php echo esc_html__('Deleted forms', 'andbrand-block-forms-base'); ?>
 							</a>
 						<?php } ?>
 						
 						<?php if ($adminListingType === 'trash' && $adminListingListingLink) { ?>
 							<a href="<?php echo esc_url($adminListingListingLink); ?>" class="<?php echo esc_attr("{$sectionClass}__link"); ?>">
 								<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 10H4m4-5-5 5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-								<?php echo esc_html__('All forms', 'eightshift-forms'); ?>
+								<?php echo esc_html__('All forms', 'andbrand-block-forms-base'); ?>
 							</a>
 						<?php } ?>
 
 						<?php if ($adminListingNewFormLink) { ?>
 							<a href="<?php echo esc_url($adminListingNewFormLink); ?>" class="<?php echo esc_attr("{$sectionClass}__link"); ?> <?php echo esc_attr("{$sectionClass}__link--cta"); ?>">
 								<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 10a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0zM10 5.636a.75.75 0 0 1 .75.75v3h3a.75.75 0 0 1 0 1.5h-3v3a.75.75 0 1 1-1.5 0v-3h-3a.75.75 0 1 1 0-1.5h3v-3a.75.75 0 0 1 .75-.75z" fill="currentColor"/></svg>
-								<?php echo esc_html__('New form', 'eightshift-forms'); ?>
+								<?php echo esc_html__('New form', 'andbrand-block-forms-base'); ?>
 							</a>
 						<?php } ?>
 					</div>
@@ -73,14 +73,14 @@ $layoutClass = Components::classnames([
 		<?php } ?>
 		<div class="<?php echo esc_attr("{$sectionClass}__content"); ?>">
 			<?php if (!$adminListingForms) {
-				$emptyStateSubtitle = __('No forms (yet).', 'eightshift-forms');
+				$emptyStateSubtitle = __('No forms (yet).', 'andbrand-block-forms-base');
 
 				if ($adminListingType === 'trash') {
-					$emptyStateSubtitle = __('Trash is empty.', 'eightshift-forms');
+					$emptyStateSubtitle = __('Trash is empty.', 'andbrand-block-forms-base');
 				}
 
 				echo Components::render('highlighted-content', [
-					'highlightedContentTitle' => __('Nothing to see here', 'eightshift-forms'),
+					'highlightedContentTitle' => __('Nothing to see here', 'andbrand-block-forms-base'),
 					// translators: %s will be replaced with the global settings url.
 					'highlightedContentSubtitle' => $emptyStateSubtitle,
 					'highlightedContentIcon' => 'empty',
@@ -155,7 +155,7 @@ $layoutClass = Components::classnames([
 								<?php if ($editLink) { ?>
 									<a href="<?php echo esc_url($editLink); ?>" class="<?php echo esc_attr("{$sectionClass}__link"); ?>">
 										<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.5 7.5-3-3-8.665 8.184a1.5 1.5 0 0 0-.435.765l-.708 3.189a.5.5 0 0 0 .646.583l3.326-1.109a1.5 1.5 0 0 0 .586-.362L15.5 7.5z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="m12.5 4.5 1.44-1.44a1.5 1.5 0 0 1 2.12 0l.88.88a1.5 1.5 0 0 1 0 2.12L15.5 7.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
-										<?php echo esc_html__('Edit', 'eightshift-forms'); ?>
+										<?php echo esc_html__('Edit', 'andbrand-block-forms-base'); ?>
 									</a>
 								<?php } ?>
 
@@ -164,9 +164,9 @@ $layoutClass = Components::classnames([
 										<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m5 4.75 1.712 12.14a1 1 0 0 0 .99.86h5.596a1 1 0 0 0 .99-.86L16 4.75m-12 0h13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12.5 4.25a2 2 0 1 0-4 0" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M9 8v6m3-6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
 										<?php
 										if ($adminListingType === 'trash') {
-											echo esc_html__('Delete permanently', 'eightshift-forms');
+											echo esc_html__('Delete permanently', 'andbrand-block-forms-base');
 										} else {
-											echo esc_html__('Delete', 'eightshift-forms');
+											echo esc_html__('Delete', 'andbrand-block-forms-base');
 										}
 										?>
 									</a>
@@ -175,28 +175,28 @@ $layoutClass = Components::classnames([
 								<?php if ($adminListingType === 'trash') { ?>
 									<a href="<?php echo esc_url($trashRestoreLink); ?>" class="<?php echo esc_attr("{$sectionClass}__link"); ?>">
 										<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 11A5.5 5.5 0 1 0 10 5.5H8.5m0 0L10.75 8M8.5 5.5l2.5-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M4.5 11c0-.706.133-1.38.375-2" stroke="currentColor" stroke-opacity=".12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-										<?php echo esc_html__('Restore', 'eightshift-forms'); ?>
+										<?php echo esc_html__('Restore', 'andbrand-block-forms-base'); ?>
 									</a>
 								<?php } ?>
 
 								<?php if ($settingsLink) { ?>
 									<a href="<?php echo esc_url($settingsLink); ?>" class="<?php echo esc_attr("{$sectionClass}__link"); ?>">
 										<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.196 1.66c-1.813-.743-3.59-.31-4.25 0 .118 1.619-.581 4.37-4.321 2.428-.661.62-2.012 2.186-2.125 3.5 1.653.761 3.995 2.885.142 5.285.236.976.963 3.042 1.983 3.499 1.417-1 4.264-1.9 4.32 2.5.922.285 3.06.685 4.25 0-.117-1.762.567-4.728 4.25-2.5.567-.476 1.772-1.843 2.055-3.5-1.511-.928-3.627-3.285 0-5.284-.212-.834-.935-2.7-2.125-3.5-3.287 1.943-4.156-.81-4.18-2.428z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><ellipse cx="10.071" cy="10.16" rx="2.975" ry="3" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
-										<?php echo esc_html__('Settings', 'eightshift-forms'); ?>
+										<?php echo esc_html__('Settings', 'andbrand-block-forms-base'); ?>
 									</a>
 								<?php } ?>
 
 								<?php if ($settingsLocationLink) { ?>
 									<a href="<?php echo esc_url($settingsLocationLink); ?>" class="<?php echo esc_attr("{$sectionClass}__link"); ?>">
 										<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="M7.5 11.75H12m-4.5 3H11m-6.5-6h5" stroke="#29A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle opacity=".3" cx="5" cy="11.75" r="1" fill="#29A3A3"/><circle opacity=".3" cx="5" cy="14.75" r="1" fill="#29A3A3"/><path d="M19 14.125c0 2.273-2.5 4.773-2.5 4.773s-2.5-2.5-2.5-4.773a2.5 2.5 0 0 1 5 0z" stroke="#29A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="16.5" cy="14.125" r=".682" fill="#29A3A3"/><path opacity=".2" fill="#29A3A3" d="M1 1h18v5H1z"/><path d="M19 10V2.5A1.5 1.5 0 0 0 17.5 1h-15A1.5 1.5 0 0 0 1 2.5v15A1.5 1.5 0 0 0 2.5 19H13M4.5 3.75h8" stroke="#29A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-										<?php echo esc_html__('Locations', 'eightshift-forms'); ?>
+										<?php echo esc_html__('Locations', 'andbrand-block-forms-base'); ?>
 									</a>
 								<?php } ?>
 
 								<?php if ($viewLink) { ?>
 									<a href="<?php echo esc_url($viewLink); ?>" class="<?php echo esc_attr("{$sectionClass}__link"); ?>">
 										<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 15c-5 0-8-3-9-5 1-2 4-5 9-5s8 3 9 5c-1 2-4 5-9 5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-										<?php echo esc_html__('View', 'eightshift-forms'); ?>
+										<?php echo esc_html__('View', 'andbrand-block-forms-base'); ?>
 									</a>
 								<?php } ?>
 							</div>

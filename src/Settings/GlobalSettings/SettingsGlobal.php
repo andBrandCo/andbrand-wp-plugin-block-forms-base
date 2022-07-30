@@ -3,19 +3,19 @@
 /**
  * Class that holds data for global forms settings.
  *
- * @package EightshiftForms\Settings\GlobalSettings
+ * @package AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Settings\GlobalSettings;
+namespace AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings;
 
-use EightshiftForms\Form\AbstractFormBuilder;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Settings\Settings\SettingsGeneral;
-use EightshiftForms\Settings\GlobalSettings\SettingsGlobalInterface;
-use EightshiftForms\Settings\Settings\SettingsTest;
+use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings\SettingsGlobalInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsTest;
 
 /**
  * SettingsGlobal class.

@@ -3,20 +3,20 @@
 /**
  * Mailerlite integration class.
  *
- * @package EightshiftForms\Integrations\Mailerlite
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Mailerlite;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite;
 
-use EightshiftForms\Form\AbstractFormBuilder;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Validation\ValidatorInterface;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Mailerlite integration class.

@@ -3,18 +3,18 @@
 /**
  * Mailer Settings class.
  *
- * @package EightshiftForms\Mailer
+ * @package AndbrandWpPluginBlockFormsBase\Mailer
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Mailer;
+namespace AndbrandWpPluginBlockFormsBase\Mailer;
 
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Settings\Settings\SettingsDataInterface;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsMailer class.
@@ -132,7 +132,7 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Mailer', 'eightshift-forms'),
+			'label' => \__('Mailer', 'andbrand-block-forms-base'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -152,8 +152,8 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Mailer', 'eightshift-forms'),
-				'introSubtitle' => \__('Sends simple e-mails.', 'eightshift-forms'),
+				'introTitle' => \__('Mailer', 'andbrand-block-forms-base'),
+				'introSubtitle' => \__('Sends simple e-mails.', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'divider',
@@ -166,7 +166,7 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use Mailer', 'eightshift-forms'),
+						'checkboxLabel' => \__('Use Mailer', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxSettingsChecked(self::SETTINGS_MAILER_USE_KEY, self::SETTINGS_MAILER_USE_KEY, $formId),
 						'checkboxValue' => self::SETTINGS_MAILER_USE_KEY,
 						'checkboxSingleSubmit' => true,
@@ -186,15 +186,15 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 					],
 					[
 						'component' => 'intro',
-						'introTitle' => \__('E-mail settings', 'eightshift-forms'),
+						'introTitle' => \__('E-mail settings', 'andbrand-block-forms-base'),
 						'introTitleSize' => 'medium',
 					],
 					[
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_MAILER_SENDER_NAME_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_MAILER_SENDER_NAME_KEY),
-						'inputFieldLabel' => \__('Sender name', 'eightshift-forms'),
-						'inputFieldHelp' => \__('Most e-mail clients show this instead of the e-mail address in the list of e-mails.', 'eightshift-forms'),
+						'inputFieldLabel' => \__('Sender name', 'andbrand-block-forms-base'),
+						'inputFieldHelp' => \__('Most e-mail clients show this instead of the e-mail address in the list of e-mails.', 'andbrand-block-forms-base'),
 						'inputType' => 'text',
 						'inputIsRequired' => true,
 						'inputValue' => $this->getSettingsValue(self::SETTINGS_MAILER_SENDER_NAME_KEY, $formId),
@@ -203,8 +203,8 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_MAILER_SENDER_EMAIL_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_MAILER_SENDER_EMAIL_KEY),
-						'inputFieldLabel' => \__('Sender e-mail', 'eightshift-forms'),
-						'inputFieldHelp' => \__('Shows in the e-mail client as <i>From:</i>', 'eightshift-forms'),
+						'inputFieldLabel' => \__('Sender e-mail', 'andbrand-block-forms-base'),
+						'inputFieldHelp' => \__('Shows in the e-mail client as <i>From:</i>', 'andbrand-block-forms-base'),
 						'inputType' => 'text',
 						'inputIsEmail' => true,
 						'inputIsRequired' => true,
@@ -217,13 +217,13 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_MAILER_TO_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_MAILER_TO_KEY),
-						'inputFieldLabel' => \__('E-mail destination', 'eightshift-forms'),
+						'inputFieldLabel' => \__('E-mail destination', 'andbrand-block-forms-base'),
 						// translators: %s will be replaced with forms field name.
 						'inputFieldHelp' => \sprintf(\__('The e-mail will be sent to this address.
 						<br /> <br />
 						Data from the form can be used in the form of template tags (<code>{field-name}</code>).
 						<br />
-						<b>WARNING: Be careful when using template tags and make sure that tag you are using contains a valid email address value.</b>', 'eightshift-forms'), $formNames),
+						<b>WARNING: Be careful when using template tags and make sure that tag you are using contains a valid email address value.</b>', 'andbrand-block-forms-base'), $formNames),
 						'inputType' => 'text',
 						'inputIsRequired' => true,
 						'inputValue' => $this->getSettingsValue(self::SETTINGS_MAILER_TO_KEY, $formId),
@@ -232,9 +232,9 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_MAILER_SUBJECT_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_MAILER_SUBJECT_KEY),
-						'inputFieldLabel' => \__('E-mail subject', 'eightshift-forms'),
+						'inputFieldLabel' => \__('E-mail subject', 'andbrand-block-forms-base'),
 						// translators: %s will be replaced with forms field name.
-						'inputFieldHelp' => \sprintf(\__('Data from the form can be used in the form of template tags (<code>{field-name}</code>).', 'eightshift-forms'), $formNames),
+						'inputFieldHelp' => \sprintf(\__('Data from the form can be used in the form of template tags (<code>{field-name}</code>).', 'andbrand-block-forms-base'), $formNames),
 						'inputType' => 'text',
 						'inputIsRequired' => true,
 						'inputValue' => $this->getSettingsValue(self::SETTINGS_MAILER_SUBJECT_KEY, $formId),
@@ -243,7 +243,7 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 						'component' => 'textarea',
 						'textareaName' => $this->getSettingsName(self::SETTINGS_MAILER_TEMPLATE_KEY),
 						'textareaId' => $this->getSettingsName(self::SETTINGS_MAILER_TEMPLATE_KEY),
-						'textareaFieldLabel' => \__('E-mail content', 'eightshift-forms'),
+						'textareaFieldLabel' => \__('E-mail content', 'andbrand-block-forms-base'),
 						// translators: %s will be replaced with forms field name.
 						'textareaFieldHelp' => \sprintf(\__('Data from the form can be used in the form of template tags (<code>{field-name}</code>).
 							<br /> <br />
@@ -251,7 +251,7 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 							<br />
 							%s
 							<br /> <br />
-							If some tags are missing or you don\'t see any tags above, check that the <code>name</code> on the form field is set in the Form editor.', 'eightshift-forms'), $formNames),
+							If some tags are missing or you don\'t see any tags above, check that the <code>name</code> on the form field is set in the Form editor.', 'andbrand-block-forms-base'), $formNames),
 						'textareaIsRequired' => true,
 						'textareaValue' => $this->getSettingsValue(self::SETTINGS_MAILER_TEMPLATE_KEY, $formId),
 					],
@@ -260,19 +260,19 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 					],
 					[
 						'component' => 'intro',
-						'introTitle' => \__('Confirmation mail', 'eightshift-forms'),
+						'introTitle' => \__('Confirmation mail', 'andbrand-block-forms-base'),
 						'introTitleSize' => 'medium',
 						'introSubtitle' => \__('The confirmation mail is sent to the user that filled in the form, usually a "thank you" e-mail or similar.
 							<br /> <br />
-							Leave blank to disable the confirmation e-mail.', 'eightshift-forms'),
+							Leave blank to disable the confirmation e-mail.', 'andbrand-block-forms-base'),
 					],
 					[
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_MAILER_SENDER_SUBJECT_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_MAILER_SENDER_SUBJECT_KEY),
-						'inputFieldLabel' => \__('E-mail subject', 'eightshift-forms'),
+						'inputFieldLabel' => \__('E-mail subject', 'andbrand-block-forms-base'),
 						// translators: %s will be replaced with forms field name.
-						'inputFieldHelp' => \sprintf(\__('Data from the form can be used in the form of template tags (<code>{field-name}</code>).', 'eightshift-forms'), $formNames),
+						'inputFieldHelp' => \sprintf(\__('Data from the form can be used in the form of template tags (<code>{field-name}</code>).', 'andbrand-block-forms-base'), $formNames),
 						'inputType' => 'text',
 						'inputIsRequired' => false,
 						'inputValue' => $this->getSettingsValue(self::SETTINGS_MAILER_SENDER_SUBJECT_KEY, $formId),
@@ -281,7 +281,7 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 						'component' => 'textarea',
 						'textareaName' => $this->getSettingsName(self::SETTINGS_MAILER_SENDER_TEMPLATE_KEY),
 						'textareaId' => $this->getSettingsName(self::SETTINGS_MAILER_SENDER_TEMPLATE_KEY),
-						'textareaFieldLabel' => \__('E-mail content', 'eightshift-forms'),
+						'textareaFieldLabel' => \__('E-mail content', 'andbrand-block-forms-base'),
 						// translators: %s will be replaced with forms field name.
 						'textareaFieldHelp' => \sprintf(\__('Data from the form can be used in the form of template tags (<code>{field-name}</code>).
 							<br /> <br />
@@ -290,7 +290,7 @@ class SettingsMailer implements SettingsDataInterface, ServiceInterface
 							%s
 							<br /> <br />
 							If some tags are missing or you don\'t see any tags above, check that the <code>name</code> on the form field is set in the Form editor.
-						', 'eightshift-forms'), $formNames),
+						', 'andbrand-block-forms-base'), $formNames),
 						'textareaIsRequired' => false,
 						'textareaValue' => $this->getSettingsValue(self::SETTINGS_MAILER_SENDER_TEMPLATE_KEY, $formId),
 					],

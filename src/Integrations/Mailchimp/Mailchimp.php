@@ -3,19 +3,19 @@
 /**
  * Mailchimp integration class.
  *
- * @package EightshiftForms\Integrations\Mailchimp
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Mailchimp;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp;
 
-use EightshiftForms\Form\AbstractFormBuilder;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Validation\ValidatorInterface;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Mailchimp integration class.
@@ -159,7 +159,7 @@ class Mailchimp extends AbstractFormBuilder implements MapperInterface, ServiceI
 		$output[] = [
 			'component' => 'input',
 			'inputName' => 'email_address',
-			'inputFieldLabel' => \__('Email address', 'eightshift-forms'),
+			'inputFieldLabel' => \__('Email address', 'andbrand-block-forms-base'),
 			'inputId' => 'email_address',
 			'inputType' => 'text',
 			'inputIsEmail' => true,
@@ -323,7 +323,7 @@ class Mailchimp extends AbstractFormBuilder implements MapperInterface, ServiceI
 					case 'select':
 						$output[] = [
 							'component' => 'select',
-							'selectFieldLabel' => \__('Tags', 'eightshift-forms'),
+							'selectFieldLabel' => \__('Tags', 'andbrand-block-forms-base'),
 							'selectId' => self::FIELD_MAILCHIMP_TAGS_KEY,
 							'selectName' => self::FIELD_MAILCHIMP_TAGS_KEY,
 							'selectTracking' => self::FIELD_MAILCHIMP_TAGS_KEY,
@@ -363,7 +363,7 @@ class Mailchimp extends AbstractFormBuilder implements MapperInterface, ServiceI
 
 						$output[] = [
 							'component' => 'checkboxes',
-							'checkboxesFieldLabel' => \__('Tags', 'eightshift-forms'),
+							'checkboxesFieldLabel' => \__('Tags', 'andbrand-block-forms-base'),
 							'checkboxesId' => $checkboxesFieldName,
 							'checkboxesName' => $checkboxesFieldName,
 							'checkboxesContent' => \array_map(

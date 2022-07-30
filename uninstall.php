@@ -3,7 +3,7 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
 declare(strict_types=1);

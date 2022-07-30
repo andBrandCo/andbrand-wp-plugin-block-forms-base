@@ -3,14 +3,14 @@
 /**
  * Interface that holds all methods for building single form settings form - Clearbit specific.
  *
- * @package EightshiftForms\Integrations\Clearbit
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Clearbit
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Clearbit;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Clearbit;
 
-use EightshiftForms\Settings\Settings\SettingsDataInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
 
 /**
  * Interface for SettingsClearbitDataInterface.

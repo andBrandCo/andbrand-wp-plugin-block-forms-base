@@ -3,17 +3,17 @@
 /**
  * General Settings class.
  *
- * @package EightshiftForms\Settings\Settings
+ * @package AndbrandWpPluginBlockFormsBase\Settings\Settings
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Settings\Settings;
+namespace AndbrandWpPluginBlockFormsBase\Settings\Settings;
 
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsGeneral class.
@@ -98,7 +98,7 @@ class SettingsGeneral implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('General', 'eightshift-forms'),
+			'label' => \__('General', 'andbrand-block-forms-base'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -117,7 +117,7 @@ class SettingsGeneral implements SettingsDataInterface, ServiceInterface
 			'component' => 'input',
 			'inputName' => $this->getSettingsName(self::SETTINGS_GENERAL_REDIRECTION_SUCCESS_KEY),
 			'inputId' => $this->getSettingsName(self::SETTINGS_GENERAL_REDIRECTION_SUCCESS_KEY),
-			'inputFieldLabel' => \__('After submit redirect URL', 'eightshift-forms'),
+			'inputFieldLabel' => \__('After submit redirect URL', 'andbrand-block-forms-base'),
 			// translators: %s will be replaced with forms field name.
 			'inputFieldHelp' => \sprintf(\__('
 				If URL is provided, after a successful submission the user is redirected to the provided URL. The success message will <strong>not</strong> be shown.
@@ -128,28 +128,28 @@ class SettingsGeneral implements SettingsDataInterface, ServiceInterface
 				<br />
 				%s
 				<br /> <br />
-				If some tags are missing or you don\'t see any tags above, check that the <code>name</code> on the form field is set in the Form editor.', 'eightshift-forms'), Helper::getFormNames($formId)),
+				If some tags are missing or you don\'t see any tags above, check that the <code>name</code> on the form field is set in the Form editor.', 'andbrand-block-forms-base'), Helper::getFormNames($formId)),
 			'inputType' => 'url',
 			'inputIsUrl' => true,
 			'inputValue' => $this->getSettingsValue(self::SETTINGS_GENERAL_REDIRECTION_SUCCESS_KEY, $formId),
 		];
 
 		if (\has_filter(Filters::getBlockFilterName('form', 'successRedirectUrl'))) {
-			$successRedirectUrl['inputFieldHelp'] = $successRedirectUrl['inputFieldHelp'] . '<br /> <strong>' . \__('The redirect URL is set by a global constant, the value above will be ignored.', 'eightshift-forms') . '</strong>';
+			$successRedirectUrl['inputFieldHelp'] = $successRedirectUrl['inputFieldHelp'] . '<br /> <strong>' . \__('The redirect URL is set by a global constant, the value above will be ignored.', 'andbrand-block-forms-base') . '</strong>';
 		}
 
 		$trackingEventName = [
 			'component' => 'input',
 			'inputName' => $this->getSettingsName(self::SETTINGS_GENERAL_TRACKING_EVENT_NAME_KEY),
 			'inputId' => $this->getSettingsName(self::SETTINGS_GENERAL_TRACKING_EVENT_NAME_KEY),
-			'inputFieldLabel' => \__('Tracking event name', 'eightshift-forms'),
-			'inputFieldHelp' => \__('Used when pushing data to Google Tag Manager.', 'eightshift-forms'),
+			'inputFieldLabel' => \__('Tracking event name', 'andbrand-block-forms-base'),
+			'inputFieldHelp' => \__('Used when pushing data to Google Tag Manager.', 'andbrand-block-forms-base'),
 			'inputType' => 'text',
 			'inputValue' => $this->getSettingsValue(self::SETTINGS_GENERAL_TRACKING_EVENT_NAME_KEY, $formId),
 		];
 
 		if (\has_filter(Filters::getBlockFilterName('form', 'trackingEventName'))) {
-			$trackingEventName['inputFieldHelp'] = $trackingEventName['inputFieldHelp'] . '<br /> <strong>' . \__('The tracking event name is set by a global constant, the value above will be ignored.', 'eightshift-forms') . '</strong>';
+			$trackingEventName['inputFieldHelp'] = $trackingEventName['inputFieldHelp'] . '<br /> <strong>' . \__('The tracking event name is set by a global constant, the value above will be ignored.', 'andbrand-block-forms-base') . '</strong>';
 		}
 
 		return [
@@ -168,7 +168,7 @@ class SettingsGeneral implements SettingsDataInterface, ServiceInterface
 		return [
 			[
 				'component' => 'checkboxes',
-				'checkboxesFieldLabel' => \__('Built-in scripts and styles', 'eightshift-forms'),
+				'checkboxesFieldLabel' => \__('Built-in scripts and styles', 'andbrand-block-forms-base'),
 				'checkboxesFieldHelp' => \__('
 					Don\'t forget to provide your own scripts and styles if you disable the built-in ones. You can get a template for the stylesheet using a WP CLI command.
 					<br /> <br />
@@ -177,25 +177,25 @@ class SettingsGeneral implements SettingsDataInterface, ServiceInterface
 					<i>Disable default scripts</i> will remove all the frontend logic, including validation and form submission.
 					<br /> <br />
 					<i>Don\'t auto-initialize scripts</i> will load all the scripts, but not initialize them. To learn how to do it manually refer to the documentation.
-				', 'eightshift-forms'),
+				', 'andbrand-block-forms-base'),
 				'checkboxesId' => $this->getSettingsName(self::SETTINGS_GENERAL_DISABLE_DEFAULT_ENQUEUE_KEY),
 				'checkboxesName' => $this->getSettingsName(self::SETTINGS_GENERAL_DISABLE_DEFAULT_ENQUEUE_KEY),
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Disable default styles', 'eightshift-forms'),
+						'checkboxLabel' => \__('Disable default styles', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GENERAL_DISABLE_DEFAULT_ENQUEUE_STYLE_KEY, self::SETTINGS_GENERAL_DISABLE_DEFAULT_ENQUEUE_KEY),
 						'checkboxValue' => self::SETTINGS_GENERAL_DISABLE_DEFAULT_ENQUEUE_STYLE_KEY,
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Disable default scripts', 'eightshift-forms'),
+						'checkboxLabel' => \__('Disable default scripts', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GENERAL_DISABLE_DEFAULT_ENQUEUE_SCRIPT_KEY, self::SETTINGS_GENERAL_DISABLE_DEFAULT_ENQUEUE_KEY),
 						'checkboxValue' => self::SETTINGS_GENERAL_DISABLE_DEFAULT_ENQUEUE_SCRIPT_KEY,
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Don\'t auto-initialize scripts', 'eightshift-forms'),
+						'checkboxLabel' => \__('Don\'t auto-initialize scripts', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GENERAL_DISABLE_AUTOINIT_ENQUEUE_SCRIPT_KEY, self::SETTINGS_GENERAL_DISABLE_DEFAULT_ENQUEUE_KEY),
 						'checkboxValue' => self::SETTINGS_GENERAL_DISABLE_AUTOINIT_ENQUEUE_SCRIPT_KEY,
 					]
@@ -206,26 +206,26 @@ class SettingsGeneral implements SettingsDataInterface, ServiceInterface
 			],
 			[
 				'component' => 'checkboxes',
-				'checkboxesFieldLabel' => \__('Custom fields', 'eightshift-forms'),
+				'checkboxesFieldLabel' => \__('Custom fields', 'andbrand-block-forms-base'),
 				'checkboxesId' => $this->getSettingsName(self::SETTINGS_GENERAL_CUSTOM_OPTIONS_KEY),
 				'checkboxesName' => $this->getSettingsName(self::SETTINGS_GENERAL_CUSTOM_OPTIONS_KEY),
-				'checkboxesFieldHelp' => \__('If checked, fields will use the default browser implementation.', 'eightshift-forms'),
+				'checkboxesFieldHelp' => \__('If checked, fields will use the default browser implementation.', 'andbrand-block-forms-base'),
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Disable custom selection dropdown', 'eightshift-forms'),
+						'checkboxLabel' => \__('Disable custom selection dropdown', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GENERAL_CUSTOM_OPTIONS_SELECT, self::SETTINGS_GENERAL_CUSTOM_OPTIONS_KEY),
 						'checkboxValue' => self::SETTINGS_GENERAL_CUSTOM_OPTIONS_SELECT,
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Disable custom textarea', 'eightshift-forms'),
+						'checkboxLabel' => \__('Disable custom textarea', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GENERAL_CUSTOM_OPTIONS_TEXTAREA, self::SETTINGS_GENERAL_CUSTOM_OPTIONS_KEY),
 						'checkboxValue' => self::SETTINGS_GENERAL_CUSTOM_OPTIONS_TEXTAREA,
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Disable custom file picker', 'eightshift-forms'),
+						'checkboxLabel' => \__('Disable custom file picker', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GENERAL_CUSTOM_OPTIONS_FILE, self::SETTINGS_GENERAL_CUSTOM_OPTIONS_KEY),
 						'checkboxValue' => self::SETTINGS_GENERAL_CUSTOM_OPTIONS_FILE,
 					],
@@ -236,20 +236,20 @@ class SettingsGeneral implements SettingsDataInterface, ServiceInterface
 			],
 			[
 				'component' => 'checkboxes',
-				'checkboxesFieldLabel' => \__('After submitting the form', 'eightshift-forms'),
+				'checkboxesFieldLabel' => \__('After submitting the form', 'andbrand-block-forms-base'),
 				'checkboxesId' => $this->getSettingsName(self::SETTINGS_GENERAL_DISABLE_SCROLL_KEY),
 				'checkboxesName' => $this->getSettingsName(self::SETTINGS_GENERAL_DISABLE_SCROLL_KEY),
-				'checkboxesFieldHelp' => \__('If checked, forms will not use these features.', 'eightshift-forms'),
+				'checkboxesFieldHelp' => \__('If checked, forms will not use these features.', 'andbrand-block-forms-base'),
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Disable scroll to first field with an error', 'eightshift-forms'),
+						'checkboxLabel' => \__('Disable scroll to first field with an error', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GENERAL_DISABLE_SCROLL_TO_FIELD_ON_ERROR, self::SETTINGS_GENERAL_DISABLE_SCROLL_KEY),
 						'checkboxValue' => self::SETTINGS_GENERAL_DISABLE_SCROLL_TO_FIELD_ON_ERROR,
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Disable scroll to top of the form to see the success message', 'eightshift-forms'),
+						'checkboxLabel' => \__('Disable scroll to top of the form to see the success message', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GENERAL_DISABLE_SCROLL_TO_GLOBAL_MESSAGE_ON_SUCCESS, self::SETTINGS_GENERAL_DISABLE_SCROLL_KEY),
 						'checkboxValue' => self::SETTINGS_GENERAL_DISABLE_SCROLL_TO_GLOBAL_MESSAGE_ON_SUCCESS,
 					]

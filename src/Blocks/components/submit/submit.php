@@ -3,12 +3,12 @@
 /**
  * Template for the Submit Component.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
 
 $manifest = Components::getManifest(__DIR__);
 

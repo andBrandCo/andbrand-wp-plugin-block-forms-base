@@ -72,7 +72,7 @@ export const FormSelectorEditor = ({ attributes, clientId }) => {
 			{!hasInnerBlocks &&
 				<Placeholder
 					icon={<BlockIcon iconName='esf-form' />}
-					label={__('Eightshift Forms', 'productive')}
+					label={__('Andbrand Wp Plugin Block Forms Base', 'productive')}
 					instructions={__('Select a form type below to start.', 'productive')}
 					className={attributes.blockClass}
 				>
@@ -92,7 +92,7 @@ export const FormSelectorEditor = ({ attributes, clientId }) => {
 									isTertiary
 									onClick={() => createFormType(slug)}
 								>
-									{sprintf(__('%s form', 'eightshift-forms'), label)}
+									{sprintf(__('%s form', 'andbrand-block-forms-base'), label)}
 								</Button>
 							);
 						})}

@@ -2,7 +2,7 @@
 	"blockName": "file",
 	"title": "File",
 	"description" : "A file upload field",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-file"
 	},
@@ -13,6 +13,6 @@
 		"file": "file"
 	},
 	"parent": [
-		"eightshift-forms/form"
+		"andbrand-block-forms-base/form"
 	]
 }

@@ -3,19 +3,19 @@
 /**
  * The file that is an Geolocation class.
  *
- * @package EightshiftForms\Geolocation;
+ * @package AndbrandWpPluginBlockFormsBase\Geolocation;
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Geolocation;
+namespace AndbrandWpPluginBlockFormsBase\Geolocation;
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 use Throwable;
 
 /**
@@ -219,7 +219,7 @@ class Geolocation implements ServiceInterface, GeolocationInterface
 	{
 		$output = [
 			[
-				'label' => \__('Europe', 'eightshift-forms'),
+				'label' => \__('Europe', 'andbrand-block-forms-base'),
 				'value' => 'europe',
 				'group' => [
 					'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR',
@@ -230,7 +230,7 @@ class Geolocation implements ServiceInterface, GeolocationInterface
 				],
 			],
 			[
-				'label' => \__('European Union', 'eightshift-forms'),
+				'label' => \__('European Union', 'andbrand-block-forms-base'),
 				'value' => 'european-union',
 				'group' => [
 					'BE', 'EL', 'LT', 'PT', 'BG', 'ES', 'LU', 'RO', 'CZ',
@@ -239,7 +239,7 @@ class Geolocation implements ServiceInterface, GeolocationInterface
 				],
 			],
 			[
-				'label' => \__('Ex Yugoslavia', 'eightshift-forms'),
+				'label' => \__('Ex Yugoslavia', 'andbrand-block-forms-base'),
 				'value' => 'ex-yugoslavia',
 				'group' => [
 					'HR', 'RS', 'BA', 'ME', 'SI', 'MK'

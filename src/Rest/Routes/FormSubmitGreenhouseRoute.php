@@ -3,19 +3,19 @@
 /**
  * The class register route for public form submiting endpoint - Greenhouse
  *
- * @package EightshiftForms\Rest\Routes
+ * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Rest\Routes;
+namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
 
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Helpers\UploadHelper;
-use EightshiftForms\Integrations\Greenhouse\SettingsGreenhouse;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Labels\LabelsInterface;
-use EightshiftForms\Validation\ValidatorInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Helpers\UploadHelper;
+use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\SettingsGreenhouse;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
+use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
 
 /**
  * Class FormSubmitGreenhouseRoute

@@ -3,13 +3,13 @@
 namespace Tests\Unit\Integrations\Goodbits;
 
 use Brain\Monkey;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Integrations\Goodbits\Goodbits;
-use EightshiftForms\Integrations\Goodbits\GoodbitsClient;
-use EightshiftForms\Integrations\Goodbits\SettingsGoodbits;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftForms\Labels\Labels;
-use EightshiftForms\Validation\Validator;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\Goodbits;
+use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\GoodbitsClient;
+use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\SettingsGoodbits;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBase\Labels\Labels;
+use AndbrandWpPluginBlockFormsBase\Validation\Validator;
 
 use function Tests\setupMocks;
 

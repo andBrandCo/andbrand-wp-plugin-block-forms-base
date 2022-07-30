@@ -3,18 +3,18 @@
 /**
  * Class that holds all methods for building form settings pages, integrations forms, etc.
  *
- * @package EightshiftForms\Form
+ * @package AndbrandWpPluginBlockFormsBase\Form
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Form;
+namespace AndbrandWpPluginBlockFormsBase\Form;
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\Settings\SettingsGeneral;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components as HelpersComponents;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components as HelpersComponents;
 
 /**
  * FormBuilder class.
@@ -64,7 +64,7 @@ abstract class AbstractFormBuilder
 			'submit',
 			Components::props('submit', [
 				'additionalClass' => 'es-submit--global',
-				'submitValue' => \__('Save settings', 'eightshift-forms'),
+				'submitValue' => \__('Save settings', 'andbrand-block-forms-base'),
 				'submitIcon' => 'save',
 			]),
 			'',

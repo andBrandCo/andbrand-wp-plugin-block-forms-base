@@ -3,19 +3,19 @@
 /**
  * HubSpot Client integration class.
  *
- * @package EightshiftForms\Integrations\Hubspot
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Hubspot
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Hubspot;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Hubspot;
 
 use CURLFile;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
 
 /**
  * HubspotClient integration class.

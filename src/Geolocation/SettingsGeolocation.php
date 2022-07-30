@@ -3,17 +3,17 @@
 /**
  * Geolocation Settings class.
  *
- * @package EightshiftForms\Geolocation
+ * @package AndbrandWpPluginBlockFormsBase\Geolocation
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Geolocation;
+namespace AndbrandWpPluginBlockFormsBase\Geolocation;
 
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\Settings\SettingsDataInterface;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsGeolocation class.
@@ -80,7 +80,7 @@ class SettingsGeolocation implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Geolocation', 'eightshift-forms'),
+			'label' => \__('Geolocation', 'andbrand-block-forms-base'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -108,8 +108,8 @@ class SettingsGeolocation implements SettingsDataInterface, ServiceInterface
 		return [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Geolocation', 'eightshift-forms'),
-				'introSubtitle' => \__('Allows conditionally rendering different forms based on the user\'s location. Uses a local geolocation API. Consult documentation for more info.', 'eightshift-forms'),
+				'introTitle' => \__('Geolocation', 'andbrand-block-forms-base'),
+				'introSubtitle' => \__('Allows conditionally rendering different forms based on the user\'s location. Uses a local geolocation API. Consult documentation for more info.', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'checkboxes',
@@ -120,7 +120,7 @@ class SettingsGeolocation implements SettingsDataInterface, ServiceInterface
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use geolocation', 'eightshift-forms'),
+						'checkboxLabel' => \__('Use geolocation', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GEOLOCATION_USE_KEY, self::SETTINGS_GEOLOCATION_USE_KEY),
 						'checkboxValue' => self::SETTINGS_GEOLOCATION_USE_KEY,
 						'checkboxSingleSubmit' => true,

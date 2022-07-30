@@ -8,14 +8,14 @@
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Helpers;
+namespace AndbrandWpPluginBlockFormsBase\Helpers;
 
-use EightshiftForms\AdminMenus\FormGlobalSettingsAdminSubMenu;
-use EightshiftForms\AdminMenus\FormSettingsAdminSubMenu;
-use EightshiftForms\AdminMenus\FormListingAdminSubMenu;
-use EightshiftForms\CustomPostType\Forms;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormGlobalSettingsAdminSubMenu;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormSettingsAdminSubMenu;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormListingAdminSubMenu;
+use AndbrandWpPluginBlockFormsBase\CustomPostType\Forms;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
 
 /**
  * Helper class.

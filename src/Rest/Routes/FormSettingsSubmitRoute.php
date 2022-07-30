@@ -3,19 +3,19 @@
 /**
  * The class register route for Form Settings endpoint
  *
- * @package EightshiftForms\Rest\Routes
+ * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Rest\Routes;
+namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
 
-use EightshiftForms\AdminMenus\FormGlobalSettingsAdminSubMenu;
-use EightshiftForms\Cache\SettingsCache;
-use EightshiftForms\Exception\UnverifiedRequestException;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Validation\ValidatorInterface;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormGlobalSettingsAdminSubMenu;
+use AndbrandWpPluginBlockFormsBase\Cache\SettingsCache;
+use AndbrandWpPluginBlockFormsBase\Exception\UnverifiedRequestException;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
 use WP_REST_Request;
 
 /**

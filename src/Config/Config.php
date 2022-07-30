@@ -6,14 +6,14 @@
  * A class definition that includes attributes and functions used across both the
  * public side of the site and the admin area.
  *
- * @package EightshiftForms\Config
+ * @package AndbrandWpPluginBlockFormsBase\Config
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Config;
+namespace AndbrandWpPluginBlockFormsBase\Config;
 
-use EightshiftFormsVendor\EightshiftLibs\Config\AbstractConfigData;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Config\AbstractConfigData;
 
 /**
  * The project config class.
@@ -27,7 +27,7 @@ class Config extends AbstractConfigData
 	 */
 	public static function getProjectName(): string
 	{
-		return "eightshift-forms";
+		return "andbrand-block-forms-base";
 	}
 
 	/**

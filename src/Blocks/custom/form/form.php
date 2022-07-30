@@ -3,11 +3,11 @@
 /**
  * Template for the Form Block view.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
-use EightshiftForms\Form\Form;
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Form\Form;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
 
 $manifest = Components::getManifest(__DIR__);
 

@@ -3,12 +3,12 @@
 /**
  * Geolocation interface.
  *
- * @package EightshiftForms\Geolocation;
+ * @package AndbrandWpPluginBlockFormsBase\Geolocation;
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Geolocation;
+namespace AndbrandWpPluginBlockFormsBase\Geolocation;
 
 /**
  * GeolocationInterface interface.

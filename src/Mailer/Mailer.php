@@ -3,14 +3,14 @@
 /**
  * The class for sending emails.
  *
- * @package EightshiftForms\Mailers
+ * @package AndbrandWpPluginBlockFormsBase\Mailers
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Mailer;
+namespace AndbrandWpPluginBlockFormsBase\Mailer;
 
-use EightshiftForms\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
 
 /**
  * Class Mailer

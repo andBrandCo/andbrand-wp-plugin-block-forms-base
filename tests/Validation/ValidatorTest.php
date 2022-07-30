@@ -7,10 +7,10 @@ use Brain\Monkey\Functions;
 
 use function Tests\setupMocks;
 
-use EightshiftForms\Validation\Validator;
-use EightshiftForms\Labels\Labels;
-use EightshiftForms\Labels\LabelsInterface;
-use EightshiftForms\Validation\SettingsValidation;
+use AndbrandWpPluginBlockFormsBase\Validation\Validator;
+use AndbrandWpPluginBlockFormsBase\Labels\Labels;
+use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
+use AndbrandWpPluginBlockFormsBase\Validation\SettingsValidation;
 
 class ValidatorMock extends Validator {
 	public function __construct(LabelsInterface $labels) {

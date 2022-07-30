@@ -3,10 +3,10 @@
 /**
  * Template for the radios Block view.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
 
 $unique = Components::getUnique();
 

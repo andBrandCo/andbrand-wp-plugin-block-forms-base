@@ -3,17 +3,17 @@
 /**
  * Clearbit Settings class.
  *
- * @package EightshiftForms\Integrations\Clearbit
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Clearbit
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Clearbit;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Clearbit;
 
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Hooks\Variables;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsClearbit class.
@@ -161,7 +161,7 @@ class SettingsClearbit implements SettingsClearbitDataInterface, ServiceInterfac
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Clearbit', 'eightshift-forms'),
+			'label' => \__('Clearbit', 'andbrand-block-forms-base'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -191,18 +191,18 @@ class SettingsClearbit implements SettingsClearbitDataInterface, ServiceInterfac
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Clearbit', 'eightshift-forms'),
+				'introTitle' => \__('Clearbit', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('How to get the API key?', 'eightshift-forms'),
+				'introTitle' => \__('How to get the API key?', 'andbrand-block-forms-base'),
 				'introTitleSize' => 'small',
 				// phpcs:ignore WordPress.WP.I18n.NoHtmlWrappedStrings
 				'introSubtitle' => \__('<ol>
 						<li>Log in to your Clearbit Account.</li>
 						<li>Then click on the <strong><a target="_blank" href="https://dashboard.clearbit.com/api">API</a></strong> in the sidebar.</li>
 						<li>Copy the secret API key into the field below or use the global constant</li>
-					</ol>', 'eightshift-forms'),
+					</ol>', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'divider',
@@ -216,7 +216,7 @@ class SettingsClearbit implements SettingsClearbitDataInterface, ServiceInterfac
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use Clearbit', 'eightshift-forms'),
+						'checkboxLabel' => \__('Use Clearbit', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_CLEARBIT_USE_KEY, self::SETTINGS_CLEARBIT_USE_KEY),
 						'checkboxValue' => self::SETTINGS_CLEARBIT_USE_KEY,
 						'checkboxSingleSubmit' => true,
@@ -235,8 +235,8 @@ class SettingsClearbit implements SettingsClearbitDataInterface, ServiceInterfac
 					'component' => 'input',
 					'inputName' => $this->getSettingsName(self::SETTINGS_CLEARBIT_API_KEY_KEY),
 					'inputId' => $this->getSettingsName(self::SETTINGS_CLEARBIT_API_KEY_KEY),
-					'inputFieldLabel' => \__('API key', 'eightshift-forms'),
-					'inputFieldHelp' => \__('Can also be provided via a global variable.', 'eightshift-forms'),
+					'inputFieldLabel' => \__('API key', 'andbrand-block-forms-base'),
+					'inputFieldHelp' => \__('Can also be provided via a global variable.', 'andbrand-block-forms-base'),
 					'inputType' => 'password',
 					'inputIsRequired' => true,
 					'inputValue' => !empty($apiKey) ? 'xxxxxxxxxxxxxxxx' : $this->getOptionValue(self::SETTINGS_CLEARBIT_API_KEY_KEY),
@@ -255,8 +255,8 @@ class SettingsClearbit implements SettingsClearbitDataInterface, ServiceInterfac
 				],
 				[
 					'component' => 'checkboxes',
-					'checkboxesFieldLabel' => \__('Available fields', 'eightshift-forms'),
-					'checkboxesFieldHelp' => \__('Select fields that you want to use in your forms.', 'eightshift-forms'),
+					'checkboxesFieldLabel' => \__('Available fields', 'andbrand-block-forms-base'),
+					'checkboxesFieldHelp' => \__('Select fields that you want to use in your forms.', 'andbrand-block-forms-base'),
 					'checkboxesName' => $this->getSettingsName(self::SETTINGS_CLEARBIT_AVAILABLE_KEYS_KEY),
 					'checkboxesId' => $this->getSettingsName(self::SETTINGS_CLEARBIT_AVAILABLE_KEYS_KEY),
 					'checkboxesIsRequired' => true,
@@ -310,7 +310,7 @@ class SettingsClearbit implements SettingsClearbitDataInterface, ServiceInterfac
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Clearbit', 'eightshift-forms'),
+				'introTitle' => \__('Clearbit', 'andbrand-block-forms-base'),
 				'introTitleSize' => 'medium',
 			],
 			[
@@ -322,7 +322,7 @@ class SettingsClearbit implements SettingsClearbitDataInterface, ServiceInterfac
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use Clearbit integration', 'eightshift-forms'),
+						'checkboxLabel' => \__('Use Clearbit integration', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $isUsed,
 						'checkboxValue' => $useKey,
 						'checkboxSingleSubmit' => true,
@@ -339,8 +339,8 @@ class SettingsClearbit implements SettingsClearbitDataInterface, ServiceInterfac
 					'component' => 'select',
 					'selectName' => $this->getSettingsName($emailFieldKey),
 					'selectId' => $this->getSettingsName($emailFieldKey),
-					'selectFieldLabel' => \__('Email field', 'eightshift-forms'),
-					'selectFieldHelp' => \__('Select what field in HubSpot is email filed.', 'eightshift-forms'),
+					'selectFieldLabel' => \__('Email field', 'andbrand-block-forms-base'),
+					'selectFieldHelp' => \__('Select what field in HubSpot is email filed.', 'andbrand-block-forms-base'),
 					'selectOptions' => \array_merge(
 						[
 							[
@@ -403,8 +403,8 @@ class SettingsClearbit implements SettingsClearbitDataInterface, ServiceInterfac
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Clearbit', 'eightshift-forms'),
-				'introSubtitle' => \__('Control which fields from Clearbit are connected to the HubSpot properties. <br/>First column is Clearbit field, and the secound column is HubSpot field.', 'eightshift-forms'),
+				'introTitle' => \__('Clearbit', 'andbrand-block-forms-base'),
+				'introSubtitle' => \__('Control which fields from Clearbit are connected to the HubSpot properties. <br/>First column is Clearbit field, and the secound column is HubSpot field.', 'andbrand-block-forms-base'),
 				'introTitleSize' => 'medium',
 			],
 			$clearbitAvailableKeys ? [

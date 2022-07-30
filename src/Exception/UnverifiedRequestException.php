@@ -3,14 +3,14 @@
 /**
  * UnverifiedRequestException
  *
- * @package EightshiftForms\Exception
+ * @package AndbrandWpPluginBlockFormsBase\Exception
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Exception;
+namespace AndbrandWpPluginBlockFormsBase\Exception;
 
-use EightshiftFormsVendor\EightshiftLibs\Exception\GeneralExceptionInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Exception\GeneralExceptionInterface;
 use InvalidArgumentException;
 
 /**

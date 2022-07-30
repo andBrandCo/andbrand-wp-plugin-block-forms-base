@@ -3,10 +3,10 @@
 /**
  * File containing Clearbit specific interface.
  *
- * @package EightshiftForms\Integrations\Clearbit
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Clearbit
  */
 
-namespace EightshiftForms\Integrations\Clearbit;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Clearbit;
 
 /**
  * Interface for a Client

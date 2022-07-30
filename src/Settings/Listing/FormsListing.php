@@ -3,17 +3,17 @@
 /**
  * Class that holds data for admin forms listing.
  *
- * @package EightshiftForms\Settings\Listing
+ * @package AndbrandWpPluginBlockFormsBase\Settings\Listing
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Settings\Listing;
+namespace AndbrandWpPluginBlockFormsBase\Settings\Listing;
 
-use EightshiftForms\CustomPostType\Forms;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\Settings\SettingsLocation;
+use AndbrandWpPluginBlockFormsBase\CustomPostType\Forms;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsLocation;
 use WP_Query;
 
 /**

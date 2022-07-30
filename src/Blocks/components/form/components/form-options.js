@@ -21,16 +21,16 @@ export const FormOptions = (attributes) => {
 	return (
 		<>
 			<TextControl
-				label={<IconLabel icon={icons.fieldName} label={__('Form name', 'eightshift-forms')} />}
-				help={__('Used to identify and reference the form. If not set, a random name will be generated.', 'eightshift-forms')}
+				label={<IconLabel icon={icons.fieldName} label={__('Form name', 'andbrand-block-forms-base')} />}
+				help={__('Used to identify and reference the form. If not set, a random name will be generated.', 'andbrand-block-forms-base')}
 				value={formName}
 				onChange={(value) => setAttributes({ [getAttrKey('formName', attributes, manifest)]: value })}
 			/>
 
-			<FancyDivider label={__('Advanced', 'eightshift-forms')} />
+			<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
 
 			<TextControl
-				label={<IconLabel icon={icons.id} label={__('Unique identifier', 'eightshift-forms')} />}
+				label={<IconLabel icon={icons.id} label={__('Unique identifier', 'andbrand-block-forms-base')} />}
 				value={formId}
 				onChange={(value) => setAttributes({ [getAttrKey('formId', attributes, manifest)]: value })}
 			/>

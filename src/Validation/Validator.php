@@ -3,17 +3,17 @@
 /**
  * The class for form validator.
  *
- * @package EightshiftForms\Validation
+ * @package AndbrandWpPluginBlockFormsBase\Validation
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Validation;
+namespace AndbrandWpPluginBlockFormsBase\Validation;
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Labels\LabelsInterface;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftFormsVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
 
 /**
  * Class Validator

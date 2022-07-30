@@ -3,14 +3,14 @@
 /**
  * File missing data in filter exception
  *
- * @package EightshiftForms\Exception
+ * @package AndbrandWpPluginBlockFormsBase\Exception
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Exception;
+namespace AndbrandWpPluginBlockFormsBase\Exception;
 
-use EightshiftFormsVendor\EightshiftLibs\Exception\GeneralExceptionInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Exception\GeneralExceptionInterface;
 use InvalidArgumentException;
 
 /**
@@ -32,7 +32,7 @@ final class MissingFilterInfoException extends InvalidArgumentException implemen
 		return new MissingFilterInfoException(
 			\sprintf(
 				/* translators: %1$d is replaced with filter name, %2$d is replaced with filter type, , %3$d is replaced with name. */
-				\esc_html__('Filter for %1$s is missing or has a wrong type hint. Provided type: %2$s, provided name: %3$s. Please check your name and try again.', 'eightshift-forms'),
+				\esc_html__('Filter for %1$s is missing or has a wrong type hint. Provided type: %2$s, provided name: %3$s. Please check your name and try again.', 'andbrand-block-forms-base'),
 				$filter,
 				$type,
 				$name

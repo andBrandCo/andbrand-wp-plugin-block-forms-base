@@ -6,7 +6,7 @@ import { RadioOptions as RadioOptionsComponent } from '../../../components/radio
 
 export const RadioOptions = ({ attributes, setAttributes }) => {
 	return (
-		<PanelBody title={__('Radio button', 'eightshift-forms')}>
+		<PanelBody title={__('Radio button', 'andbrand-block-forms-base')}>
 			<RadioOptionsComponent
 				{...props('radio', attributes, {
 					setAttributes,

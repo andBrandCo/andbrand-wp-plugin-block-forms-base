@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: Eightshift Forms
+ * Plugin Name: Andbrand Wp Plugin Block Forms Base
  * Plugin URI: https://github.com/infinum/eightshift-forms
  * Description: Eightshift form builder plugin.
  * Author: Team Eightshift
@@ -9,14 +9,14 @@
  * Version: 1.3.0
  * Text Domain: eightshift-forms
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms;
+namespace AndbrandWpPluginBlockFormsBase;
 
-use EightshiftForms\Main\Main;
+use AndbrandWpPluginBlockFormsBase\Main\Main;
 
 /**
  * If this file is called directly, abort.

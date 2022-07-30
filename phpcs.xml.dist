@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="Eightshift Forms plugin ruleset">
-	<description>Eightshift Forms plugin ruleset.</description>
+<ruleset name="Andbrand Wp Plugin Block Forms Base plugin ruleset">
+	<description>Andbrand Wp Plugin Block Forms Base plugin ruleset.</description>
 
 	<rule ref="Eightshift" />
 

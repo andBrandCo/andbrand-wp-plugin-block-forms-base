@@ -3,14 +3,14 @@
 /**
  * Class that holds class for FormsPostType custom post type registration.
  *
- * @package EightshiftForms\CustomPostType
+ * @package AndbrandWpPluginBlockFormsBase\CustomPostType
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\CustomPostType;
+namespace AndbrandWpPluginBlockFormsBase\CustomPostType;
 
-use EightshiftFormsVendor\EightshiftLibs\CustomPostType\AbstractPostType;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\CustomPostType\AbstractPostType;
 
 /**
  * Class FormsPostType.
@@ -22,21 +22,21 @@ class Forms extends AbstractPostType
 	 *
 	 * @var string
 	 */
-	public const POST_TYPE_SLUG = 'eightshift-forms';
+	public const POST_TYPE_SLUG = 'andbrand-block-forms-base';
 
 	/**
 	 * URL slug for the custom post type.
 	 *
 	 * @var string
 	 */
-	public const POST_TYPE_URL_SLUG = 'eightshift-forms';
+	public const POST_TYPE_URL_SLUG = 'andbrand-block-forms-base';
 
 	/**
 	 * Rest API Endpoint slug constant.
 	 *
 	 * @var string
 	 */
-	public const REST_API_ENDPOINT_SLUG = 'eightshift-forms';
+	public const REST_API_ENDPOINT_SLUG = 'andbrand-block-forms-base';
 
 	/**
 	 * Post type slug constant.
@@ -50,7 +50,7 @@ class Forms extends AbstractPostType
 	 *
 	 * @var string
 	 */
-	public const URL_SLUG = 'eightshift-forms';
+	public const URL_SLUG = 'andbrand-block-forms-base';
 
 	/**
 	 * Location of menu in sidebar.
@@ -85,12 +85,12 @@ class Forms extends AbstractPostType
 	{
 		$template = [
 			[
-				'eightshift-forms/form-selector', [], []
+				'andbrand-block-forms-base/form-selector', [], []
 			]
 		];
 
 		return [
-			'label' => \esc_html__('Eightshift Forms', 'eightshift-forms'),
+			'label' => \esc_html__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base'),
 			'public' => true,
 			'menu_position' => static::MENU_POSITION,
 			'menu_icon' => static::MENU_ICON,

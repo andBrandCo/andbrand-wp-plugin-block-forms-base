@@ -3,15 +3,15 @@
 /**
  * The class register route for getting Geolocation list of countries endpoint.
  *
- * @package EightshiftForms\Rest\Routes
+ * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Rest\Routes;
+namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
 
-use EightshiftForms\Exception\UnverifiedRequestException;
-use EightshiftForms\Geolocation\GeolocationInterface;
+use AndbrandWpPluginBlockFormsBase\Exception\UnverifiedRequestException;
+use AndbrandWpPluginBlockFormsBase\Geolocation\GeolocationInterface;
 use WP_REST_Request;
 
 /**

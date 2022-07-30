@@ -1,8 +1,8 @@
 {
 	"blockName": "forms",
-	"title": "Eightshift Forms",
+	"title": "Andbrand Wp Plugin Block Forms Base",
 	"description" : "Allows selecting the form that should be displayed",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-form"
 	},
@@ -34,5 +34,5 @@
 			"default": false
 		}
 	},
-	"postType": "eightshift-forms"
+	"postType": "andbrand-block-forms-base"
 }

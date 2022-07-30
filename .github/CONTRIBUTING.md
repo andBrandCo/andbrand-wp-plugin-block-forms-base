@@ -1,4 +1,4 @@
-Hi there! Thanks for helping out in improving our Eightshift Forms.
+Hi there! Thanks for helping out in improving our Andbrand Wp Plugin Block Forms Base.
 
 ## Reporting an issue
 

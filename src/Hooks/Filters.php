@@ -3,34 +3,34 @@
 /**
  * The Filters class, used for defining settings and integrations filter variables.
  *
- * @package EightshiftForms\Hooks
+ * @package AndbrandWpPluginBlockFormsBase\Hooks
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Hooks;
+namespace AndbrandWpPluginBlockFormsBase\Hooks;
 
-use EightshiftForms\Cache\SettingsCache;
-use EightshiftForms\Exception\MissingFilterInfoException;
-use EightshiftForms\Geolocation\SettingsGeolocation;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Integrations\Clearbit\SettingsClearbit;
-use EightshiftForms\Integrations\Goodbits\SettingsGoodbits;
-use EightshiftForms\Integrations\Goodbits\Goodbits;
-use EightshiftForms\Integrations\Greenhouse\Greenhouse;
-use EightshiftForms\Integrations\Greenhouse\SettingsGreenhouse;
-use EightshiftForms\Integrations\Hubspot\Hubspot;
-use EightshiftForms\Integrations\Hubspot\SettingsHubspot;
-use EightshiftForms\Integrations\Mailchimp\Mailchimp;
-use EightshiftForms\Integrations\Mailchimp\SettingsMailchimp;
-use EightshiftForms\Integrations\Mailerlite\Mailerlite;
-use EightshiftForms\Integrations\Mailerlite\SettingsMailerlite;
-use EightshiftForms\Mailer\SettingsMailer;
-use EightshiftForms\Settings\Settings\SettingsGeneral;
-use EightshiftForms\Settings\Settings\SettingsLocation;
-use EightshiftForms\Settings\Settings\SettingsTest;
-use EightshiftForms\Validation\SettingsCaptcha;
-use EightshiftForms\Validation\SettingsValidation;
+use AndbrandWpPluginBlockFormsBase\Cache\SettingsCache;
+use AndbrandWpPluginBlockFormsBase\Exception\MissingFilterInfoException;
+use AndbrandWpPluginBlockFormsBase\Geolocation\SettingsGeolocation;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\SettingsClearbit;
+use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\SettingsGoodbits;
+use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\Goodbits;
+use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\Greenhouse;
+use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\SettingsGreenhouse;
+use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\Hubspot;
+use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\SettingsHubspot;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\Mailchimp;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\SettingsMailchimp;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite\Mailerlite;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite\SettingsMailerlite;
+use AndbrandWpPluginBlockFormsBase\Mailer\SettingsMailer;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsLocation;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsTest;
+use AndbrandWpPluginBlockFormsBase\Validation\SettingsCaptcha;
+use AndbrandWpPluginBlockFormsBase\Validation\SettingsValidation;
 
 /**
  * The Filters class, used for defining settings and integrations filter variables.

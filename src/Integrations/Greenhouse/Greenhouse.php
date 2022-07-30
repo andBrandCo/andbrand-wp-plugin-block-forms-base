@@ -3,19 +3,19 @@
 /**
  * Greenhouse Mapper integration class.
  *
- * @package EightshiftForms\Integrations\Greenhouse
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Greenhouse;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse;
 
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Form\AbstractFormBuilder;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Greenhouse integration class.

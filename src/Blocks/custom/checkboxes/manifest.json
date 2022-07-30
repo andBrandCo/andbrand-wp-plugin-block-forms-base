@@ -2,7 +2,7 @@
 	"blockName": "checkboxes",
 	"title": "Checkboxes",
 	"description" : "A group of checkboxes",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-checkboxes"
 	},
@@ -14,7 +14,7 @@
 		"checkboxes": "checkboxes"
 	},
 	"parent": [
-		"eightshift-forms/form"
+		"andbrand-block-forms-base/form"
 	],
 	"attributes": {
 		"checkboxesAllowedBlocks": {
@@ -23,19 +23,19 @@
 				"type": "string"
 			},
 			"default": [
-				"eightshift-forms/checkbox"
+				"andbrand-block-forms-base/checkbox"
 			]
 		}
 	},
 	"template": [
 		[
-			"eightshift-forms/checkbox",
+			"andbrand-block-forms-base/checkbox",
 			{
 				"checkboxCheckboxLabel": "Checkbox 1"
 			}
 		],
 		[
-			"eightshift-forms/checkbox",
+			"andbrand-block-forms-base/checkbox",
 			{
 				"checkboxCheckboxLabel": "Checkbox 2"
 			}

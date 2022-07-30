@@ -8,11 +8,11 @@
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Settings;
+namespace AndbrandWpPluginBlockFormsBase\Settings;
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Integrations\Greenhouse\SettingsGreenhouse;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\SettingsGreenhouse;
 
 /**
  * SettingsHelper trait.
@@ -293,17 +293,17 @@ trait SettingsHelper
 					'component' => 'input',
 					'inputId' => "{$id}---{$breakpoint}",
 					// translators: %s is replaced with the breakpoint name.
-					'inputFieldLabel' => \sprintf(\esc_html__('Width (%s)', 'eightshift-forms'), $breakpoint),
+					'inputFieldLabel' => \sprintf(\esc_html__('Width (%s)', 'andbrand-block-forms-base'), $breakpoint),
 					'inputType' => 'number',
 					'inputValue' => $fieldsValues["{$id}---{$breakpoint}"] ?? '',
 					'inputMin' => 0,
 					'inputMax' => 12,
 					'inputStep' => 1,
 					'inputIsDisabled' => $disabledEdit,
-					'inputPlaceholder' => \__('auto', 'eightshift-forms'),
+					'inputPlaceholder' => \__('auto', 'andbrand-block-forms-base'),
 					'inputFieldUseTooltip' => true,
 					// translators: %s is replaced with the breakpoint name.
-					'inputFieldTooltipContent' => \sprintf(\esc_html__('Define field width for %s breakpoint.', 'eightshift-forms'), $breakpoint),
+					'inputFieldTooltipContent' => \sprintf(\esc_html__('Define field width for %s breakpoint.', 'andbrand-block-forms-base'), $breakpoint),
 				];
 
 				$fieldsOutput[0]['groupContent'][] = $item;
@@ -315,16 +315,16 @@ trait SettingsHelper
 			$fieldsOutput[0]['groupContent'][] = [
 				'component' => 'input',
 				'inputId' => "{$id}---{$this->integrationFieldOrder}",
-				'inputFieldLabel' => \__('Order', 'eightshift-forms'),
+				'inputFieldLabel' => \__('Order', 'andbrand-block-forms-base'),
 				'inputType' => 'number',
 				'inputValue' => $fieldsValues["{$id}---{$this->integrationFieldOrder}"] ?? $fieldKey + 1,
 				'inputMin' => 1,
 				'inputMax' => $totalFields,
 				'inputStep' => 1,
 				'inputIsDisabled' => $disabledEdit,
-				'inputPlaceholder' => \__('auto', 'eightshift-forms'),
+				'inputPlaceholder' => \__('auto', 'andbrand-block-forms-base'),
 				'inputFieldUseTooltip' => true,
-				'inputFieldTooltipContent' => \__('Define field order that is going to be used.', 'eightshift-forms'),
+				'inputFieldTooltipContent' => \__('Define field order that is going to be used.', 'andbrand-block-forms-base'),
 			];
 
 			// Use.
@@ -339,21 +339,21 @@ trait SettingsHelper
 			$fieldsOutput[0]['groupContent'][] = [
 				'component' => 'select',
 				'selectId' => "{$id}---{$this->integrationFieldUse}",
-				'selectFieldLabel' => \__('Visibility', 'eightshift-forms'),
+				'selectFieldLabel' => \__('Visibility', 'andbrand-block-forms-base'),
 				'selectValue' => $toggleValue,
 				'selectIsDisabled' => $toggleDisabled || $disabledEdit,
 				'selectFieldUseTooltip' => true,
-				'selectFieldTooltipContent' => \__('Define if field is going to be default visible or hidden.', 'eightshift-forms'),
+				'selectFieldTooltipContent' => \__('Define if field is going to be default visible or hidden.', 'andbrand-block-forms-base'),
 				'selectOptions' => [
 					[
 						'component' => 'select-option',
-						'selectOptionLabel' => \__('Visible', 'eightshift-forms'),
+						'selectOptionLabel' => \__('Visible', 'andbrand-block-forms-base'),
 						'selectOptionValue' => 'true',
 						'selectOptionIsSelected' => $toggleValue === 'true',
 					],
 					[
 						'component' => 'select-option',
-						'selectOptionLabel' => \__('Hidden', 'eightshift-forms'),
+						'selectOptionLabel' => \__('Hidden', 'andbrand-block-forms-base'),
 						'selectOptionValue' => 'false',
 						'selectOptionIsSelected' => $toggleValue === 'false',
 					]
@@ -367,21 +367,21 @@ trait SettingsHelper
 				$fieldsOutput[0]['groupContent'][] = [
 					'component' => 'select',
 					'selectId' => "{$id}---{$this->integrationFieldFileInfoLabel}",
-					'selectFieldLabel' => \__('Field label', 'eightshift-forms'),
+					'selectFieldLabel' => \__('Field label', 'andbrand-block-forms-base'),
 					'selectValue' => $fileInfoLabelValue,
 					'selectIsDisabled' => $disabledEdit,
 					'selectFieldUseTooltip' => true,
-					'selectFieldTooltipContent' => \__('Define if field file label is going to be default visible or hidden.', 'eightshift-forms'),
+					'selectFieldTooltipContent' => \__('Define if field file label is going to be default visible or hidden.', 'andbrand-block-forms-base'),
 					'selectOptions' => [
 						[
 							'component' => 'select-option',
-							'selectOptionLabel' => \__('Hidden', 'eightshift-forms'),
+							'selectOptionLabel' => \__('Hidden', 'andbrand-block-forms-base'),
 							'selectOptionValue' => 'false',
 							'selectOptionIsSelected' => $fileInfoLabelValue === 'false',
 						],
 						[
 							'component' => 'select-option',
-							'selectOptionLabel' => \__('Visible', 'eightshift-forms'),
+							'selectOptionLabel' => \__('Visible', 'andbrand-block-forms-base'),
 							'selectOptionValue' => 'true',
 							'selectOptionIsSelected' => $fileInfoLabelValue === 'true',
 						]
@@ -396,11 +396,11 @@ trait SettingsHelper
 				$fieldsOutput[0]['groupContent'][] = [
 					'component' => 'select',
 					'selectId' => "{$id}---{$this->integrationFieldStyle}",
-					'selectFieldLabel' => \__('Style', 'eightshift-forms'),
+					'selectFieldLabel' => \__('Style', 'andbrand-block-forms-base'),
 					'selectValue' => $fieldStyleValue,
 					'selectIsDisabled' => $disabledEdit,
 					'selectFieldUseTooltip' => true,
-					'selectFieldTooltipContent' => \__('Define different style for this field.', 'eightshift-forms'),
+					'selectFieldTooltipContent' => \__('Define different style for this field.', 'andbrand-block-forms-base'),
 					'selectOptions' => \array_map(
 						static function ($item) use ($fieldStyleValue) {
 							return [
@@ -420,11 +420,11 @@ trait SettingsHelper
 				$fieldsOutput[0]['groupContent'][] = [
 					'component' => 'input',
 					'inputId' => "{$id}---{$this->integrationFieldLabel}",
-					'inputFieldLabel' => \__('Label', 'eightshift-forms'),
+					'inputFieldLabel' => \__('Label', 'andbrand-block-forms-base'),
 					'inputValue' => $fieldsValues["{$id}---{$this->integrationFieldLabel}"] ?? '',
 					'inputIsDisabled' => $disabledEdit,
 					'selectFieldUseTooltip' => true,
-					'selectFieldTooltipContent' => \__('Define field label value.', 'eightshift-forms'),
+					'selectFieldTooltipContent' => \__('Define field label value.', 'andbrand-block-forms-base'),
 				];
 			}
 

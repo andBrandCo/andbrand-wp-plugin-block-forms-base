@@ -2,7 +2,7 @@
 	"blockName": "custom-data",
 	"title": "Custom data",
 	"description" : "A field that displays custom data from a data source",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-custom-data"
 	},
@@ -33,7 +33,7 @@
 		}
 	},
 	"parent": [
-		"eightshift-forms/form"
+		"andbrand-block-forms-base/form"
 	],
 	"components": {
 		"select": "select",

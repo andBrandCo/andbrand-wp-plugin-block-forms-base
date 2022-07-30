@@ -3,21 +3,21 @@
 /**
  * The Theme/Frontend Enqueue specific functionality.
  *
- * @package EightshiftForms\Enqueue\Theme
+ * @package AndbrandWpPluginBlockFormsBase\Enqueue\Theme
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Enqueue\Theme;
+namespace AndbrandWpPluginBlockFormsBase\Enqueue\Theme;
 
-use EightshiftForms\Config\Config;
-use EightshiftForms\Settings\Settings\SettingsGeneral;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Validation\SettingsCaptcha;
-use EightshiftFormsVendor\EightshiftLibs\Manifest\ManifestInterface;
-use EightshiftFormsVendor\EightshiftLibs\Enqueue\Theme\AbstractEnqueueTheme;
+use AndbrandWpPluginBlockFormsBase\Config\Config;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Validation\SettingsCaptcha;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Manifest\ManifestInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Enqueue\Theme\AbstractEnqueueTheme;
 
 /**
  * Class EnqueueTheme
@@ -148,7 +148,7 @@ class EnqueueTheme extends AbstractEnqueueTheme
 			'hideGlobalMessageTimeout' => \apply_filters($hideGlobalMsgTimeoutFilterName, 6000),
 			'redirectionTimeout' => \apply_filters($redirectionTimeoutFilterName, 300),
 			'hideLoadingStateTimeout' => \apply_filters($hideLoadingStateTimeoutFilterName, 600),
-			'fileCustomRemoveLabel' => \apply_filters($previewRemoveLabelFilterName, \esc_html__('Remove', 'eightshift-forms')),
+			'fileCustomRemoveLabel' => \apply_filters($previewRemoveLabelFilterName, \esc_html__('Remove', 'andbrand-block-forms-base')),
 			'formDisableScrollToFieldOnError' => $this->isCheckboxOptionChecked(
 				SettingsGeneral::SETTINGS_GENERAL_DISABLE_SCROLL_TO_FIELD_ON_ERROR,
 				SettingsGeneral::SETTINGS_GENERAL_DISABLE_SCROLL_KEY

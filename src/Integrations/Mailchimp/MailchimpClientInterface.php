@@ -3,12 +3,12 @@
 /**
  * File containing Mailchimp specific interface.
  *
- * @package EightshiftForms\Integrations\Mailchimp
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp
  */
 
-namespace EightshiftForms\Integrations\Mailchimp;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp;
 
-use EightshiftForms\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
 
 /**
  * Interface for a Client

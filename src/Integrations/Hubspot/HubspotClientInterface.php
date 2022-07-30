@@ -3,12 +3,12 @@
 /**
  * File containing Hubspot specific interface.
  *
- * @package EightshiftForms\Integrations\Hubspot
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Hubspot
  */
 
-namespace EightshiftForms\Integrations\Hubspot;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Hubspot;
 
-use EightshiftForms\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
 
 /**
  * Interface for a Client

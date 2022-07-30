@@ -3,20 +3,20 @@
 /**
  * Validation Settings class.
  *
- * @package EightshiftForms\Validation
+ * @package AndbrandWpPluginBlockFormsBase\Validation
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Validation;
+namespace AndbrandWpPluginBlockFormsBase\Validation;
 
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Labels\Labels;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Labels\LabelsInterface;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Settings\Settings\SettingsDataInterface;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Labels\Labels;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsValidation class.
@@ -98,7 +98,7 @@ class SettingsValidation implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Validation', 'eightshift-forms'),
+			'label' => \__('Validation', 'andbrand-block-forms-base'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -116,7 +116,7 @@ class SettingsValidation implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Validation messages', 'eightshift-forms'),
+				'introTitle' => \__('Validation messages', 'andbrand-block-forms-base'),
 			]
 		];
 
@@ -156,13 +156,13 @@ class SettingsValidation implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Form validation', 'eightshift-forms'),
+				'introTitle' => \__('Form validation', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'textarea',
 				'textareaId' => $this->getSettingsName(self::SETTINGS_VALIDATION_PATTERNS_KEY),
 				'textareaIsMonospace' => true,
-				'textareaFieldLabel' => \__('Validation patterns', 'eightshift-forms'),
+				'textareaFieldLabel' => \__('Validation patterns', 'andbrand-block-forms-base'),
 				// translators: %s will be replaced with local validation patterns.
 				'textareaFieldHelp' => Helper::minifyString(\sprintf(\__("
 					These patterns can be selected inside the Form editor.
@@ -176,7 +176,7 @@ class SettingsValidation implements SettingsDataInterface, ServiceInterface
 					Use these patterns as an example:
 					<ul>
 					%2\$s
-					</ul>", 'eightshift-forms'), 'https://regex101.com/', $validationPatterns)),
+					</ul>", 'andbrand-block-forms-base'), 'https://regex101.com/', $validationPatterns)),
 				'textareaValue' => $this->getOptionValue(self::SETTINGS_VALIDATION_PATTERNS_KEY),
 			],
 			[
@@ -184,7 +184,7 @@ class SettingsValidation implements SettingsDataInterface, ServiceInterface
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Validation messages', 'eightshift-forms'),
+				'introTitle' => \__('Validation messages', 'andbrand-block-forms-base'),
 			],
 		];
 

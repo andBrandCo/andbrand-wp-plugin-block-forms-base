@@ -3,15 +3,15 @@
 /**
  * File containing an class for general configuration.
  *
- * @package EightshiftForms\General
+ * @package AndbrandWpPluginBlockFormsBase\General
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\General;
+namespace AndbrandWpPluginBlockFormsBase\General;
 
-use EightshiftForms\Hooks\Filters;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Class General

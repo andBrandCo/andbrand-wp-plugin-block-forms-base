@@ -3,22 +3,22 @@
 /**
  * Cache Settings class.
  *
- * @package EightshiftForms\Cache
+ * @package AndbrandWpPluginBlockFormsBase\Cache
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Cache;
+namespace AndbrandWpPluginBlockFormsBase\Cache;
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Integrations\Greenhouse\GreenhouseClient;
-use EightshiftForms\Integrations\Hubspot\HubspotClient;
-use EightshiftForms\Integrations\Mailchimp\MailchimpClient;
-use EightshiftForms\Integrations\Mailerlite\MailerliteClient;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Settings\GlobalSettings\SettingsGlobalDataInterface;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\GreenhouseClient;
+use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\HubspotClient;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\MailchimpClient;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite\MailerliteClient;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings\SettingsGlobalDataInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsCache class.
@@ -87,7 +87,7 @@ class SettingsCache implements SettingsGlobalDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Clear cache', 'eightshift-forms'),
+			'label' => \__('Clear cache', 'andbrand-block-forms-base'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -103,8 +103,8 @@ class SettingsCache implements SettingsGlobalDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Clear cache', 'eightshift-forms'),
-				'introSubtitle' => \__('Use the buttons below to clear the cache if the entry you\'re looking for isn\'t available or has changed.', 'eightshift-forms'),
+				'introTitle' => \__('Clear cache', 'andbrand-block-forms-base'),
+				'introSubtitle' => \__('Use the buttons below to clear the cache if the entry you\'re looking for isn\'t available or has changed.', 'andbrand-block-forms-base'),
 			]
 		];
 

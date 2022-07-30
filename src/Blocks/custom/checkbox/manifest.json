@@ -2,7 +2,7 @@
 	"blockName": "checkbox",
 	"title": "Checkbox",
 	"description" : "A simple true/false toggle",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-checkbox"
 	},
@@ -13,6 +13,6 @@
 		"checkbox": "checkbox"
 	},
 	"parent": [
-		"eightshift-forms/checkbox"
+		"andbrand-block-forms-base/checkbox"
 	]
 }

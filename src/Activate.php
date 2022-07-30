@@ -3,15 +3,15 @@
 /**
  * The file that defines actions on plugin activation.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms;
+namespace AndbrandWpPluginBlockFormsBase;
 
-use EightshiftForms\Permissions\Permissions;
-use EightshiftFormsVendor\EightshiftLibs\Plugin\HasActivationInterface;
+use AndbrandWpPluginBlockFormsBase\Permissions\Permissions;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Plugin\HasActivationInterface;
 use WP_Role;
 
 /**

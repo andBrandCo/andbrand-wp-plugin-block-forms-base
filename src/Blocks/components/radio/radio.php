@@ -3,10 +3,10 @@
 /**
  * Template for the radio Block view.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
 
 $manifest = Components::getManifest(__DIR__);
 

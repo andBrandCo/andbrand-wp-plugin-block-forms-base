@@ -16,7 +16,7 @@ export const FormOptions = ({ attributes, setAttributes }) => {
 	const wpAdminUrl = esFormsBlocksLocalization.wpAdminUrl;
 
 	return (
-		<PanelBody title={__('Form', 'eightshift-forms')}>
+		<PanelBody title={__('Form', 'andbrand-block-forms-base')}>
 			<Button
 				isPrimary
 				icon={icons.options}
@@ -24,9 +24,9 @@ export const FormOptions = ({ attributes, setAttributes }) => {
 				style={{ height: '3rem', paddingLeft: '0.5rem', paddingRight: '0.5rem', }}
 			>
 				<span>
-					<span>{__('Form settings', 'eightshift-forms')}</span>
+					<span>{__('Form settings', 'andbrand-block-forms-base')}</span>
 					<br />
-					<small>{__('Configure the form and integrations', 'eightshift-forms')}</small>
+					<small>{__('Configure the form and integrations', 'andbrand-block-forms-base')}</small>
 				</span>
 			</Button>
 

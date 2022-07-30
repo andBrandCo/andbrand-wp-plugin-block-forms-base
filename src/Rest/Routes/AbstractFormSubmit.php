@@ -3,18 +3,18 @@
 /**
  * The class register route for public/admin form submiting endpoint
  *
- * @package EightshiftForms\Rest\Routes
+ * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Rest\Routes;
+namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
 
-use EightshiftForms\Exception\UnverifiedRequestException;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Helpers\UploadHelper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Exception\UnverifiedRequestException;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Helpers\UploadHelper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
 use WP_REST_Request;
 
 /**

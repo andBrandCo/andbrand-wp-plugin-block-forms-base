@@ -3,10 +3,10 @@
 namespace Tests\Unit\Validation;
 
 use Brain\Monkey;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Validation\SettingsValidation;
-use EightshiftForms\Labels\Labels;
-use EightshiftForms\Labels\LabelsInterface;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Validation\SettingsValidation;
+use AndbrandWpPluginBlockFormsBase\Labels\Labels;
+use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
 
 use function Tests\setupMocks;
 

@@ -3,16 +3,16 @@
 /**
  * Class that holds data for admin forms settings.
  *
- * @package EightshiftForms\Settings\Settings
+ * @package AndbrandWpPluginBlockFormsBase\Settings\Settings
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Settings\Settings;
+namespace AndbrandWpPluginBlockFormsBase\Settings\Settings;
 
-use EightshiftForms\Settings\Settings\SettingsGeneral;
-use EightshiftForms\Form\AbstractFormBuilder;
-use EightshiftForms\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
 
 /**
  * SettingsAll class.

@@ -8,11 +8,11 @@
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Form;
+namespace AndbrandWpPluginBlockFormsBase\Form;
 
-use EightshiftForms\Mailer\SettingsMailer;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Mailer\SettingsMailer;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Form class.

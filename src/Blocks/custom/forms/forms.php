@@ -3,16 +3,16 @@
 /**
  * Template for the Forms Block view.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
-use EightshiftForms\AdminMenus\FormSettingsAdminSubMenu;
-use EightshiftForms\CustomPostType\Forms;
-use EightshiftForms\Geolocation\Geolocation;
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Manifest\Manifest;
-use EightshiftForms\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormSettingsAdminSubMenu;
+use AndbrandWpPluginBlockFormsBase\CustomPostType\Forms;
+use AndbrandWpPluginBlockFormsBase\Geolocation\Geolocation;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Manifest\Manifest;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
 
 $manifest = Components::getManifest(__DIR__);
 $manifestInvalid = Components::getManifest(dirname(__DIR__, 2) . '/components/invalid');
@@ -58,7 +58,7 @@ if ($formsServerSideRender) {
 		?>
 			<div class="<?php echo esc_attr($formsClass); ?> <?php echo esc_attr($formsClassNotSet); ?>">
 				<img class="<?php echo esc_attr("{$blockClass}__image") ?>" src="<?php echo esc_url(apply_filters(Manifest::MANIFEST_ITEM, 'cover.png')); ?>" />
-				<div class="<?php echo esc_attr("{$blockClass}__text") ?>"><?php esc_html_e('Please select form to show from the blocks sidebar.', 'eightshift-forms'); ?></div>
+				<div class="<?php echo esc_attr("{$blockClass}__text") ?>"><?php esc_html_e('Please select form to show from the blocks sidebar.', 'andbrand-block-forms-base'); ?></div>
 			</div>
 		<?php
 
@@ -75,9 +75,9 @@ if ($formsServerSideRender) {
 					<path d="M13 13V16C13 17.3807 14.1193 18.5 15.5 18.5V18.5C16.8807 18.5 18 17.3807 18 16V13M13 13V10.5H14M13 13H18M18 13V10.5H17M14 10.5V5.5L13.5 3.5L14 1.5H17L17.5 3.5L17 5.5V10.5M14 10.5H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
 				<br />
-				<b><?php esc_html_e('Form cannot be found', 'eightshift-forms'); ?></b>
+				<b><?php esc_html_e('Form cannot be found', 'andbrand-block-forms-base'); ?></b>
 				<br />
-				<?php esc_html_e('It might not be published yet or it\'s not available anymore.', 'eightshift-forms'); ?>
+				<?php esc_html_e('It might not be published yet or it\'s not available anymore.', 'andbrand-block-forms-base'); ?>
 			</div>
 		<?php
 
@@ -94,14 +94,14 @@ if ($formsServerSideRender) {
 			<?php if (current_user_can(Forms::POST_CAPABILITY_TYPE)) { ?>
 				<a class="<?php echo esc_attr("{$blockClass}__edit-link") ?>" href="<?php echo esc_url(Helper::getFormEditPageUrl($formsFormPostId)) ?>">
 					<span class="<?php echo esc_attr("{$blockClass}__edit-link-icon dashicons dashicons-edit"); ?> "></span>
-					<?php esc_html_e('Edit form', 'eightshift-forms'); ?>
+					<?php esc_html_e('Edit form', 'andbrand-block-forms-base'); ?>
 				</a>
 			<?php } ?>
 
 			<?php if (current_user_can(FormSettingsAdminSubMenu::ADMIN_MENU_CAPABILITY)) { ?>
 				<a class="<?php echo esc_attr("{$blockClass}__edit-link") ?>" href="<?php echo esc_url(Helper::getSettingsPageUrl($formsFormPostId)) ?>">
 					<span class="<?php echo esc_attr("{$blockClass}__edit-link-icon dashicons dashicons-admin-settings"); ?> "></span>
-					<?php esc_html_e('Edit settings', 'eightshift-forms'); ?>
+					<?php esc_html_e('Edit settings', 'andbrand-block-forms-base'); ?>
 				</a>
 			<?php } ?>
 		</div>

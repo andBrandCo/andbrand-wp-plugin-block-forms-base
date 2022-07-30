@@ -14,16 +14,16 @@ export const MailerliteOptions = ({ postId }) => {
 	const wpAdminUrl = esFormsBlocksLocalization.wpAdminUrl;
 
 	return (
-		<PanelBody title={__('Mailerlite', 'eightshift-forms')}>
+		<PanelBody title={__('Mailerlite', 'andbrand-block-forms-base')}>
 			<BaseControl
-				label={<IconLabel icon={icons.options} label={__('Settings', 'eightshift-forms')} />}
-				help={__('On Mailerlite settings page you can setup all details regarding you integration.', 'eightshift-forms')}
+				label={<IconLabel icon={icons.options} label={__('Settings', 'andbrand-block-forms-base')} />}
+				help={__('On Mailerlite settings page you can setup all details regarding you integration.', 'andbrand-block-forms-base')}
 			>
 				<Button
 					href={`${wpAdminUrl}${settingsPageUrl}&formId=${postId}&type=mailerlite`}
 					isSecondary
 				>
-					{__('Open Mailerlite Form Settings', 'eightshift-forms')}
+					{__('Open Mailerlite Form Settings', 'andbrand-block-forms-base')}
 				</Button>
 			</BaseControl>
 		</PanelBody>

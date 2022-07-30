@@ -3,12 +3,12 @@
 /**
  * Class that holds data for admin forms settings.
  *
- * @package EightshiftForms\Settings\Settings
+ * @package AndbrandWpPluginBlockFormsBase\Settings\Settings
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Settings\Settings;
+namespace AndbrandWpPluginBlockFormsBase\Settings\Settings;
 
 /**
  * Interface for SettingsAllInterface

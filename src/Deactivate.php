@@ -3,16 +3,16 @@
 /**
  * The file that defines actions on plugin deactivation.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms;
+namespace AndbrandWpPluginBlockFormsBase;
 
-use EightshiftForms\Cache\SettingsCache;
-use EightshiftForms\Permissions\Permissions;
-use EightshiftFormsVendor\EightshiftLibs\Plugin\HasDeactivationInterface;
+use AndbrandWpPluginBlockFormsBase\Cache\SettingsCache;
+use AndbrandWpPluginBlockFormsBase\Permissions\Permissions;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Plugin\HasDeactivationInterface;
 use WP_Role;
 
 /**

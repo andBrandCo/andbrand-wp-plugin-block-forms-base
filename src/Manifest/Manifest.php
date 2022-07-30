@@ -5,15 +5,15 @@
  *
  * It is used to provide manifest.json file location used with Webpack to fetch correct file locations.
  *
- * @package EightshiftForms\Manifest
+ * @package AndbrandWpPluginBlockFormsBase\Manifest
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Manifest;
+namespace AndbrandWpPluginBlockFormsBase\Manifest;
 
-use EightshiftForms\Config\Config;
-use EightshiftFormsVendor\EightshiftLibs\Manifest\AbstractManifest;
+use AndbrandWpPluginBlockFormsBase\Config\Config;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Manifest\AbstractManifest;
 
 /**
  * Class Manifest

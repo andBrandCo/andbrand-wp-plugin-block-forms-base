@@ -3,12 +3,12 @@
 /**
  * Class that holds data for global forms settings.
  *
- * @package EightshiftForms\Settings\GlobalSettings
+ * @package AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Settings\GlobalSettings;
+namespace AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings;
 
 /**
  * Interface for SettingsGlobalDataInterface

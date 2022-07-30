@@ -3,10 +3,10 @@
 /**
  * File containing Connect interface
  *
- * @package EightshiftForms\Integrations
+ * @package AndbrandWpPluginBlockFormsBase\Integrations
  */
 
-namespace EightshiftForms\Integrations;
+namespace AndbrandWpPluginBlockFormsBase\Integrations;
 
 /**
  * Interface for a Client

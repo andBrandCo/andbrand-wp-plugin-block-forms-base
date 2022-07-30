@@ -3,18 +3,18 @@
 /**
  * The class register route for Base endpoint used on all forms.
  *
- * @package EightshiftForms\Rest\Routes
+ * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Rest\Routes;
+namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
 
-use EightshiftForms\Config\Config;
-use EightshiftForms\Exception\UnverifiedRequestException;
-use EightshiftFormsVendor\EightshiftLibs\Rest\Routes\AbstractRoute;
-use EightshiftFormsVendor\EightshiftLibs\Rest\CallableRouteInterface;
-use EightshiftForms\Validation\Validator; // phpcs:ignore
+use AndbrandWpPluginBlockFormsBase\Config\Config;
+use AndbrandWpPluginBlockFormsBase\Exception\UnverifiedRequestException;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Rest\Routes\AbstractRoute;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Rest\CallableRouteInterface;
+use AndbrandWpPluginBlockFormsBase\Validation\Validator; // phpcs:ignore
 
 /**
  * Class FormSubmitRoute
@@ -26,7 +26,7 @@ abstract class AbstractBaseRoute extends AbstractRoute implements CallableRouteI
 	/**
 	 * Method that returns project Route namespace.
 	 *
-	 * @return string Project namespace EightshiftFormsVendor\for REST route.
+	 * @return string Project namespace AndbrandWpPluginBlockFormsBaseVendor\for REST route.
 	 */
 	protected function getNamespace(): string
 	{
@@ -125,7 +125,7 @@ abstract class AbstractBaseRoute extends AbstractRoute implements CallableRouteI
 				! \wp_verify_nonce($params['nonce'], $params['form-unique-id'])
 			) {
 				throw new UnverifiedRequestException(
-					\esc_html__('Invalid nonce.', 'eightshift-forms')
+					\esc_html__('Invalid nonce.', 'andbrand-block-forms-base')
 				);
 			}
 		}
@@ -134,7 +134,7 @@ abstract class AbstractBaseRoute extends AbstractRoute implements CallableRouteI
 		$validate = $this->validator->validate($params, $files, $formId, $formData);
 		if (!empty($validate)) {
 			throw new UnverifiedRequestException(
-				\esc_html__('Missing one or more required parameters to process the request.', 'eightshift-forms'),
+				\esc_html__('Missing one or more required parameters to process the request.', 'andbrand-block-forms-base'),
 				$validate
 			);
 		}

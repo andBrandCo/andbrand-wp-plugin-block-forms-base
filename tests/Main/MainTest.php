@@ -3,7 +3,7 @@
 namespace Tests\Unit\Login;
 
 use Brain\Monkey;
-use EightshiftForms\Main\Main;
+use AndbrandWpPluginBlockFormsBase\Main\Main;
 
 use function Tests\setupMocks;
 
@@ -21,5 +21,5 @@ afterEach(function() {
 test('Register method will call init hook', function () {
 	$this->main->register();
 
-	$this->assertSame(10, has_action('plugins_loaded', 'EightshiftForms\Main\Main->registerServices()'));
+	$this->assertSame(10, has_action('plugins_loaded', 'AndbrandWpPluginBlockFormsBase\Main\Main->registerServices()'));
 });

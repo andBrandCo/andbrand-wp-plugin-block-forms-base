@@ -3,18 +3,18 @@
 /**
  * Class that holds class for admin sub menu - Global Settings.
  *
- * @package EightshiftForms\AdminMenus
+ * @package AndbrandWpPluginBlockFormsBase\AdminMenus
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\AdminMenus;
+namespace AndbrandWpPluginBlockFormsBase\AdminMenus;
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Settings\GlobalSettings\SettingsGlobalInterface;
-use EightshiftForms\Settings\Settings\SettingsGeneral;
-use EightshiftFormsVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings\SettingsGlobalInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
 
 /**
  * FormGlobalSettingsAdminSubMenu class.
@@ -89,7 +89,7 @@ class FormGlobalSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 */
 	protected function getTitle(): string
 	{
-		return \esc_html__('Settings', 'eightshift-forms');
+		return \esc_html__('Settings', 'andbrand-block-forms-base');
 	}
 
 	/**
@@ -99,7 +99,7 @@ class FormGlobalSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 */
 	protected function getMenuTitle(): string
 	{
-		return \esc_html__('Settings', 'eightshift-forms');
+		return \esc_html__('Settings', 'andbrand-block-forms-base');
 	}
 
 	/**
@@ -175,8 +175,8 @@ class FormGlobalSettingsAdminSubMenu extends AbstractAdminSubMenu
 
 		return [
 			// translators: %s replaces form title name.
-			'adminSettingsPageTitle' => \esc_html__('Settings', 'eightshift-forms'),
-			'adminSettingsSubTitle' => \esc_html__('These settings apply to all forms.', 'eightshift-forms'),
+			'adminSettingsPageTitle' => \esc_html__('Settings', 'andbrand-block-forms-base'),
+			'adminSettingsSubTitle' => \esc_html__('These settings apply to all forms.', 'andbrand-block-forms-base'),
 			'adminSettingsBackLink' => Helper::getListingPageUrl(),
 			'adminSettingsLink' => Helper::getSettingsGlobalPageUrl(''),
 			'adminSettingsSidebar' => $this->settingsGlobal->getSettingsSidebar($type),

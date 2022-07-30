@@ -3,18 +3,18 @@
 /**
  * File containing an user Permissions class.
  *
- * @package EightshiftForms\Permissions
+ * @package AndbrandWpPluginBlockFormsBase\Permissions
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Permissions;
+namespace AndbrandWpPluginBlockFormsBase\Permissions;
 
-use EightshiftForms\AdminMenus\FormAdminMenu;
-use EightshiftForms\AdminMenus\FormGlobalSettingsAdminSubMenu;
-use EightshiftForms\AdminMenus\FormListingAdminSubMenu;
-use EightshiftForms\AdminMenus\FormSettingsAdminSubMenu;
-use EightshiftForms\CustomPostType\Forms;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormAdminMenu;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormGlobalSettingsAdminSubMenu;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormListingAdminSubMenu;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormSettingsAdminSubMenu;
+use AndbrandWpPluginBlockFormsBase\CustomPostType\Forms;
 
 /**
  * Class Permissions

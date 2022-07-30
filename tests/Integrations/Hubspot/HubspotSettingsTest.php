@@ -3,17 +3,17 @@
 namespace Tests\Unit\Integrations\Hubspot;
 
 use Brain\Monkey;
-use EightshiftForms\Integrations\Clearbit\ClearbitClient;
-use EightshiftForms\Integrations\Clearbit\ClearbitClientInterface;
-use EightshiftForms\Integrations\Clearbit\SettingsClearbit;
-use EightshiftForms\Integrations\Clearbit\SettingsClearbitDataInterface;
-use EightshiftForms\Integrations\Hubspot\Hubspot;
-use EightshiftForms\Integrations\Hubspot\HubspotClient;
-use EightshiftForms\Integrations\Hubspot\HubspotClientInterface;
-use EightshiftForms\Integrations\Hubspot\SettingsHubspot;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftForms\Labels\Labels;
-use EightshiftForms\Validation\Validator;
+use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\ClearbitClient;
+use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\ClearbitClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\SettingsClearbit;
+use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\SettingsClearbitDataInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\Hubspot;
+use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\HubspotClient;
+use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\HubspotClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\SettingsHubspot;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBase\Labels\Labels;
+use AndbrandWpPluginBlockFormsBase\Validation\Validator;
 
 use function Tests\setupMocks;
 

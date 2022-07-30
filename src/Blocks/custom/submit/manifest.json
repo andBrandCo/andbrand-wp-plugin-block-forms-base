@@ -2,7 +2,7 @@
 	"blockName": "submit",
 	"title": "Submit",
 	"description" : "A form submission button",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-submit"
 	},
@@ -13,6 +13,6 @@
 		"submit": "submit"
 	},
 	"parent": [
-		"eightshift-forms/form"
+		"andbrand-block-forms-base/form"
 	]
 }

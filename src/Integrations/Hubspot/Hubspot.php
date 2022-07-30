@@ -3,18 +3,18 @@
 /**
  * Hubspot Mapper integration class.
  *
- * @package EightshiftForms\Integrations\Hubspot
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Hubspot
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Hubspot;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Hubspot;
 
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Form\AbstractFormBuilder;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Hubspot integration class.
@@ -300,7 +300,7 @@ class Hubspot extends AbstractFormBuilder implements MapperInterface, ServiceInt
 									[
 										[
 											'component' => 'select-option',
-											'selectOptionLabel' => \__('Select option', 'eightshift-forms'),
+											'selectOptionLabel' => \__('Select option', 'andbrand-block-forms-base'),
 											'selectOptionValue' => ' ',
 											'selectOptionIsSelected' => true,
 											'selectOptionIsDisabled' => true,

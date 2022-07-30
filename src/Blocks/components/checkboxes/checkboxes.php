@@ -3,11 +3,11 @@
 /**
  * Template for the Checkboxes Block view.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
 
 $manifest = Components::getManifest(__DIR__);
 

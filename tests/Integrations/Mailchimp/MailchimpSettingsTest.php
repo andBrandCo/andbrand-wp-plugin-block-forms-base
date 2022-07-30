@@ -3,13 +3,13 @@
 namespace Tests\Unit\Integrations\Mailchimp;
 
 use Brain\Monkey;
-use EightshiftForms\Integrations\Mailchimp\Mailchimp;
-use EightshiftForms\Integrations\Mailchimp\MailchimpClient;
-use EightshiftForms\Integrations\Mailchimp\MailchimpClientInterface;
-use EightshiftForms\Integrations\Mailchimp\SettingsMailchimp;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftForms\Labels\Labels;
-use EightshiftForms\Validation\Validator;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\Mailchimp;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\MailchimpClient;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\MailchimpClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\SettingsMailchimp;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBase\Labels\Labels;
+use AndbrandWpPluginBlockFormsBase\Validation\Validator;
 
 use function Tests\setupMocks;
 

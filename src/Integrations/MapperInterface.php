@@ -3,12 +3,12 @@
 /**
  * The class for Mapper interface.
  *
- * @package EightshiftForms\Integrations
+ * @package AndbrandWpPluginBlockFormsBase\Integrations
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations;
+namespace AndbrandWpPluginBlockFormsBase\Integrations;
 
 /**
  * Class Mapper

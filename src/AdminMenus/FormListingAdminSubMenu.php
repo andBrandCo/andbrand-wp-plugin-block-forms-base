@@ -3,15 +3,15 @@
 /**
  * Class that holds class for admin sub menu - Form Listing.
  *
- * @package EightshiftForms\AdminMenus
+ * @package AndbrandWpPluginBlockFormsBase\AdminMenus
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\AdminMenus;
+namespace AndbrandWpPluginBlockFormsBase\AdminMenus;
 
-use EightshiftForms\Settings\Listing\FormListingInterface;
-use EightshiftFormsVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
+use AndbrandWpPluginBlockFormsBase\Settings\Listing\FormListingInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
 
 /**
  * FormListingAdminSubMenu class.
@@ -96,7 +96,7 @@ class FormListingAdminSubMenu extends AbstractAdminSubMenu
 	 */
 	protected function getMenuTitle(): string
 	{
-		return \esc_html__('Forms', 'eightshift-forms');
+		return \esc_html__('Forms', 'andbrand-block-forms-base');
 	}
 
 	/**

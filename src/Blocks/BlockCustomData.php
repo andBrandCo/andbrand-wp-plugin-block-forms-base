@@ -3,16 +3,16 @@
 /**
  * BlockCustomData integration class.
  *
- * @package EightshiftForms\Blocks
+ * @package AndbrandWpPluginBlockFormsBase\Blocks
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Blocks;
+namespace AndbrandWpPluginBlockFormsBase\Blocks;
 
-use EightshiftForms\Form\AbstractFormBuilder;
-use EightshiftForms\Hooks\Filters;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * BlockCustomData integration class.

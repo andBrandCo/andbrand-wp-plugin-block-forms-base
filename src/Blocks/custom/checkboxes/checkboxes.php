@@ -3,10 +3,10 @@
 /**
  * Template for the Checkboxes Block view.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
 
 $checkboxesName = $attributes['checkboxesCheckboxesName'] ?? '';
 $checkboxesId = $attributes['checkboxesCheckboxesId'] ?? '';

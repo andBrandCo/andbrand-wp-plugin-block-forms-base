@@ -3,18 +3,18 @@
 /**
  * Clearbit Client integration class.
  *
- * @package EightshiftForms\Integrations\Clearbit
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Clearbit
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Clearbit;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Clearbit;
 
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftFormsVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
 
 /**
  * ClearbitClient integration class.

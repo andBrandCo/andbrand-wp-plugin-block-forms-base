@@ -3,16 +3,16 @@
 /**
  * The class register route for deleting transient cache endpoint
  *
- * @package EightshiftForms\Rest\Routes
+ * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Rest\Routes;
+namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
 
-use EightshiftForms\AdminMenus\FormSettingsAdminSubMenu;
-use EightshiftForms\Cache\SettingsCache;
-use EightshiftForms\Validation\ValidatorInterface;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormSettingsAdminSubMenu;
+use AndbrandWpPluginBlockFormsBase\Cache\SettingsCache;
+use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
 use WP_REST_Request;
 
 /**

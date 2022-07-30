@@ -3,7 +3,7 @@
 namespace Tests\Unit\Mailer;
 
 use Brain\Monkey;
-use EightshiftForms\Mailer\Mailer;
+use AndbrandWpPluginBlockFormsBase\Mailer\Mailer;
 
 use function Tests\setupMocks;
 

@@ -3,20 +3,20 @@
 /**
  * Goodbits integration class.
  *
- * @package EightshiftForms\Integrations\Goodbits
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Goodbits
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Goodbits;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Goodbits;
 
-use EightshiftForms\Form\AbstractFormBuilder;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Validation\ValidatorInterface;
-use EightshiftForms\Hooks\Filters;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Goodbits integration class.
@@ -142,7 +142,7 @@ class Goodbits extends AbstractFormBuilder implements MapperInterface, ServiceIn
 				'component' => 'input',
 				'inputName' => 'email',
 				'inputTracking' => 'email',
-				'inputFieldLabel' => \__('Email', 'eightshift-forms'),
+				'inputFieldLabel' => \__('Email', 'andbrand-block-forms-base'),
 				'inputId' => 'email',
 				'inputType' => 'text',
 				'inputIsRequired' => true,
@@ -153,7 +153,7 @@ class Goodbits extends AbstractFormBuilder implements MapperInterface, ServiceIn
 				'component' => 'input',
 				'inputName' => 'first_name',
 				'inputTracking' => 'first_name',
-				'inputFieldLabel' => \__('First Name', 'eightshift-forms'),
+				'inputFieldLabel' => \__('First Name', 'andbrand-block-forms-base'),
 				'inputId' => 'first_name',
 				'inputType' => 'text',
 				'blockSsr' => $ssr,
@@ -162,7 +162,7 @@ class Goodbits extends AbstractFormBuilder implements MapperInterface, ServiceIn
 				'component' => 'input',
 				'inputName' => 'last_name',
 				'inputTracking' => 'last_name',
-				'inputFieldLabel' => \__('Last Name', 'eightshift-forms'),
+				'inputFieldLabel' => \__('Last Name', 'andbrand-block-forms-base'),
 				'inputId' => 'last_name',
 				'inputType' => 'text',
 				'blockSsr' => $ssr,

@@ -3,21 +3,21 @@
 /**
  * Goodbits Settings class.
  *
- * @package EightshiftForms\Integrations\Goodbits
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Goodbits
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Goodbits;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Goodbits;
 
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftForms\Settings\Settings\SettingsDataInterface;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsGoodbits class.
@@ -161,7 +161,7 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Goodbits', 'eightshift-forms'),
+			'label' => \__('Goodbits', 'andbrand-block-forms-base'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -180,9 +180,9 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Some config required', 'eightshift-forms'),
+					'highlightedContentTitle' => \__('Some config required', 'andbrand-block-forms-base'),
 					// translators: %s will be replaced with the global settings url.
-					'highlightedContentSubtitle' => \sprintf(\__('Before using Goodbits you need to configure it in  <a href="%s">global settings</a>.', 'eightshift-forms'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
+					'highlightedContentSubtitle' => \sprintf(\__('Before using Goodbits you need to configure it in  <a href="%s">global settings</a>.', 'andbrand-block-forms-base'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
 					'highlightedContentIcon' => 'tools',
 				],
 			];
@@ -194,8 +194,8 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Something went wrong', 'eightshift-forms'),
-					'highlightedContentSubtitle' => \__('Data from Goodbits couldn\'t be fetched. Check the API key.', 'eightshift-forms'),
+					'highlightedContentTitle' => \__('Something went wrong', 'andbrand-block-forms-base'),
+					'highlightedContentSubtitle' => \__('Data from Goodbits couldn\'t be fetched. Check the API key.', 'andbrand-block-forms-base'),
 					'highlightedContentIcon' => 'error',
 				],
 			];
@@ -227,13 +227,13 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Goodbits', 'eightshift-forms'),
+				'introTitle' => \__('Goodbits', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'select',
 				'selectName' => $this->getSettingsName(self::SETTINGS_GOODBITS_LIST_KEY),
 				'selectId' => $this->getSettingsName(self::SETTINGS_GOODBITS_LIST_KEY),
-				'selectFieldLabel' => \__('List', 'eightshift-forms'),
+				'selectFieldLabel' => \__('List', 'andbrand-block-forms-base'),
 				'selectOptions' => $itemOptions,
 				'selectIsRequired' => true,
 				'selectValue' => $selectedItem,
@@ -258,9 +258,9 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 					],
 					[
 						'component' => 'intro',
-						'introTitle' => \__('Form fields', 'eightshift-forms'),
+						'introTitle' => \__('Form fields', 'andbrand-block-forms-base'),
 						'introTitleSize' => 'medium',
-						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'eightshift-forms'),
+						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'andbrand-block-forms-base'),
 					],
 					[
 						'component' => 'group',
@@ -293,18 +293,18 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Goodbits', 'eightshift-forms'),
+				'introTitle' => \__('Goodbits', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('How to get the API key?', 'eightshift-forms'),
+				'introTitle' => \__('How to get the API key?', 'andbrand-block-forms-base'),
 				'introTitleSize' => 'small',
 				// phpcs:ignore WordPress.WP.I18n.NoHtmlWrappedStrings
 				'introSubtitle' => \__('<ol>
 						<li>Log in to your Goodbits Account.</li>
 						<li>Go to <strong>Settings</strong>, then click <strong><a target="_blank" href="https://app.Goodbits.com/integrations/api/">API</a></strong>.</li>
 						<li>Copy the API key into the field below or use the global constant</li>
-					</ol>', 'eightshift-forms'),
+					</ol>', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'divider',
@@ -318,7 +318,7 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use Goodbits', 'eightshift-forms'),
+						'checkboxLabel' => \__('Use Goodbits', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GOODBITS_USE_KEY, self::SETTINGS_GOODBITS_USE_KEY),
 						'checkboxValue' => self::SETTINGS_GOODBITS_USE_KEY,
 						'checkboxSingleSubmit' => true,
@@ -337,8 +337,8 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_GOODBITS_API_KEY_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_GOODBITS_API_KEY_KEY),
-						'inputFieldLabel' => \__('API key', 'eightshift-forms'),
-						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'eightshift-forms'),
+						'inputFieldLabel' => \__('API key', 'andbrand-block-forms-base'),
+						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'andbrand-block-forms-base'),
 						'inputType' => 'password',
 						'inputIsRequired' => true,
 						'inputValue' => !empty($apiKey) ? 'xxxxxxxxxxxxxxxx' : $this->getOptionValue(self::SETTINGS_GOODBITS_API_KEY_KEY),

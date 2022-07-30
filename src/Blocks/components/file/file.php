@@ -3,13 +3,13 @@
 /**
  * Template for the file Component.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
-use EightshiftForms\Blocks\Blocks;
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBase\Blocks\Blocks;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
 
 $manifest = Components::getManifest(__DIR__);
 

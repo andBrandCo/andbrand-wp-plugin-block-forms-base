@@ -3,17 +3,17 @@
 /**
  * Greenhouse Client integration class.
  *
- * @package EightshiftForms\Integrations\Greenhouse
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Greenhouse;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse;
 
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
 
 /**
  * GreenhouseClient integration class.

@@ -6,14 +6,14 @@
  * A class definition that includes attributes and functions used across both the
  * theme-facing side of the site and the admin area.
  *
- * @package EightshiftForms\Main
+ * @package AndbrandWpPluginBlockFormsBase\Main
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Main;
+namespace AndbrandWpPluginBlockFormsBase\Main;
 
-use EightshiftFormsVendor\EightshiftLibs\Main\AbstractMain;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Main\AbstractMain;
 
 /**
  * The main start class.

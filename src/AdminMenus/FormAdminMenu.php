@@ -3,17 +3,17 @@
 /**
  * Class that holds class for admin sub menu - Form Listing.
  *
- * @package EightshiftForms\AdminMenus
+ * @package AndbrandWpPluginBlockFormsBase\AdminMenus
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\AdminMenus;
+namespace AndbrandWpPluginBlockFormsBase\AdminMenus;
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Settings\Listing\FormListingInterface;
-use EightshiftFormsVendor\EightshiftLibs\AdminMenus\AbstractAdminMenu;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Settings\Listing\FormListingInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\AdminMenus\AbstractAdminMenu;
 
 /**
  * FormAdminMenu class.
@@ -72,7 +72,7 @@ class FormAdminMenu extends AbstractAdminMenu
 	 */
 	protected function getTitle(): string
 	{
-		return \esc_html__('Eightshift Forms', 'eightshift-forms');
+		return \esc_html__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base');
 	}
 
 	/**
@@ -82,7 +82,7 @@ class FormAdminMenu extends AbstractAdminMenu
 	 */
 	protected function getMenuTitle(): string
 	{
-		return \esc_html__('Eightshift Forms', 'eightshift-forms');
+		return \esc_html__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base');
 	}
 
 	/**
@@ -181,12 +181,12 @@ class FormAdminMenu extends AbstractAdminMenu
 	protected function processAttributes($attr): array
 	{
 		$status = isset($_GET['type']) ? \sanitize_text_field(\wp_unslash($_GET['type'])) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$title = \esc_html__('All forms', 'eightshift-forms');
+		$title = \esc_html__('All forms', 'andbrand-block-forms-base');
 		$trashLink = Helper::getFormsTrashPageUrl();
 		$listingLink = '';
 
 		if ($status === 'trash') {
-			$title = \esc_html__('Deleted forms', 'eightshift-forms');
+			$title = \esc_html__('Deleted forms', 'andbrand-block-forms-base');
 			$trashLink = '';
 			$listingLink = Helper::getListingPageUrl();
 		}

@@ -3,22 +3,22 @@
 /**
  * Enqueue class used to define all script and style enqueues for Gutenberg blocks.
  *
- * @package EightshiftForms\Enqueue\Blocks
+ * @package AndbrandWpPluginBlockFormsBase\Enqueue\Blocks
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Enqueue\Blocks;
+namespace AndbrandWpPluginBlockFormsBase\Enqueue\Blocks;
 
-use EightshiftForms\Config\Config;
-use EightshiftForms\Geolocation\SettingsGeolocation;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Rest\Routes\GeolocationCountriesRoute;
-use EightshiftForms\Settings\Settings\SettingsGeneral;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Validation\ValidatorInterface;
-use EightshiftFormsVendor\EightshiftLibs\Enqueue\Blocks\AbstractEnqueueBlocks;
-use EightshiftFormsVendor\EightshiftLibs\Manifest\ManifestInterface;
+use AndbrandWpPluginBlockFormsBase\Config\Config;
+use AndbrandWpPluginBlockFormsBase\Geolocation\SettingsGeolocation;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Rest\Routes\GeolocationCountriesRoute;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Enqueue\Blocks\AbstractEnqueueBlocks;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Manifest\ManifestInterface;
 
 /**
  * Enqueue_Blocks class.

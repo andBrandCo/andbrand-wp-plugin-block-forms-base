@@ -2,7 +2,7 @@
 	"blockName": "form-selector",
 	"title": "Form selector",
 	"description" : "Allows selecting the form that should be displayed",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-form-picker"
 	},
@@ -14,12 +14,12 @@
 		"formSelectorAllowedBlocks": {
 			"type": "array",
 			"default": [
-				"eightshift-forms/form",
-				"eightshift-forms/mailchimp",
-				"eightshift-forms/greenhouse",
-				"eightshift-forms/hubspot",
-				"eightshift-forms/mailerlite",
-				"eightshift-forms/goodbits"
+				"andbrand-block-forms-base/form",
+				"andbrand-block-forms-base/mailchimp",
+				"andbrand-block-forms-base/greenhouse",
+				"andbrand-block-forms-base/hubspot",
+				"andbrand-block-forms-base/mailerlite",
+				"andbrand-block-forms-base/goodbits"
 			]
 		}
 	},
@@ -28,40 +28,40 @@
 			"label": "Empty",
 			"slug": "empty",
 			"icon": "esf-form-custom",
-			"blockName": "eightshift-forms/form"
+			"blockName": "andbrand-block-forms-base/form"
 		},
 		{
 			"label": "Simple contact",
 			"slug": "contact",
 			"icon": "esf-sender-email",
-			"blockName": "eightshift-forms/form",
+			"blockName": "andbrand-block-forms-base/form",
 			"innerBlocks": [
 				[
-					"eightshift-forms/sender-email",
+					"andbrand-block-forms-base/sender-email",
 					{
 						"senderEmailInputFieldLabel": "E-mail"
 					}
 				],
 				[
-					"eightshift-forms/input",
+					"andbrand-block-forms-base/input",
 					{
 						"inputInputFieldLabel": "Name"
 					}
 				],
 				[
-					"eightshift-forms/input",
+					"andbrand-block-forms-base/input",
 					{
 						"inputInputFieldLabel": "Subject"
 					}
 				],
 				[
-					"eightshift-forms/textarea",
+					"andbrand-block-forms-base/textarea",
 					{
 						"textareaTextareaFieldLabel": "Message"
 					}
 				],
 				[
-					"eightshift-forms/submit"
+					"andbrand-block-forms-base/submit"
 				]
 			]
 		},
@@ -69,31 +69,31 @@
 			"label": "Mailchimp",
 			"slug": "mailchimp",
 			"icon": "esf-form-mailchimp",
-			"blockName": "eightshift-forms/mailchimp"
+			"blockName": "andbrand-block-forms-base/mailchimp"
 		},
 		{
 			"label": "Greenhouse",
 			"slug": "greenhouse",
 			"icon": "esf-form-greenhouse",
-			"blockName": "eightshift-forms/greenhouse"
+			"blockName": "andbrand-block-forms-base/greenhouse"
 		},
 		{
 			"label": "HubSpot",
 			"slug": "hubspot",
 			"icon": "esf-form-hubspot",
-			"blockName": "eightshift-forms/hubspot"
+			"blockName": "andbrand-block-forms-base/hubspot"
 		},
 		{
 			"label": "MailerLite",
 			"slug": "mailerlite",
 			"icon": "esf-form-mailerlite",
-			"blockName": "eightshift-forms/mailerlite"
+			"blockName": "andbrand-block-forms-base/mailerlite"
 		},
 		{
 			"label": "Goodbits",
 			"slug": "goodbits",
 			"icon": "esf-form-goodbits",
-			"blockName": "eightshift-forms/goodbits"
+			"blockName": "andbrand-block-forms-base/goodbits"
 		}
 	]
 }

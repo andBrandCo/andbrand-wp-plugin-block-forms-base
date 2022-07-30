@@ -3,22 +3,22 @@
 /**
  * The class register route for public form submiting endpoint - HubSpot
  *
- * @package EightshiftForms\Rest\Routes
+ * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Rest\Routes;
+namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
 
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Helpers\UploadHelper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Integrations\Clearbit\ClearbitClientInterface;
-use EightshiftForms\Integrations\Clearbit\SettingsClearbit;
-use EightshiftForms\Integrations\Hubspot\HubspotClientInterface;
-use EightshiftForms\Integrations\Hubspot\SettingsHubspot;
-use EightshiftForms\Labels\LabelsInterface;
-use EightshiftForms\Validation\ValidatorInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Helpers\UploadHelper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\ClearbitClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\SettingsClearbit;
+use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\HubspotClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\SettingsHubspot;
+use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
+use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
 
 /**
  * Class FormSubmitHubspotRoute

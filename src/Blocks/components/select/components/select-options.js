@@ -25,12 +25,12 @@ export const SelectOptions = (attributes) => {
 
 	return (
 		<>
-			<PanelBody title={__('Select', 'eightshift-forms')}>
+			<PanelBody title={__('Select', 'andbrand-block-forms-base')}>
 				<FieldOptions
 					{...props('field', attributes)}
 				/>
 
-				<FancyDivider label={__('Validation', 'eightshift-forms')} />
+				<FancyDivider label={__('Validation', 'andbrand-block-forms-base')} />
 
 				<div className='es-h-spaced'>
 					<Button
@@ -38,15 +38,15 @@ export const SelectOptions = (attributes) => {
 						isPressed={selectIsRequired}
 						onClick={() => setAttributes({ [getAttrKey('selectIsRequired', attributes, manifest)]: !selectIsRequired })}
 					>
-						{__('Required', 'eightshift-forms')}
+						{__('Required', 'andbrand-block-forms-base')}
 					</Button>
 				</div>
 
-				<FancyDivider label={__('Advanced', 'eightshift-forms')} />
+				<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.fieldName} label={__('Name', 'eightshift-forms')} />}
-					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'eightshift-forms')}
+					label={<IconLabel icon={icons.fieldName} label={__('Name', 'andbrand-block-forms-base')} />}
+					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'andbrand-block-forms-base')}
 					value={selectName}
 					onChange={(value) => setAttributes({ [getAttrKey('selectName', attributes, manifest)]: value })}
 				/>
@@ -57,14 +57,14 @@ export const SelectOptions = (attributes) => {
 						isPressed={selectIsDisabled}
 						onClick={() => setAttributes({ [getAttrKey('selectIsDisabled', attributes, manifest)]: !selectIsDisabled })}
 					>
-						{__('Disabled', 'eightshift-forms')}
+						{__('Disabled', 'andbrand-block-forms-base')}
 					</Button>
 				</div>
 
-				<FancyDivider label={__('Tracking', 'eightshift-forms')} />
+				<FancyDivider label={__('Tracking', 'andbrand-block-forms-base')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'eightshift-forms')} />}
+					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'andbrand-block-forms-base')} />}
 					value={selectTracking}
 					onChange={(value) => setAttributes({ [getAttrKey('selectTracking', attributes, manifest)]: value })}
 				/>

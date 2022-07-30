@@ -2,7 +2,7 @@
 	"blockName": "sender-email",
 	"title": "Sender Email",
 	"description" : "A field for inputting e-mail addresses that will be the target for sending confirmation e-mails",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-sender-email"
 	},
@@ -14,7 +14,7 @@
 		"input": "input"
 	},
 	"parent": [
-		"eightshift-forms/form"
+		"andbrand-block-forms-base/form"
 	],
 	"example": {
 		"attributes": {

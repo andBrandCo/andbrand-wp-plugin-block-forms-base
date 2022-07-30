@@ -3,12 +3,12 @@
 /**
  * The class for form validator.
  *
- * @package EightshiftForms\Validation
+ * @package AndbrandWpPluginBlockFormsBase\Validation
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Validation;
+namespace AndbrandWpPluginBlockFormsBase\Validation;
 
 /**
  * Class Validator

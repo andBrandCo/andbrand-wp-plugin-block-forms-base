@@ -4,7 +4,7 @@ namespace Tests\Unit\Helper;
 
 use Brain\Monkey;
 use Brain\Monkey\Functions;
-use EightshiftForms\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
 
 use function Tests\setupMocks;
 
@@ -137,7 +137,7 @@ test('getFormNames returns field names properly.', function () {
 test('logger does not log if log mode is turned off', function () {
 	// Unfortunately, because Pest doesn't support running tests in isolation,
 	// there isn't test coverage for correct logging when log mode is turned on.
-	Functions\when('EightshiftForms\\Hooks\\Variables\\isLogMode', function() {
+	Functions\when('AndbrandWpPluginBlockFormsBase\\Hooks\\Variables\\isLogMode', function() {
 		return false;
 	});
 

@@ -3,17 +3,17 @@
 /**
  * Mailerlite Client integration class.
  *
- * @package EightshiftForms\Integrations\Mailerlite
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Mailerlite;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite;
 
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
 
 /**
  * MailerliteClient integration class.

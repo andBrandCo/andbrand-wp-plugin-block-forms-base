@@ -3,10 +3,10 @@
 /**
  * Template for the Form Selector Block view.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
-use EightshiftForms\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
 
 // Add custom additional content filter.
 $filterName = Filters::getBlockFilterName('formSelector', 'additionalContent');

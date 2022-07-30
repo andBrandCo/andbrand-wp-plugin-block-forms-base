@@ -2,7 +2,7 @@
 	"blockName": "mailchimp",
 	"title": "Mailchimp Form",
 	"description" : "A MailChimp subscription form",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-form-mailchimp"
 	},
@@ -24,6 +24,6 @@
 		}
 	},
 	"parent": [
-		"eightshift-forms/form-selector"
+		"andbrand-block-forms-base/form-selector"
 	]
 }

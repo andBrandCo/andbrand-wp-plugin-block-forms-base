@@ -3,7 +3,7 @@
 namespace Tests\Unit\Location;
 
 use Brain\Monkey;
-use EightshiftForms\Settings\Settings\SettingsLocation;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsLocation;
 
 use function Tests\setupMocks;
 use function Tests\mock;
@@ -28,8 +28,8 @@ afterAll(function() {
 test('Register method will call custom hooks', function () {
 	$this->locationSettings->register();
 
-	$this->assertSame(10, \has_filter(SettingsLocation::FILTER_SETTINGS_SIDEBAR_NAME, 'EightshiftForms\Settings\Settings\SettingsLocation->getSettingsSidebar()'), 'The callback getSettingsSidebar should be hooked to custom filter hook with priority 10.');
-	$this->assertSame(10, \has_filter(SettingsLocation::FILTER_SETTINGS_NAME, 'EightshiftForms\Settings\Settings\SettingsLocation->getSettingsData()'), 'The callback getSettingsData should be hooked to custom filter hook with priority 10.');
+	$this->assertSame(10, \has_filter(SettingsLocation::FILTER_SETTINGS_SIDEBAR_NAME, 'AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsLocation->getSettingsSidebar()'), 'The callback getSettingsSidebar should be hooked to custom filter hook with priority 10.');
+	$this->assertSame(10, \has_filter(SettingsLocation::FILTER_SETTINGS_NAME, 'AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsLocation->getSettingsData()'), 'The callback getSettingsData should be hooked to custom filter hook with priority 10.');
 });
 
 test('getSettingsSidebar should return correct array keys', function () {

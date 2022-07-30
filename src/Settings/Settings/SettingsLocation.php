@@ -3,17 +3,17 @@
 /**
  * Location Settings class.
  *
- * @package EightshiftForms\Settings\Settings
+ * @package AndbrandWpPluginBlockFormsBase\Settings\Settings
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Settings\Settings;
+namespace AndbrandWpPluginBlockFormsBase\Settings\Settings;
 
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsLocation class.
@@ -59,7 +59,7 @@ class SettingsLocation implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Display locations', 'eightshift-forms'),
+			'label' => \__('Display locations', 'andbrand-block-forms-base'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -77,8 +77,8 @@ class SettingsLocation implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Display locations', 'eightshift-forms'),
-				'introSubtitle' => \__('See where your form appears throughout the website.', 'eightshift-forms'),
+				'introTitle' => \__('Display locations', 'andbrand-block-forms-base'),
+				'introSubtitle' => \__('See where your form appears throughout the website.', 'andbrand-block-forms-base'),
 			],
 		];
 
@@ -87,8 +87,8 @@ class SettingsLocation implements SettingsDataInterface, ServiceInterface
 		if (!$locations) {
 			$output[] = [
 				'component' => 'highlighted-content',
-				'highlightedContentTitle' => \__('Nothing to see here...', 'eightshift-forms'),
-				'highlightedContentSubtitle' => \__('The form isn\'t used anywhere on this website.', 'eightshift-forms'),
+				'highlightedContentTitle' => \__('Nothing to see here...', 'andbrand-block-forms-base'),
+				'highlightedContentSubtitle' => \__('The form isn\'t used anywhere on this website.', 'andbrand-block-forms-base'),
 				'highlightedContentIcon' => 'empty',
 			];
 		} else {

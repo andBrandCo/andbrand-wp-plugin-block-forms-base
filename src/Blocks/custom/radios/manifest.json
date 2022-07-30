@@ -2,7 +2,7 @@
 	"blockName": "radios",
 	"title": "Radio buttons",
 	"description" : "A group of radio buttons",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-radios"
 	},
@@ -14,7 +14,7 @@
 		"radios": "radios"
 	},
 	"parent": [
-		"eightshift-forms/form"
+		"andbrand-block-forms-base/form"
 	],
 	"attributes": {
 		"radiosAllowedBlocks": {
@@ -23,19 +23,19 @@
 				"type": "string"
 			},
 			"default": [
-				"eightshift-forms/radio"
+				"andbrand-block-forms-base/radio"
 			]
 		}
 	},
 	"template": [
 		[
-			"eightshift-forms/radio",
+			"andbrand-block-forms-base/radio",
 			{
 				"radioRadioLabel": "Radio 1"
 			}
 		],
 		[
-			"eightshift-forms/radio",
+			"andbrand-block-forms-base/radio",
 			{
 				"radioRadioLabel": "Radio 2"
 			}

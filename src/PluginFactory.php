@@ -3,12 +3,12 @@
 /**
  * The file that defines a factory for activating / deactivating plugin.
  *
- * @package EightshiftForms
+ * @package AndbrandWpPluginBlockFormsBase
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms;
+namespace AndbrandWpPluginBlockFormsBase;
 
 /**
  * The plugin factory class.

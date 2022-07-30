@@ -24,14 +24,14 @@ export const SubmitOptions = (attributes) => {
 
 	return (
 		<>
-			<PanelBody title={__('Submit', 'eightshift-forms')}>
+			<PanelBody title={__('Submit', 'andbrand-block-forms-base')}>
 				<FieldOptions
 					{...props('field', attributes)}
 					showFieldLabel={false}
 				/>
 
 				<TextControl
-					label={<IconLabel icon={icons.buttonOutline} label={__('Button label', 'eightshift-forms')} />}
+					label={<IconLabel icon={icons.buttonOutline} label={__('Button label', 'andbrand-block-forms-base')} />}
 					value={submitValue}
 					onChange={(value) => setAttributes({ [getAttrKey('submitValue', attributes, manifest)]: value })}
 				/>
@@ -41,13 +41,13 @@ export const SubmitOptions = (attributes) => {
 					isPressed={submitIsDisabled}
 					onClick={() => setAttributes({ [getAttrKey('submitIsDisabled', attributes, manifest)]: !submitIsDisabled })}
 				>
-					{__('Disabled', 'eightshift-forms')}
+					{__('Disabled', 'andbrand-block-forms-base')}
 				</Button>
 
-				<FancyDivider label={__('Tracking', 'eightshift-forms')} />
+				<FancyDivider label={__('Tracking', 'andbrand-block-forms-base')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'eightshift-forms')} />}
+					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'andbrand-block-forms-base')} />}
 					value={submitTracking}
 					onChange={(value) => setAttributes({ [getAttrKey('submitTracking', attributes, manifest)]: value })}
 				/>

@@ -41,19 +41,19 @@ export const TextareaOptions = (attributes) => {
 
 	return (
 		<>
-			<PanelBody title={__('Multiline text', 'eightshift-forms')}>
+			<PanelBody title={__('Multiline text', 'andbrand-block-forms-base')}>
 				<FieldOptions
 					{...props('field', attributes)}
 				/>
 
 				<TextControl
-					label={<IconLabel icon={icons.fieldPlaceholder} label={__('Placeholder', 'eightshift-forms')} />}
-					help={__('Shown when the field is empty', 'eightshift-forms')}
+					label={<IconLabel icon={icons.fieldPlaceholder} label={__('Placeholder', 'andbrand-block-forms-base')} />}
+					help={__('Shown when the field is empty', 'andbrand-block-forms-base')}
 					value={textareaPlaceholder}
 					onChange={(value) => setAttributes({ [getAttrKey('textareaPlaceholder', attributes, manifest)]: value })}
 				/>
 
-				<FancyDivider label={__('Validation', 'eightshift-forms')} />
+				<FancyDivider label={__('Validation', 'andbrand-block-forms-base')} />
 
 				<div className='es-h-spaced'>
 					<Button
@@ -61,7 +61,7 @@ export const TextareaOptions = (attributes) => {
 						isPressed={textareaIsRequired}
 						onClick={() => setAttributes({ [getAttrKey('textareaIsRequired', attributes, manifest)]: !textareaIsRequired })}
 					>
-						{__('Required', 'eightshift-forms')}
+						{__('Required', 'andbrand-block-forms-base')}
 					</Button>
 
 					<Button
@@ -69,13 +69,13 @@ export const TextareaOptions = (attributes) => {
 						isPressed={textareaValidationPattern?.length > 0}
 						onClick={() => setShowValidation(true)}
 					>
-						{__('Pattern validation', 'eightshift-forms')}
+						{__('Pattern validation', 'andbrand-block-forms-base')}
 
 						{showValidation &&
 							<Popover noArrow={false} onClose={() => setShowValidation(false)}>
 								<div className='es-popover-content'>
 									<SimpleVerticalSingleSelect
-										label={__('Validation pattern', 'eightshift-forms')}
+										label={__('Validation pattern', 'andbrand-block-forms-base')}
 										options={textareaValidationPatternOptions.map(({ label, value }) => ({
 											onClick: () => setAttributes({ [getAttrKey('textareaValidationPattern', attributes, manifest)]: value }),
 											label: label,
@@ -88,17 +88,17 @@ export const TextareaOptions = (attributes) => {
 					</Button>
 				</div>
 
-				<FancyDivider label={__('Advanced', 'eightshift-forms')} />
+				<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.fieldValue} label={__('Initial value', 'eightshift-forms')} />}
+					label={<IconLabel icon={icons.fieldValue} label={__('Initial value', 'andbrand-block-forms-base')} />}
 					value={textareaValue}
 					onChange={(value) => setAttributes({ [getAttrKey('textareaValue', attributes, manifest)]: value })}
 				/>
 
 				<TextControl
-					label={<IconLabel icon={icons.fieldName} label={__('Name', 'eightshift-forms')} />}
-					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'eightshift-forms')}
+					label={<IconLabel icon={icons.fieldName} label={__('Name', 'andbrand-block-forms-base')} />}
+					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'andbrand-block-forms-base')}
 					value={textareaName}
 					onChange={(value) => setAttributes({ [getAttrKey('textareaName', attributes, manifest)]: value })}
 				/>
@@ -109,7 +109,7 @@ export const TextareaOptions = (attributes) => {
 						isPressed={textareaIsReadOnly}
 						onClick={() => setAttributes({ [getAttrKey('textareaIsReadOnly', attributes, manifest)]: !textareaIsReadOnly })}
 					>
-						{__('Read-only', 'eightshift-forms')}
+						{__('Read-only', 'andbrand-block-forms-base')}
 					</Button>
 
 					<Button
@@ -117,14 +117,14 @@ export const TextareaOptions = (attributes) => {
 						isPressed={textareaIsDisabled}
 						onClick={() => setAttributes({ [getAttrKey('textareaIsDisabled', attributes, manifest)]: !textareaIsDisabled })}
 					>
-						{__('Disabled', 'eightshift-forms')}
+						{__('Disabled', 'andbrand-block-forms-base')}
 					</Button>
 				</div>
 
-				<FancyDivider label={__('Tracking', 'eightshift-forms')} />
+				<FancyDivider label={__('Tracking', 'andbrand-block-forms-base')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'eightshift-forms')} />}
+					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'andbrand-block-forms-base')} />}
 					value={textareaTracking}
 					onChange={(value) => setAttributes({ [getAttrKey('textareaTracking', attributes, manifest)]: value })}
 				/>

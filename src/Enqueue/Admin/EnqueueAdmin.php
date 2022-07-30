@@ -3,18 +3,18 @@
 /**
  * The Admin Enqueue specific functionality.
  *
- * @package EightshiftForms\Enqueue\Admin
+ * @package AndbrandWpPluginBlockFormsBase\Enqueue\Admin
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Enqueue\Admin;
+namespace AndbrandWpPluginBlockFormsBase\Enqueue\Admin;
 
-use EightshiftForms\Config\Config;
-use EightshiftForms\Rest\Routes\CacheDeleteRoute;
-use EightshiftForms\Rest\Routes\FormSettingsSubmitRoute;
-use EightshiftFormsVendor\EightshiftLibs\Manifest\ManifestInterface;
-use EightshiftFormsVendor\EightshiftLibs\Enqueue\Admin\AbstractEnqueueAdmin;
+use AndbrandWpPluginBlockFormsBase\Config\Config;
+use AndbrandWpPluginBlockFormsBase\Rest\Routes\CacheDeleteRoute;
+use AndbrandWpPluginBlockFormsBase\Rest\Routes\FormSettingsSubmitRoute;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Manifest\ManifestInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Enqueue\Admin\AbstractEnqueueAdmin;
 
 /**
  * Class EnqueueAdmin

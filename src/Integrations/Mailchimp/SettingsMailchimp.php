@@ -3,23 +3,23 @@
 /**
  * Mailchimp Settings class.
  *
- * @package EightshiftForms\Integrations\Mailchimp
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Mailchimp;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp;
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftForms\Settings\GlobalSettings\SettingsGlobalDataInterface;
-use EightshiftForms\Settings\Settings\SettingsDataInterface;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings\SettingsGlobalDataInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsMailchimp class.
@@ -179,7 +179,7 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Mailchimp', 'eightshift-forms'),
+			'label' => \__('Mailchimp', 'andbrand-block-forms-base'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -198,9 +198,9 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Some config required', 'eightshift-forms'),
+					'highlightedContentTitle' => \__('Some config required', 'andbrand-block-forms-base'),
 					// translators: %s will be replaced with the global settings url.
-					'highlightedContentSubtitle' => \sprintf(\__('Before using Mailchimp you need to configure it in  <a href="%s">global settings</a>.', 'eightshift-forms'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
+					'highlightedContentSubtitle' => \sprintf(\__('Before using Mailchimp you need to configure it in  <a href="%s">global settings</a>.', 'andbrand-block-forms-base'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
 					'highlightedContentIcon' => 'tools',
 				],
 			];
@@ -214,8 +214,8 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Something went wrong', 'eightshift-forms'),
-					'highlightedContentSubtitle' => \__('Data from Mailchimp couldn\'t be fetched. Check the API key.', 'eightshift-forms'),
+					'highlightedContentTitle' => \__('Something went wrong', 'andbrand-block-forms-base'),
+					'highlightedContentSubtitle' => \__('Data from Mailchimp couldn\'t be fetched. Check the API key.', 'andbrand-block-forms-base'),
 					'highlightedContentIcon' => 'error',
 				],
 			];
@@ -249,15 +249,15 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Mailchimp', 'eightshift-forms'),
+				'introTitle' => \__('Mailchimp', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'select',
 				'selectName' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_LIST_KEY),
 				'selectId' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_LIST_KEY),
-				'selectFieldLabel' => \__('Subscription list', 'eightshift-forms'),
+				'selectFieldLabel' => \__('Subscription list', 'andbrand-block-forms-base'),
 				// translators: %1$s will be replaced with js selector, %2$s will be replaced with the cache type, %3$s will be replaced with latest update time.
-				'selectFieldHelp' => \sprintf(\__('If a list isn\'t showing up or is missing some items, try <a href="#" class="%1$s" data-type="%2$s">clearing the cache</a>. Last updated: %3$s.', 'eightshift-forms'), $manifestForm['componentCacheJsClass'], self::SETTINGS_TYPE_KEY, $lastUpdatedTime),
+				'selectFieldHelp' => \sprintf(\__('If a list isn\'t showing up or is missing some items, try <a href="#" class="%1$s" data-type="%2$s">clearing the cache</a>. Last updated: %3$s.', 'andbrand-block-forms-base'), $manifestForm['componentCacheJsClass'], self::SETTINGS_TYPE_KEY, $lastUpdatedTime),
 				'selectOptions' => $itemOptions,
 				'selectIsRequired' => true,
 				'selectValue' => $selectedItem,
@@ -275,9 +275,9 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 				],
 				[
 					'component' => 'intro',
-					'introTitle' => \__('Audience tags', 'eightshift-forms'),
+					'introTitle' => \__('Audience tags', 'andbrand-block-forms-base'),
 					'introTitleSize' => 'medium',
-					'introSubtitle' => \__('Control which tags wil show up on the frontend and set up how will they look and work.', 'eightshift-forms'),
+					'introSubtitle' => \__('Control which tags wil show up on the frontend and set up how will they look and work.', 'andbrand-block-forms-base'),
 				],
 			];
 
@@ -289,7 +289,7 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 				if (!$isTagsShowHidden) {
 					$tagsLabelsOverrides = [
 						'component' => 'group',
-						'groupHelp' => \__('Provide override label that will be displayed on the frontend.', 'eightshift-forms'),
+						'groupHelp' => \__('Provide override label that will be displayed on the frontend.', 'andbrand-block-forms-base'),
 						'groupSaveOneField' => true,
 						'groupContent' => \array_map(
 							function ($tag, $index) use ($formId) {
@@ -317,26 +317,26 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 						[
 							'component' => 'select',
 							'selectId' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_LIST_TAGS_SHOW_KEY),
-							'selectFieldLabel' => \__('Tag visibility', 'eightshift-forms'),
-							'selectFieldHelp' => $isTagsShowHidden ? \__('Tags you select bellow will be added to you form as a hidden field.', 'eightshift-forms') : \__('Tags you select bellow will be displayed in the form.', 'eightshift-forms'),
+							'selectFieldLabel' => \__('Tag visibility', 'andbrand-block-forms-base'),
+							'selectFieldHelp' => $isTagsShowHidden ? \__('Tags you select bellow will be added to you form as a hidden field.', 'andbrand-block-forms-base') : \__('Tags you select bellow will be displayed in the form.', 'andbrand-block-forms-base'),
 							'selectValue' => $this->getOptionValue(self::SETTINGS_MAILCHIMP_LIST_TAGS_SHOW_KEY),
 							'selectSingleSubmit' => true,
 							'selectOptions' => [
 								[
 									'component' => 'select-option',
-									'selectOptionLabel' => \__('Don\'t show tags', 'eightshift-forms'),
+									'selectOptionLabel' => \__('Don\'t show tags', 'andbrand-block-forms-base'),
 									'selectOptionValue' => 'hidden',
 									'selectOptionIsSelected' => $isTagsShowHidden,
 								],
 								[
 									'component' => 'select-option',
-									'selectOptionLabel' => \__('Show as a select menu', 'eightshift-forms'),
+									'selectOptionLabel' => \__('Show as a select menu', 'andbrand-block-forms-base'),
 									'selectOptionValue' => 'select',
 									'selectOptionIsSelected' => $this->isCheckedSettings('select', self::SETTINGS_MAILCHIMP_LIST_TAGS_SHOW_KEY, $formId),
 								],
 								[
 									'component' => 'select-option',
-									'selectOptionLabel' => \__('Show as checkboxes', 'eightshift-forms'),
+									'selectOptionLabel' => \__('Show as checkboxes', 'andbrand-block-forms-base'),
 									'selectOptionValue' => 'checkboxes',
 									'selectOptionIsSelected' => $this->isCheckedSettings('checkboxes', self::SETTINGS_MAILCHIMP_LIST_TAGS_SHOW_KEY, $formId),
 								],
@@ -345,13 +345,13 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 						[
 							'component' => 'group',
 							'groupId' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_LIST_TAGS_LABELS_KEY),
-							'groupLabel' => \__('Tags list', 'eightshift-forms'),
+							'groupLabel' => \__('Tags list', 'andbrand-block-forms-base'),
 							'groupStyle' => 'tags',
 							'groupContent' => [
 								[
 									'component' => 'group',
 									'groupName' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_LIST_TAGS_KEY),
-									'groupHelp' => $isTagsShowHidden ? \__('Select tags that will be added to you form as a hidden field. If nothing is selected nothing will be sent.', 'eightshift-forms') : \__('Select tags that will be displayed in the form field. If nothing is selected everything will be displayed.', 'eightshift-forms'),
+									'groupHelp' => $isTagsShowHidden ? \__('Select tags that will be added to you form as a hidden field. If nothing is selected nothing will be sent.', 'andbrand-block-forms-base') : \__('Select tags that will be displayed in the form field. If nothing is selected everything will be displayed.', 'andbrand-block-forms-base'),
 									'groupContent' => [
 										[
 											'component' => 'checkboxes',
@@ -395,9 +395,9 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 					],
 					[
 						'component' => 'intro',
-						'introTitle' => \__('Form fields', 'eightshift-forms'),
+						'introTitle' => \__('Form fields', 'andbrand-block-forms-base'),
 						'introTitleSize' => 'medium',
-						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'eightshift-forms'),
+						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'andbrand-block-forms-base'),
 					],
 					[
 						'component' => 'group',
@@ -433,11 +433,11 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Mailchimp', 'eightshift-forms'),
+				'introTitle' => \__('Mailchimp', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('How to get the API key?', 'eightshift-forms'),
+				'introTitle' => \__('How to get the API key?', 'andbrand-block-forms-base'),
 				'introTitleSize' => 'small',
 				// phpcs:ignore WordPress.WP.I18n.NoHtmlWrappedStrings
 				'introSubtitle' => \__('<ol>
@@ -447,7 +447,7 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 						<li>Click on <strong>Extras</strong> and <strong>API Keys</strong> in the tabs section.</li>
 						<li>Click on the <strong>Create a Key</strong> button.<br/></li>
 						<li>Copy the API key into the field below or use the global constant.</li>
-					</ol>', 'eightshift-forms'),
+					</ol>', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'divider',
@@ -461,7 +461,7 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use Mailchimp', 'eightshift-forms'),
+						'checkboxLabel' => \__('Use Mailchimp', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_MAILCHIMP_USE_KEY, self::SETTINGS_MAILCHIMP_USE_KEY),
 						'checkboxValue' => self::SETTINGS_MAILCHIMP_USE_KEY,
 						'checkboxSingleSubmit' => true,
@@ -480,8 +480,8 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_API_KEY_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_API_KEY_KEY),
-						'inputFieldLabel' => \__('API key', 'eightshift-forms'),
-						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'eightshift-forms'),
+						'inputFieldLabel' => \__('API key', 'andbrand-block-forms-base'),
+						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'andbrand-block-forms-base'),
 						'inputType' => 'password',
 						'inputIsRequired' => true,
 						'inputValue' => !empty($apiKey) ? 'xxxxxxxxxxxxxxxx' : $this->getOptionValue(self::SETTINGS_MAILCHIMP_API_KEY_KEY),

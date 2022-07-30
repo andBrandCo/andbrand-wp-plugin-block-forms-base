@@ -4,17 +4,15 @@
  * Class Blocks is the base class for Gutenberg blocks registration.
  * It provides the ability to register custom blocks using manifest.json.
  *
- * @package EightshiftForms\Blocks
+ * @package AndbrandWpPluginBlockFormsBase\Blocks
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Blocks;
+namespace AndbrandWpPluginBlockFormsBase\Blocks;
 
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftFormsVendor\EightshiftLibs\Blocks\AbstractBlocks;
-use WP_Post;
-use WP_Block_Editor_Context;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Blocks\AbstractBlocks;
 
 /**
  * Class Blocks
@@ -63,9 +61,9 @@ class Blocks extends AbstractBlocks
 
 		// Create new custom category for custom blocks.
 		if (\is_wp_version_compatible('5.8')) {
-			\add_filter('block_categories_all', [$this, 'getCustomCategory'], 10, 2);
+			\add_filter('block_categories_all', [$this, 'andBrandGetCustomCategory'], 12, 2);
 		} else {
-			\add_filter('block_categories', [$this, 'getCustomCategoryOld'], 10, 2);
+			\add_filter('block_categories', [$this, 'getCustomCategoryOld'], 12, 2);
 		}
 
 		// Blocks string to value filter name constant.
@@ -83,18 +81,18 @@ class Blocks extends AbstractBlocks
 	 * @hook block_categories This is a WP 5 - WP 5.7 compatible hook callback. Will not work with WP 5.8!
 	 *
 	 * @param array<array<string, mixed>> $categories Array of categories for block types.
-	 * @param WP_Post $post Post being loaded.
+	 * @param \WP_Post $post Post being loaded.
 	 *
 	 * @return array<array<string, mixed>> Array of categories for block types.
 	 */
-	public function getCustomCategoryOld(array $categories, WP_Post $post): array
+	public function getCustomCategoryOld(array $categories, \WP_Post $post): array
 	{
 		return \array_merge(
 			$categories,
 			[
 				[
-					'slug' => 'eightshift-forms',
-					'title' => \esc_html__('Eightshift Forms', 'eightshift-forms'),
+					'slug' => 'andbrand-block-forms-base',
+					'title' => \esc_html__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base'),
 					'icon' => 'admin-settings',
 				],
 			]
@@ -108,19 +106,19 @@ class Blocks extends AbstractBlocks
 	 *
 	 * @hook block_categories_all Available from WP 5.8.
 	 *
-	 * @param array<array<string, mixed>> $categories Array of categories for block types.
-	 * @param WP_Block_Editor_Context $blockEditorContext The current block editor context.
+	 * @param array<array<string, mixed>> $block_categories Array of categories for block types
+	 * @param \WP_Block_Editor_Context $blockEditorContext The current block editor context. Removed due to error with FSE WP 6.0
 	 *
 	 * @return array<array<string, mixed>> Array of categories for block types.
 	 */
-	public function getCustomCategory(array $categories, WP_Block_Editor_Context $blockEditorContext): array
+	public function andBrandGetCustomCategory(array $block_categories): array
 	{
 		return \array_merge(
-			$categories,
+			$block_categories,
 			[
 				[
-					'slug' => 'eightshift-forms',
-					'title' => \esc_html__('Eightshift Forms', 'eightshift-forms'),
+					'slug' => 'andbrand-block-forms-base',
+					'title' => \esc_html__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base'),
 					'icon' => 'admin-settings',
 				],
 			]

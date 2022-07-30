@@ -3,22 +3,22 @@
 /**
  * Greenhouse Settings class.
  *
- * @package EightshiftForms\Integrations\Greenhouse
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Greenhouse;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse;
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Filters;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftForms\Settings\Settings\SettingsDataInterface;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsGreenhouse class.
@@ -169,7 +169,7 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Greenhouse', 'eightshift-forms'),
+			'label' => \__('Greenhouse', 'andbrand-block-forms-base'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -188,9 +188,9 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Some config required', 'eightshift-forms'),
+					'highlightedContentTitle' => \__('Some config required', 'andbrand-block-forms-base'),
 					// translators: %s will be replaced with the global settings url.
-					'highlightedContentSubtitle' => \sprintf(\__('Before using Greenhouse you need to configure it in  <a href="%s">global settings</a>.', 'eightshift-forms'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
+					'highlightedContentSubtitle' => \sprintf(\__('Before using Greenhouse you need to configure it in  <a href="%s">global settings</a>.', 'andbrand-block-forms-base'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
 					'highlightedContentIcon' => 'tools',
 				]
 			];
@@ -204,8 +204,8 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Something went wrong', 'eightshift-forms'),
-					'highlightedContentSubtitle' => \__('Data from Greenhouse couldn\'t be fetched. Check the API key.', 'eightshift-forms'),
+					'highlightedContentTitle' => \__('Something went wrong', 'andbrand-block-forms-base'),
+					'highlightedContentSubtitle' => \__('Data from Greenhouse couldn\'t be fetched. Check the API key.', 'andbrand-block-forms-base'),
 					'highlightedContentIcon' => 'error',
 				],
 			];
@@ -239,15 +239,15 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Greenhouse', 'eightshift-forms'),
+				'introTitle' => \__('Greenhouse', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'select',
 				'selectName' => $this->getSettingsName(self::SETTINGS_GREENHOUSE_JOB_ID_KEY),
 				'selectId' => $this->getSettingsName(self::SETTINGS_GREENHOUSE_JOB_ID_KEY),
-				'selectFieldLabel' => \__('Job post', 'eightshift-forms'),
+				'selectFieldLabel' => \__('Job post', 'andbrand-block-forms-base'),
 				// translators: %1$s will be replaced with js selector, %2$s will be replaced with the cache type, %3$s will be replaced with latest update time.
-				'selectFieldHelp' => \sprintf(\__('If a job post isn\'t showing up or is missing some jobs, try <a href="#" class="%1$s" data-type="%2$s">clearing the cache</a>. Last updated: %3$s.', 'eightshift-forms'), $manifestForm['componentCacheJsClass'], self::SETTINGS_TYPE_KEY, $lastUpdatedTime),
+				'selectFieldHelp' => \sprintf(\__('If a job post isn\'t showing up or is missing some jobs, try <a href="#" class="%1$s" data-type="%2$s">clearing the cache</a>. Last updated: %3$s.', 'andbrand-block-forms-base'), $manifestForm['componentCacheJsClass'], self::SETTINGS_TYPE_KEY, $lastUpdatedTime),
 				'selectOptions' => $itemOptions,
 				'selectIsRequired' => true,
 				'selectValue' => $selectedItem,
@@ -272,9 +272,9 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 					],
 					[
 						'component' => 'intro',
-						'introTitle' => \__('Form fields', 'eightshift-forms'),
+						'introTitle' => \__('Form fields', 'andbrand-block-forms-base'),
 						'introTitleSize' => 'medium',
-						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'eightshift-forms'),
+						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'andbrand-block-forms-base'),
 					],
 					[
 						'component' => 'group',
@@ -307,11 +307,11 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Greenhouse', 'eightshift-forms'),
+				'introTitle' => \__('Greenhouse', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('How to get the API key?', 'eightshift-forms'),
+				'introTitle' => \__('How to get the API key?', 'andbrand-block-forms-base'),
 				'introTitleSize' => 'small',
 				// phpcs:ignore WordPress.WP.I18n.NoHtmlWrappedStrings
 				'introSubtitle' => \__('<ol>
@@ -320,11 +320,11 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 						<li>Click on <strong>Create New API Key</strong>.</li>
 						<li>Select <strong>Job Board</strong> as your API Type.</li>
 						<li>Copy the API key into the field below or use the global constant.</li>
-					</ol>', 'eightshift-forms'),
+					</ol>', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('How to get the Job Board name?', 'eightshift-forms'),
+				'introTitle' => \__('How to get the Job Board name?', 'andbrand-block-forms-base'),
 				'introTitleSize' => 'small',
 				// phpcs:ignore WordPress.WP.I18n.NoHtmlWrappedStrings
 				'introSubtitle' => \__('<ol>
@@ -333,7 +333,7 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 						<li>Copy the <strong>Board Name</strong> you want to use.</li>
 						<li>Make the name all lowercase.</li>
 						<li>Copy the Board Name into the field below or use the global constant.</li>
-					</ol>', 'eightshift-forms'),
+					</ol>', 'andbrand-block-forms-base'),
 			],
 			[
 				'component' => 'divider',
@@ -347,7 +347,7 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use Greenhouse', 'eightshift-forms'),
+						'checkboxLabel' => \__('Use Greenhouse', 'andbrand-block-forms-base'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GREENHOUSE_USE_KEY, self::SETTINGS_GREENHOUSE_USE_KEY),
 						'checkboxValue' => self::SETTINGS_GREENHOUSE_USE_KEY,
 						'checkboxSingleSubmit' => true,
@@ -367,8 +367,8 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_GREENHOUSE_API_KEY_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_GREENHOUSE_API_KEY_KEY),
-						'inputFieldLabel' => \__('API key', 'eightshift-forms'),
-						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'eightshift-forms'),
+						'inputFieldLabel' => \__('API key', 'andbrand-block-forms-base'),
+						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'andbrand-block-forms-base'),
 						'inputType' => 'password',
 						'inputIsRequired' => true,
 						'inputValue' => !empty($apiKey) ? 'xxxxxxxxxxxxxxxx' : $this->getOptionValue(self::SETTINGS_GREENHOUSE_API_KEY_KEY),
@@ -378,8 +378,8 @@ class SettingsGreenhouse implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_GREENHOUSE_BOARD_TOKEN_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_GREENHOUSE_BOARD_TOKEN_KEY),
-						'inputFieldLabel' => \__('Job Board name', 'eightshift-forms'),
-						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'eightshift-forms'),
+						'inputFieldLabel' => \__('Job Board name', 'andbrand-block-forms-base'),
+						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'andbrand-block-forms-base'),
 						'inputType' => 'text',
 						'inputIsRequired' => true,
 						'inputValue' => !empty($boardToken) ? $boardToken : $this->getOptionValue(self::SETTINGS_GREENHOUSE_BOARD_TOKEN_KEY),

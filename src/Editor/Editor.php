@@ -3,16 +3,16 @@
 /**
  * Class that holds all filter used the Block Editor page.
  *
- * @package EightshiftForms\Editor
+ * @package AndbrandWpPluginBlockFormsBase\Editor
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Editor;
+namespace AndbrandWpPluginBlockFormsBase\Editor;
 
-use EightshiftForms\AdminMenus\FormAdminMenu;
-use EightshiftForms\CustomPostType\Forms;
-use EightshiftFormsVendor\EightshiftLibs\Services\ServiceInterface;
+use AndbrandWpPluginBlockFormsBase\AdminMenus\FormAdminMenu;
+use AndbrandWpPluginBlockFormsBase\CustomPostType\Forms;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Editor class.

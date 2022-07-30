@@ -3,13 +3,13 @@
 namespace Tests\Unit\Integrations\Mailerlite;
 
 use Brain\Monkey;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Integrations\Mailerlite\Mailerlite;
-use EightshiftForms\Integrations\Mailerlite\MailerliteClient;
-use EightshiftForms\Integrations\Mailerlite\SettingsMailerlite;
-use EightshiftForms\Integrations\MapperInterface;
-use EightshiftForms\Labels\Labels;
-use EightshiftForms\Validation\Validator;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite\Mailerlite;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite\MailerliteClient;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite\SettingsMailerlite;
+use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
+use AndbrandWpPluginBlockFormsBase\Labels\Labels;
+use AndbrandWpPluginBlockFormsBase\Validation\Validator;
 
 use function Tests\setupMocks;
 

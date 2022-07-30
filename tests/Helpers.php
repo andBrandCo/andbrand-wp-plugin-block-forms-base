@@ -71,7 +71,7 @@ function setupMocks() {
 					'post_content' => 'aa',
 				],
 				[
-					'post_content' => '{"eightshiftFormsInputFieldName":"myFirstField"}, {"anotherFieldName":"someField"}',
+					'post_content' => '{"AndbrandWpPluginBlockFormsBaseInputFieldName":"myFirstField"}, {"anotherFieldName":"someField"}',
 				]
 			];
 

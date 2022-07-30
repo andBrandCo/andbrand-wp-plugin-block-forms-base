@@ -3,14 +3,14 @@
 /**
  * The class for form validation.
  *
- * @package EightshiftForms\Validation
+ * @package AndbrandWpPluginBlockFormsBase\Validation
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Validation;
+namespace AndbrandWpPluginBlockFormsBase\Validation;
 
-use EightshiftForms\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
 use Throwable;
 
 /**

@@ -3,7 +3,7 @@
 namespace Tests\Unit\Permissions;
 
 use Brain\Monkey;
-use EightshiftForms\Permissions\Permissions;
+use AndbrandWpPluginBlockFormsBase\Permissions\Permissions;
 
 use function Tests\setupMocks;
 

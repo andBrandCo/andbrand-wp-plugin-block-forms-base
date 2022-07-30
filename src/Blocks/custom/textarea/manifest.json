@@ -2,7 +2,7 @@
 	"blockName": "textarea",
 	"title": "Multiline text",
 	"description" : "A multiline text input field",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-textarea"
 	},
@@ -13,6 +13,6 @@
 		"textarea": "textarea"
 	},
 	"parent": [
-		"eightshift-forms/form"
+		"andbrand-block-forms-base/form"
 	]
 }

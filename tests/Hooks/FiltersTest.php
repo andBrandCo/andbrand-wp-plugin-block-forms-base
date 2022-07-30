@@ -3,8 +3,8 @@
 namespace Tests\Unit\Hooks;
 
 use Brain\Monkey;
-use EightshiftForms\Exception\MissingFilterInfoException;
-use EightshiftForms\Hooks\Filters;
+use AndbrandWpPluginBlockFormsBase\Exception\MissingFilterInfoException;
+use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
 
 use function Tests\setupMocks;
 

@@ -2,7 +2,7 @@
 	"blockName": "radio",
 	"title": "Radio button",
 	"description" : "A simple radio button",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-radio"
 	},
@@ -13,6 +13,6 @@
 		"radio": "radio"
 	},
 	"parent": [
-		"eightshift-forms/radio"
+		"andbrand-block-forms-base/radio"
 	]
 }

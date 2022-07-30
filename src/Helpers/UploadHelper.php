@@ -3,12 +3,12 @@
 /**
  * The media upload helper specific functionality.
  *
- * @package EightshiftForms\Helpers
+ * @package AndbrandWpPluginBlockFormsBase\Helpers
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Helpers;
+namespace AndbrandWpPluginBlockFormsBase\Helpers;
 
 /**
  * Trait UploadHelper

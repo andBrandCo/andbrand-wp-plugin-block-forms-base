@@ -23,26 +23,26 @@ export const RadiosOptions = (attributes) => {
 
 	return (
 		<>
-			<PanelBody title={__('Radio buttons', 'eightshift-forms')}>
+			<PanelBody title={__('Radio buttons', 'andbrand-block-forms-base')}>
 				<FieldOptions
 					{...props('field', attributes)}
 				/>
 
-				<FancyDivider label={__('Validation', 'eightshift-forms')} />
+				<FancyDivider label={__('Validation', 'andbrand-block-forms-base')} />
 
 				<Button
 					icon={icons.fieldRequired}
 					isPressed={radiosIsRequired}
 					onClick={() => setAttributes({ [getAttrKey('radiosIsRequired', attributes, manifest)]: !radiosIsRequired })}
 				>
-					{__('Required', 'eightshift-forms')}
+					{__('Required', 'andbrand-block-forms-base')}
 				</Button>
 
-				<FancyDivider label={__('Advanced', 'eightshift-forms')} />
+				<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.fieldName} label={__('Name', 'eightshift-forms')} />}
-					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'eightshift-forms')}
+					label={<IconLabel icon={icons.fieldName} label={__('Name', 'andbrand-block-forms-base')} />}
+					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'andbrand-block-forms-base')}
 					value={radiosName}
 					onChange={(value) => setAttributes({ [getAttrKey('radiosName', attributes, manifest)]: value })}
 				/>

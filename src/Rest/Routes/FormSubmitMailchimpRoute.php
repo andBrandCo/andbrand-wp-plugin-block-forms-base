@@ -3,17 +3,17 @@
 /**
  * The class register route for public form submiting endpoint - mailchimp
  *
- * @package EightshiftForms\Rest\Routes
+ * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Rest\Routes;
+namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
 
-use EightshiftForms\Integrations\Mailchimp\MailchimpClientInterface;
-use EightshiftForms\Integrations\Mailchimp\SettingsMailchimp;
-use EightshiftForms\Labels\LabelsInterface;
-use EightshiftForms\Validation\ValidatorInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\MailchimpClientInterface;
+use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\SettingsMailchimp;
+use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
+use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
 
 /**
  * Class FormSubmitMailchimpRoute

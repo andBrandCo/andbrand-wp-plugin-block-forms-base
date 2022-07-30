@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Labels;
+namespace AndbrandWpPluginBlockFormsBase\Labels;
 
 /**
  * Labels Interface.

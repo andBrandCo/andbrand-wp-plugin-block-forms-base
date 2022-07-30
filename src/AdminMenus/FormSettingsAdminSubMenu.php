@@ -3,18 +3,18 @@
 /**
  * Class that holds class for admin sub menu - Form Settings.
  *
- * @package EightshiftForms\AdminMenus
+ * @package AndbrandWpPluginBlockFormsBase\AdminMenus
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\AdminMenus;
+namespace AndbrandWpPluginBlockFormsBase\AdminMenus;
 
-use EightshiftFormsVendor\EightshiftLibs\Helpers\Components;
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Settings\Settings\SettingsAllInterface;
-use EightshiftForms\Settings\Settings\SettingsGeneral;
-use EightshiftFormsVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsAllInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
 
 /**
  * FormSettingsAdminSubMenu class.
@@ -91,7 +91,7 @@ class FormSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 */
 	protected function getTitle(): string
 	{
-		return \esc_html__('Form Settings', 'eightshift-forms');
+		return \esc_html__('Form Settings', 'andbrand-block-forms-base');
 	}
 
 	/**
@@ -101,7 +101,7 @@ class FormSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 */
 	protected function getMenuTitle(): string
 	{
-		return \esc_html__('Form Settings', 'eightshift-forms');
+		return \esc_html__('Form Settings', 'andbrand-block-forms-base');
 	}
 
 	/**
@@ -183,12 +183,12 @@ class FormSettingsAdminSubMenu extends AbstractAdminSubMenu
 		$formTitle = \get_the_title((int) $formId);
 
 		if (!$formTitle) {
-			$formTitle = \esc_html__('No form title', 'eightshift-forms');
+			$formTitle = \esc_html__('No form title', 'andbrand-block-forms-base');
 		}
 
 		return [
 			// translators: %s replaces the form name.
-			'adminSettingsPageTitle' => \sprintf(\esc_html__('Form settings: %s', 'eightshift-forms'), $formTitle),
+			'adminSettingsPageTitle' => \sprintf(\esc_html__('Form settings: %s', 'andbrand-block-forms-base'), $formTitle),
 			'adminSettingsBackLink' => Helper::getListingPageUrl(),
 			'adminSettingsFormEditLink' => Helper::getFormEditPageUrl($formId),
 			'adminSettingsLink' => Helper::getSettingsPageUrl($formId, ''),

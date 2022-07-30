@@ -3,18 +3,18 @@
 /**
  * Goodbits Client integration class.
  *
- * @package EightshiftForms\Integrations\Goodbits
+ * @package AndbrandWpPluginBlockFormsBase\Integrations\Goodbits
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Integrations\Goodbits;
+namespace AndbrandWpPluginBlockFormsBase\Integrations\Goodbits;
 
-use EightshiftForms\Helpers\Helper;
-use EightshiftForms\Hooks\Variables;
-use EightshiftForms\Integrations\ClientInterface;
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftFormsVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
 
 /**
  * GoodbitsClient integration class.
@@ -68,7 +68,7 @@ class GoodbitsClient implements ClientInterface
 
 		return [
 			'Goodbits' => [
-				'title' => \__('Goodbits', 'eightshift-forms'),
+				'title' => \__('Goodbits', 'andbrand-block-forms-base'),
 				'id' => $key,
 			],
 		];

@@ -3,12 +3,12 @@
 /**
  * The Variables class, used for defining available variables.
  *
- * @package EightshiftForms\Hooks
+ * @package AndbrandWpPluginBlockFormsBase\Hooks
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Hooks;
+namespace AndbrandWpPluginBlockFormsBase\Hooks;
 
 /**
  * The Variables class, used for defining available Variables.

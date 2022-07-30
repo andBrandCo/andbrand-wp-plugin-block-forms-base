@@ -3,19 +3,19 @@
 /**
  * The class register route for public form submiting endpoint - Mailer
  *
- * @package EightshiftForms\Rest\Routes
+ * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace EightshiftForms\Rest\Routes;
+namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
 
-use EightshiftForms\Settings\SettingsHelper;
-use EightshiftForms\Helpers\UploadHelper;
-use EightshiftForms\Labels\LabelsInterface;
-use EightshiftForms\Mailer\MailerInterface;
-use EightshiftForms\Mailer\SettingsMailer;
-use EightshiftForms\Validation\ValidatorInterface;
+use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use AndbrandWpPluginBlockFormsBase\Helpers\UploadHelper;
+use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
+use AndbrandWpPluginBlockFormsBase\Mailer\MailerInterface;
+use AndbrandWpPluginBlockFormsBase\Mailer\SettingsMailer;
+use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
 
 /**
  * Class FormSubmitMailerRoute

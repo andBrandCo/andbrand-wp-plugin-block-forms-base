@@ -2,7 +2,7 @@
 	"blockName": "select",
 	"title": "Select",
 	"description" : "An item selection field",
-	"category": "eightshift-forms",
+	"category": "andbrand-block-forms-base",
 	"icon": {
 		"src": "esf-select"
 	},
@@ -14,26 +14,26 @@
 		"select": "select"
 	},
 	"parent": [
-		"eightshift-forms/form"
+		"andbrand-block-forms-base/form"
 	],
 	"example": {
 		"innerBlocks": [
 			{
-				"name": "eightshift-forms/select-option",
+				"name": "andbrand-block-forms-base/select-option",
 				"attributes": {
 					"selectOptionLabel": "Label1",
 					"selectOptionValue": "Value1"
 				}
 			},
 			{
-				"name": "eightshift-forms/select-option",
+				"name": "andbrand-block-forms-base/select-option",
 				"attributes": {
 					"selectOptionLabel": "Label2",
 					"selectOptionValue": "Value2"
 				}
 			},
 			{
-				"name": "eightshift-forms/select-option",
+				"name": "andbrand-block-forms-base/select-option",
 				"attributes": {
 					"selectOptionLabel": "Label3",
 					"selectOptionValue": "Value3"
@@ -48,19 +48,19 @@
 				"type": "string"
 			},
 			"default": [
-				"eightshift-forms/select-option"
+				"andbrand-block-forms-base/select-option"
 			]
 		}
 	},
 	"template": [
 		[
-			"eightshift-forms/select-option",
+			"andbrand-block-forms-base/select-option",
 			{
 				"selectOptionSelectOptionLabel": "Option 1"
 			}
 		],
 		[
-			"eightshift-forms/select-option",
+			"andbrand-block-forms-base/select-option",
 			{
 				"selectOptionSelectOptionLabel": "Option 2"
 			}

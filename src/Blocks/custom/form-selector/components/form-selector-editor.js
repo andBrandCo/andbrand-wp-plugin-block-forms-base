@@ -72,7 +72,7 @@ export const FormSelectorEditor = ({ attributes, clientId }) => {
 			{!hasInnerBlocks &&
 				<Placeholder
 					icon={<BlockIcon iconName='esf-form' />}
-					label={__('Andbrand Wp Plugin Block Forms Base', 'productive')}
+					label={__('Andbrand Block Forms', 'productive')}
 					instructions={__('Select a form type below to start.', 'productive')}
 					className={attributes.blockClass}
 				>

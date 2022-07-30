@@ -92,7 +92,7 @@ class Blocks extends AbstractBlocks
 			[
 				[
 					'slug' => 'andbrand-block-forms-base',
-					'title' => \esc_html__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base'),
+					'title' => \esc_html__('Andbrand Block Forms', 'andbrand-block-forms-base'),
 					'icon' => 'admin-settings',
 				],
 			]
@@ -118,7 +118,7 @@ class Blocks extends AbstractBlocks
 			[
 				[
 					'slug' => 'andbrand-block-forms-base',
-					'title' => \esc_html__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base'),
+					'title' => \esc_html__('Andbrand Block Forms', 'andbrand-block-forms-base'),
 					'icon' => 'admin-settings',
 				],
 			]

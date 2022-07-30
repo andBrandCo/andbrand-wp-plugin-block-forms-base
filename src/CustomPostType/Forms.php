@@ -90,7 +90,7 @@ class Forms extends AbstractPostType
 		];
 
 		return [
-			'label' => \esc_html__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base'),
+			'label' => \esc_html__('Andbrand Block Forms', 'andbrand-block-forms-base'),
 			'public' => true,
 			'menu_position' => static::MENU_POSITION,
 			'menu_icon' => static::MENU_ICON,

@@ -1,6 +1,6 @@
 {
 	"blockName": "forms",
-	"title": "Andbrand Wp Plugin Block Forms Base",
+	"title": "Andbrand Block Forms",
 	"description" : "Allows selecting the form that should be displayed",
 	"category": "andbrand-block-forms-base",
 	"icon": {

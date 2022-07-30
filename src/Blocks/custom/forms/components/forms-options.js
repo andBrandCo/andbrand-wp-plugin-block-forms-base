@@ -128,7 +128,7 @@ export const FormsOptions = ({ attributes, setAttributes, preview }) => {
 	};
 
 	return (
-		<PanelBody title={__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base')}>
+		<PanelBody title={__('Andbrand Block Forms', 'andbrand-block-forms-base')}>
 			<CustomSelect
 				label={<IconLabel icon={<BlockIcon iconName='esf-form-picker' />} label={__('Form to display', 'andbrand-block-forms-base')} />}
 				help={__('If you can\'t find a form, start typing its name while the dropdown is open.', 'andbrand-block-forms-base')}

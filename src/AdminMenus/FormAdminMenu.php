@@ -72,7 +72,7 @@ class FormAdminMenu extends AbstractAdminMenu
 	 */
 	protected function getTitle(): string
 	{
-		return \esc_html__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base');
+		return \esc_html__('Andbrand Block Forms', 'andbrand-block-forms-base');
 	}
 
 	/**
@@ -82,7 +82,7 @@ class FormAdminMenu extends AbstractAdminMenu
 	 */
 	protected function getMenuTitle(): string
 	{
-		return \esc_html__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base');
+		return \esc_html__('Andbrand Block Forms', 'andbrand-block-forms-base');
 	}
 
 	/**

@@ -15,7 +15,7 @@ export const FormSelectorOptions = () => {
 	const wpAdminUrl = esFormsBlocksLocalization.wpAdminUrl;
 
 	return (
-		<PanelBody title={__('Andbrand Block Forms', 'andbrand-block-forms-base')}>
+		<PanelBody title={__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base')}>
 			<Button
 				isPrimary
 				icon={icons.options}

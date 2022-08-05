@@ -36,7 +36,7 @@ registerBlocks(
 outputCssVariablesGlobal();
 
 // Remove form-selector block from anywhere else other than form CPT.
-if (esFormsBlocksLocalization?.postType !== 'andbrand-block-forms-base') {
+if (esFormsBlocksLocalization?.postType !== 'andbrand-block-forms') {
 	const namespace = select(STORE_NAME).getSettingsNamespace();
 
 	unregisterBlockType(`${namespace}/form-selector`);

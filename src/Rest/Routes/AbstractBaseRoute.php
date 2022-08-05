@@ -26,7 +26,7 @@ abstract class AbstractBaseRoute extends AbstractRoute implements CallableRouteI
 	/**
 	 * Method that returns project Route namespace.
 	 *
-	 * @return string Project namespace AndbrandWpPluginBlockFormsBaseVendor\for REST route.
+	 * @return string Project namespace EightshiftFormsVendor\for REST route.
 	 */
 	protected function getNamespace(): string
 	{
@@ -125,7 +125,7 @@ abstract class AbstractBaseRoute extends AbstractRoute implements CallableRouteI
 				! \wp_verify_nonce($params['nonce'], $params['form-unique-id'])
 			) {
 				throw new UnverifiedRequestException(
-					\esc_html__('Invalid nonce.', 'andbrand-block-forms-base')
+					\esc_html__('Invalid nonce.', 'eightshift-forms')
 				);
 			}
 		}
@@ -134,7 +134,7 @@ abstract class AbstractBaseRoute extends AbstractRoute implements CallableRouteI
 		$validate = $this->validator->validate($params, $files, $formId, $formData);
 		if (!empty($validate)) {
 			throw new UnverifiedRequestException(
-				\esc_html__('Missing one or more required parameters to process the request.', 'andbrand-block-forms-base'),
+				\esc_html__('Missing one or more required parameters to process the request.', 'eightshift-forms'),
 				$validate
 			);
 		}
@@ -281,6 +281,11 @@ abstract class AbstractBaseRoute extends AbstractRoute implements CallableRouteI
 	{
 		foreach ($params as $key => $value) {
 			if ($key === 'es-form-type') {
+				// Allow action parameter for forms with custom actions.
+				if ($value['value'] !== 'custom') {
+					unset($params['action']);
+				}
+
 				unset($params['es-form-type']);
 			}
 

@@ -16,6 +16,8 @@ use AndbrandWpPluginBlockFormsBase\AdminMenus\FormListingAdminSubMenu;
 use AndbrandWpPluginBlockFormsBase\AdminMenus\FormSettingsAdminSubMenu;
 use AndbrandWpPluginBlockFormsBase\CustomPostType\Forms;
 
+use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+
 /**
  * Class Permissions
  */
@@ -37,6 +39,12 @@ class Permissions
 	public static function getPermissions(): array
 	{
 		$postType = Forms::POST_CAPABILITY_TYPE;
+
+		Helper::logger([
+				'Class' => 'Permissions',
+				'Method' => 'getPermissions',
+				'formIdUsed' => $postType,
+			]);
 
 		return [
 			$postType,

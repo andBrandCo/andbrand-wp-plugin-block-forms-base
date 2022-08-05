@@ -68,7 +68,7 @@ class FormSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 *
 	 * @var string
 	 */
-	public const ADMIN_MENU_CAPABILITY = 'eightshift_forms_form_settings';
+	public const ADMIN_MENU_CAPABILITY = 'andbrand_block_forms_form_settings';
 
 	/**
 	 * Menu slug for this admin sub menu

@@ -22,35 +22,35 @@ class Forms extends AbstractPostType
 	 *
 	 * @var string
 	 */
-	public const POST_TYPE_SLUG = 'andbrand-block-forms-base';
+	public const POST_TYPE_SLUG = 'andbrand-block-forms';
 
 	/**
 	 * URL slug for the custom post type.
 	 *
 	 * @var string
 	 */
-	public const POST_TYPE_URL_SLUG = 'andbrand-block-forms-base';
+	public const POST_TYPE_URL_SLUG = 'andbrand-block-forms';
 
 	/**
 	 * Rest API Endpoint slug constant.
 	 *
 	 * @var string
 	 */
-	public const REST_API_ENDPOINT_SLUG = 'andbrand-block-forms-base';
+	public const REST_API_ENDPOINT_SLUG = 'andbrand-block-forms';
 
 	/**
 	 * Post type slug constant.
 	 *
 	 * @var string
 	 */
-	public const POST_CAPABILITY_TYPE = 'eightshift_forms';
+	public const POST_CAPABILITY_TYPE = 'andbrand_block_forms';
 
 	/**
 	 * Browser url slug constant.
 	 *
 	 * @var string
 	 */
-	public const URL_SLUG = 'andbrand-block-forms-base';
+	public const URL_SLUG = 'andbrand-block-forms';
 
 	/**
 	 * Location of menu in sidebar.
@@ -90,7 +90,7 @@ class Forms extends AbstractPostType
 		];
 
 		return [
-			'label' => \esc_html__('Andbrand Block Forms', 'andbrand-block-forms-base'),
+			'label' => \esc_html__('Andbrand Block Forms', 'andbrand-block-forms'),
 			'public' => true,
 			'menu_position' => static::MENU_POSITION,
 			'menu_icon' => static::MENU_ICON,

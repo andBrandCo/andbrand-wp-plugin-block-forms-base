@@ -32,6 +32,9 @@
 		"formFormPostId": {
 			"type": "string"
 		},
+		"formFormAction": {
+			"type": "string"
+		},
 		"formDataTypeSelector": {
 			"type": "string"
 		}

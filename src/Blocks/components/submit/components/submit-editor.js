@@ -1,21 +1,23 @@
 import React from 'react';
 import { ServerSideRender } from '@eightshift/frontend-libs/scripts';
 
+//import { ServerSideRender } from "@wordpress/sever-side-render";
+
 export const SubmitEditor = (attributes) => {
 	const {
 		blockFullName,
 		clientId,
-	} = attributes;
+		prefix,
+		setAttributes,
+		...formattedAttributes
 
-	delete attributes.prefix;
-	delete attributes.setAttributes;
-	delete attributes.clientId;
+	} = attributes;
 
 	return (
 		<ServerSideRender
 			block={blockFullName}
 			attributes={{
-				...attributes,
+				...formattedAttributes,
 				submitUniqueId: clientId,
 			}}
 		/>

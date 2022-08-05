@@ -53,6 +53,10 @@
 		"fieldHelp": {
 			"type": "string"
 		},
+		"fieldHidden": {
+			"type": "boolean",
+			"default": false
+		},
 		"fieldUseError": {
 			"type": "boolean",
 			"default": true

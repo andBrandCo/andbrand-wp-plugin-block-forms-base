@@ -3,20 +3,20 @@
 /**
  * Validation Settings class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Validation
+ * @package SebFormsWpPlugin\Validation
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Validation;
+namespace SebFormsWpPlugin\Validation;
 
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Labels\Labels;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Labels\Labels;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Labels\LabelsInterface;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Settings\Settings\SettingsDataInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsValidation class.
@@ -98,7 +98,7 @@ class SettingsValidation implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Validation', 'andbrand-block-forms-base'),
+			'label' => \__('Validation', 'seb-forms'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -116,7 +116,7 @@ class SettingsValidation implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Validation messages', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Validation messages', 'seb-forms'),
 			]
 		];
 
@@ -156,13 +156,13 @@ class SettingsValidation implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Form validation', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Form validation', 'seb-forms'),
 			],
 			[
 				'component' => 'textarea',
 				'textareaId' => $this->getSettingsName(self::SETTINGS_VALIDATION_PATTERNS_KEY),
 				'textareaIsMonospace' => true,
-				'textareaFieldLabel' => \__('Validation patterns', 'andbrand-block-forms-base'),
+				'textareaFieldLabel' => \__('Validation patterns', 'seb-forms'),
 				// translators: %s will be replaced with local validation patterns.
 				'textareaFieldHelp' => Helper::minifyString(\sprintf(\__("
 					These patterns can be selected inside the Form editor.
@@ -176,7 +176,7 @@ class SettingsValidation implements SettingsDataInterface, ServiceInterface
 					Use these patterns as an example:
 					<ul>
 					%2\$s
-					</ul>", 'andbrand-block-forms-base'), 'https://regex101.com/', $validationPatterns)),
+					</ul>", 'seb-forms'), 'https://regex101.com/', $validationPatterns)),
 				'textareaValue' => $this->getOptionValue(self::SETTINGS_VALIDATION_PATTERNS_KEY),
 			],
 			[
@@ -184,7 +184,7 @@ class SettingsValidation implements SettingsDataInterface, ServiceInterface
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Validation messages', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Validation messages', 'seb-forms'),
 			],
 		];
 

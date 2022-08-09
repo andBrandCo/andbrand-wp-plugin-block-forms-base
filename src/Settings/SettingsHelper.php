@@ -8,11 +8,11 @@
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Settings;
+namespace SebFormsWpPlugin\Settings;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\SettingsGreenhouse;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Integrations\Greenhouse\SettingsGreenhouse;
 
 /**
  * SettingsHelper trait.
@@ -293,17 +293,17 @@ trait SettingsHelper
 					'component' => 'input',
 					'inputId' => "{$id}---{$breakpoint}",
 					// translators: %s is replaced with the breakpoint name.
-					'inputFieldLabel' => \sprintf(\esc_html__('Width (%s)', 'andbrand-block-forms-base'), $breakpoint),
+					'inputFieldLabel' => \sprintf(\esc_html__('Width (%s)', 'seb-forms'), $breakpoint),
 					'inputType' => 'number',
 					'inputValue' => $fieldsValues["{$id}---{$breakpoint}"] ?? '',
 					'inputMin' => 0,
 					'inputMax' => 12,
 					'inputStep' => 1,
 					'inputIsDisabled' => $disabledEdit,
-					'inputPlaceholder' => \__('auto', 'andbrand-block-forms-base'),
+					'inputPlaceholder' => \__('auto', 'seb-forms'),
 					'inputFieldUseTooltip' => true,
 					// translators: %s is replaced with the breakpoint name.
-					'inputFieldTooltipContent' => \sprintf(\esc_html__('Define field width for %s breakpoint.', 'andbrand-block-forms-base'), $breakpoint),
+					'inputFieldTooltipContent' => \sprintf(\esc_html__('Define field width for %s breakpoint.', 'seb-forms'), $breakpoint),
 				];
 
 				$fieldsOutput[0]['groupContent'][] = $item;
@@ -315,16 +315,16 @@ trait SettingsHelper
 			$fieldsOutput[0]['groupContent'][] = [
 				'component' => 'input',
 				'inputId' => "{$id}---{$this->integrationFieldOrder}",
-				'inputFieldLabel' => \__('Order', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('Order', 'seb-forms'),
 				'inputType' => 'number',
 				'inputValue' => $fieldsValues["{$id}---{$this->integrationFieldOrder}"] ?? $fieldKey + 1,
 				'inputMin' => 1,
 				'inputMax' => $totalFields,
 				'inputStep' => 1,
 				'inputIsDisabled' => $disabledEdit,
-				'inputPlaceholder' => \__('auto', 'andbrand-block-forms-base'),
+				'inputPlaceholder' => \__('auto', 'seb-forms'),
 				'inputFieldUseTooltip' => true,
-				'inputFieldTooltipContent' => \__('Define field order that is going to be used.', 'andbrand-block-forms-base'),
+				'inputFieldTooltipContent' => \__('Define field order that is going to be used.', 'seb-forms'),
 			];
 
 			// Use.
@@ -339,21 +339,21 @@ trait SettingsHelper
 			$fieldsOutput[0]['groupContent'][] = [
 				'component' => 'select',
 				'selectId' => "{$id}---{$this->integrationFieldUse}",
-				'selectFieldLabel' => \__('Visibility', 'andbrand-block-forms-base'),
+				'selectFieldLabel' => \__('Visibility', 'seb-forms'),
 				'selectValue' => $toggleValue,
 				'selectIsDisabled' => $toggleDisabled || $disabledEdit,
 				'selectFieldUseTooltip' => true,
-				'selectFieldTooltipContent' => \__('Define if field is going to be default visible or hidden.', 'andbrand-block-forms-base'),
+				'selectFieldTooltipContent' => \__('Define if field is going to be default visible or hidden.', 'seb-forms'),
 				'selectOptions' => [
 					[
 						'component' => 'select-option',
-						'selectOptionLabel' => \__('Visible', 'andbrand-block-forms-base'),
+						'selectOptionLabel' => \__('Visible', 'seb-forms'),
 						'selectOptionValue' => 'true',
 						'selectOptionIsSelected' => $toggleValue === 'true',
 					],
 					[
 						'component' => 'select-option',
-						'selectOptionLabel' => \__('Hidden', 'andbrand-block-forms-base'),
+						'selectOptionLabel' => \__('Hidden', 'seb-forms'),
 						'selectOptionValue' => 'false',
 						'selectOptionIsSelected' => $toggleValue === 'false',
 					]
@@ -367,21 +367,21 @@ trait SettingsHelper
 				$fieldsOutput[0]['groupContent'][] = [
 					'component' => 'select',
 					'selectId' => "{$id}---{$this->integrationFieldFileInfoLabel}",
-					'selectFieldLabel' => \__('Field label', 'andbrand-block-forms-base'),
+					'selectFieldLabel' => \__('Field label', 'seb-forms'),
 					'selectValue' => $fileInfoLabelValue,
 					'selectIsDisabled' => $disabledEdit,
 					'selectFieldUseTooltip' => true,
-					'selectFieldTooltipContent' => \__('Define if field file label is going to be default visible or hidden.', 'andbrand-block-forms-base'),
+					'selectFieldTooltipContent' => \__('Define if field file label is going to be default visible or hidden.', 'seb-forms'),
 					'selectOptions' => [
 						[
 							'component' => 'select-option',
-							'selectOptionLabel' => \__('Hidden', 'andbrand-block-forms-base'),
+							'selectOptionLabel' => \__('Hidden', 'seb-forms'),
 							'selectOptionValue' => 'false',
 							'selectOptionIsSelected' => $fileInfoLabelValue === 'false',
 						],
 						[
 							'component' => 'select-option',
-							'selectOptionLabel' => \__('Visible', 'andbrand-block-forms-base'),
+							'selectOptionLabel' => \__('Visible', 'seb-forms'),
 							'selectOptionValue' => 'true',
 							'selectOptionIsSelected' => $fileInfoLabelValue === 'true',
 						]
@@ -396,11 +396,11 @@ trait SettingsHelper
 				$fieldsOutput[0]['groupContent'][] = [
 					'component' => 'select',
 					'selectId' => "{$id}---{$this->integrationFieldStyle}",
-					'selectFieldLabel' => \__('Style', 'andbrand-block-forms-base'),
+					'selectFieldLabel' => \__('Style', 'seb-forms'),
 					'selectValue' => $fieldStyleValue,
 					'selectIsDisabled' => $disabledEdit,
 					'selectFieldUseTooltip' => true,
-					'selectFieldTooltipContent' => \__('Define different style for this field.', 'andbrand-block-forms-base'),
+					'selectFieldTooltipContent' => \__('Define different style for this field.', 'seb-forms'),
 					'selectOptions' => \array_map(
 						static function ($item) use ($fieldStyleValue) {
 							return [
@@ -420,11 +420,11 @@ trait SettingsHelper
 				$fieldsOutput[0]['groupContent'][] = [
 					'component' => 'input',
 					'inputId' => "{$id}---{$this->integrationFieldLabel}",
-					'inputFieldLabel' => \__('Label', 'andbrand-block-forms-base'),
+					'inputFieldLabel' => \__('Label', 'seb-forms'),
 					'inputValue' => $fieldsValues["{$id}---{$this->integrationFieldLabel}"] ?? '',
 					'inputIsDisabled' => $disabledEdit,
 					'selectFieldUseTooltip' => true,
-					'selectFieldTooltipContent' => \__('Define field label value.', 'andbrand-block-forms-base'),
+					'selectFieldTooltipContent' => \__('Define field label value.', 'seb-forms'),
 				];
 			}
 

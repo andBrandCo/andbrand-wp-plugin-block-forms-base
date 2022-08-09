@@ -3,19 +3,19 @@
 /**
  * Class that holds data for global forms settings.
  *
- * @package AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings
+ * @package SebFormsWpPlugin\Settings\GlobalSettings
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings;
+namespace SebFormsWpPlugin\Settings\GlobalSettings;
 
-use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
-use AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings\SettingsGlobalInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsTest;
+use SebFormsWpPlugin\Form\AbstractFormBuilder;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Settings\Settings\SettingsGeneral;
+use SebFormsWpPlugin\Settings\GlobalSettings\SettingsGlobalInterface;
+use SebFormsWpPlugin\Settings\Settings\SettingsTest;
 
 /**
  * SettingsGlobal class.

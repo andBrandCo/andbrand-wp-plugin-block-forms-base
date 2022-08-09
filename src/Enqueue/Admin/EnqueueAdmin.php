@@ -3,18 +3,18 @@
 /**
  * The Admin Enqueue specific functionality.
  *
- * @package AndbrandWpPluginBlockFormsBase\Enqueue\Admin
+ * @package SebFormsWpPlugin\Enqueue\Admin
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Enqueue\Admin;
+namespace SebFormsWpPlugin\Enqueue\Admin;
 
-use AndbrandWpPluginBlockFormsBase\Config\Config;
-use AndbrandWpPluginBlockFormsBase\Rest\Routes\CacheDeleteRoute;
-use AndbrandWpPluginBlockFormsBase\Rest\Routes\FormSettingsSubmitRoute;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Manifest\ManifestInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Enqueue\Admin\AbstractEnqueueAdmin;
+use SebFormsWpPlugin\Config\Config;
+use SebFormsWpPlugin\Rest\Routes\CacheDeleteRoute;
+use SebFormsWpPlugin\Rest\Routes\FormSettingsSubmitRoute;
+use SebFormsWpPluginVendor\EightshiftLibs\Manifest\ManifestInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Enqueue\Admin\AbstractEnqueueAdmin;
 
 /**
  * Class EnqueueAdmin

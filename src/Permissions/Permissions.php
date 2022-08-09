@@ -3,20 +3,20 @@
 /**
  * File containing an user Permissions class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Permissions
+ * @package SebFormsWpPlugin\Permissions
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Permissions;
+namespace SebFormsWpPlugin\Permissions;
 
-use AndbrandWpPluginBlockFormsBase\AdminMenus\FormAdminMenu;
-use AndbrandWpPluginBlockFormsBase\AdminMenus\FormGlobalSettingsAdminSubMenu;
-use AndbrandWpPluginBlockFormsBase\AdminMenus\FormListingAdminSubMenu;
-use AndbrandWpPluginBlockFormsBase\AdminMenus\FormSettingsAdminSubMenu;
-use AndbrandWpPluginBlockFormsBase\CustomPostType\Forms;
+use SebFormsWpPlugin\AdminMenus\FormAdminMenu;
+use SebFormsWpPlugin\AdminMenus\FormGlobalSettingsAdminSubMenu;
+use SebFormsWpPlugin\AdminMenus\FormListingAdminSubMenu;
+use SebFormsWpPlugin\AdminMenus\FormSettingsAdminSubMenu;
+use SebFormsWpPlugin\CustomPostType\Forms;
 
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
+use SebFormsWpPlugin\Helpers\Helper;
 
 /**
  * Class Permissions

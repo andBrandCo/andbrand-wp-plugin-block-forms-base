@@ -3,17 +3,17 @@
 /**
  * The class for form validator.
  *
- * @package AndbrandWpPluginBlockFormsBase\Validation
+ * @package SebFormsWpPlugin\Validation
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Validation;
+namespace SebFormsWpPlugin\Validation;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Labels\LabelsInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
 
 /**
  * Class Validator

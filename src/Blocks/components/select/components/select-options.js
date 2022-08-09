@@ -25,12 +25,12 @@ export const SelectOptions = (attributes) => {
 
 	return (
 		<>
-			<PanelBody title={__('Select', 'andbrand-block-forms-base')}>
+			<PanelBody title={__('Select', 'seb-forms')}>
 				<FieldOptions
 					{...props('field', attributes)}
 				/>
 
-				<FancyDivider label={__('Validation', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Validation', 'seb-forms')} />
 
 				<div className='es-h-spaced'>
 					<Button
@@ -38,15 +38,15 @@ export const SelectOptions = (attributes) => {
 						isPressed={selectIsRequired}
 						onClick={() => setAttributes({ [getAttrKey('selectIsRequired', attributes, manifest)]: !selectIsRequired })}
 					>
-						{__('Required', 'andbrand-block-forms-base')}
+						{__('Required', 'seb-forms')}
 					</Button>
 				</div>
 
-				<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Advanced', 'seb-forms')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.fieldName} label={__('Name', 'andbrand-block-forms-base')} />}
-					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'andbrand-block-forms-base')}
+					label={<IconLabel icon={icons.fieldName} label={__('Name', 'seb-forms')} />}
+					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'seb-forms')}
 					value={selectName}
 					onChange={(value) => setAttributes({ [getAttrKey('selectName', attributes, manifest)]: value })}
 				/>
@@ -57,14 +57,14 @@ export const SelectOptions = (attributes) => {
 						isPressed={selectIsDisabled}
 						onClick={() => setAttributes({ [getAttrKey('selectIsDisabled', attributes, manifest)]: !selectIsDisabled })}
 					>
-						{__('Disabled', 'andbrand-block-forms-base')}
+						{__('Disabled', 'seb-forms')}
 					</Button>
 				</div>
 
-				<FancyDivider label={__('Tracking', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Tracking', 'seb-forms')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'andbrand-block-forms-base')} />}
+					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'seb-forms')} />}
 					value={selectTracking}
 					onChange={(value) => setAttributes({ [getAttrKey('selectTracking', attributes, manifest)]: value })}
 				/>

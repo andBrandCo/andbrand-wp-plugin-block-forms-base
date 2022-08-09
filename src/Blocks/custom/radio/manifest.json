@@ -2,7 +2,7 @@
 	"blockName": "radio",
 	"title": "Radio button",
 	"description" : "A simple radio button",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-radio"
 	},
@@ -13,6 +13,6 @@
 		"radio": "radio"
 	},
 	"parent": [
-		"andbrand-block-forms-base/radio"
+		"seb-forms/radio"
 	]
 }

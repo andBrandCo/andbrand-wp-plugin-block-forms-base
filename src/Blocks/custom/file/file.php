@@ -3,10 +3,10 @@
 /**
  * Template for the File Block view.
  *
- * @package AndbrandWpPluginBlockFormsBase
+ * @package SebFormsWpPlugin
  */
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
 
 $unique = Components::getUnique();
 

@@ -3,12 +3,12 @@
 /**
  * Class that holds data for admin forms listing.
  *
- * @package AndbrandWpPluginBlockFormsBase\Settings\Listing
+ * @package SebFormsWpPlugin\Settings\Listing
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Settings\Listing;
+namespace SebFormsWpPlugin\Settings\Listing;
 
 /**
  * Interface for admin content listing

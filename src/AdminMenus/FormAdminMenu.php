@@ -3,17 +3,17 @@
 /**
  * Class that holds class for admin sub menu - Form Listing.
  *
- * @package AndbrandWpPluginBlockFormsBase\AdminMenus
+ * @package SebFormsWpPlugin\AdminMenus
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\AdminMenus;
+namespace SebFormsWpPlugin\AdminMenus;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Settings\Listing\FormListingInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\AdminMenus\AbstractAdminMenu;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Settings\Listing\FormListingInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\AdminMenus\AbstractAdminMenu;
 
 /**
  * FormAdminMenu class.
@@ -72,7 +72,7 @@ class FormAdminMenu extends AbstractAdminMenu
 	 */
 	protected function getTitle(): string
 	{
-		return \esc_html__('Andbrand Block Forms', 'andbrand-block-forms-base');
+		return \esc_html__('Seb FormsBlock Forms', 'seb-forms');
 	}
 
 	/**
@@ -82,7 +82,7 @@ class FormAdminMenu extends AbstractAdminMenu
 	 */
 	protected function getMenuTitle(): string
 	{
-		return \esc_html__('Andbrand Block Forms', 'andbrand-block-forms-base');
+		return \esc_html__('Seb FormsBlock Forms', 'seb-forms');
 	}
 
 	/**
@@ -181,12 +181,12 @@ class FormAdminMenu extends AbstractAdminMenu
 	protected function processAttributes($attr): array
 	{
 		$status = isset($_GET['type']) ? \sanitize_text_field(\wp_unslash($_GET['type'])) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$title = \esc_html__('All forms', 'andbrand-block-forms-base');
+		$title = \esc_html__('All forms', 'seb-forms');
 		$trashLink = Helper::getFormsTrashPageUrl();
 		$listingLink = '';
 
 		if ($status === 'trash') {
-			$title = \esc_html__('Deleted forms', 'andbrand-block-forms-base');
+			$title = \esc_html__('Deleted forms', 'seb-forms');
 			$trashLink = '';
 			$listingLink = Helper::getListingPageUrl();
 		}

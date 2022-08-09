@@ -23,7 +23,7 @@ export const SelectOptionOptions = (attributes) => {
 	return (
 		<>
 			<TextControl
-				label={<IconLabel icon={icons.textSize} label={__('Option label', 'andbrand-block-forms-base')} />}
+				label={<IconLabel icon={icons.textSize} label={__('Option label', 'seb-forms')} />}
 				value={selectOptionLabel}
 				onChange={(value) => setAttributes({ [getAttrKey('selectOptionLabel', attributes, manifest)]: value })}
 			/>
@@ -34,15 +34,15 @@ export const SelectOptionOptions = (attributes) => {
 					isPressed={selectOptionIsSelected}
 					onClick={() => setAttributes({ [getAttrKey('selectOptionIsSelected', attributes, manifest)]: !selectOptionIsSelected })}
 				>
-					{__('Select by default', 'andbrand-block-forms-base')}
+					{__('Select by default', 'seb-forms')}
 				</Button>
 			</div>
 
-			<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
+			<FancyDivider label={__('Advanced', 'seb-forms')} />
 
 			<TextControl
-				label={<IconLabel icon={icons.fieldValue} label={__('Value', 'andbrand-block-forms-base')} />}
-				help={__('Internal value, sent if the option is selected', 'andbrand-block-forms-base')}
+				label={<IconLabel icon={icons.fieldValue} label={__('Value', 'seb-forms')} />}
+				help={__('Internal value, sent if the option is selected', 'seb-forms')}
 				value={selectOptionValue}
 				onChange={(value) => setAttributes({ [getAttrKey('selectOptionValue', attributes, manifest)]: value })}
 			/>
@@ -53,7 +53,7 @@ export const SelectOptionOptions = (attributes) => {
 					isPressed={selectOptionIsDisabled}
 					onClick={() => setAttributes({ [getAttrKey('selectOptionIsDisabled', attributes, manifest)]: !selectOptionIsDisabled })}
 				>
-					{__('Disabled', 'andbrand-block-forms-base')}
+					{__('Disabled', 'seb-forms')}
 				</Button>
 			</div>
 		</>

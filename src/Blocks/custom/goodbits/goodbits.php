@@ -3,12 +3,12 @@
 /**
  * Template for the Goodbits Block view.
  *
- * @package AndbrandWpPluginBlockFormsBase
+ * @package SebFormsWpPlugin
  */
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\Goodbits;
-use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\SettingsGoodbits;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Integrations\Goodbits\Goodbits;
+use SebFormsWpPlugin\Integrations\Goodbits\SettingsGoodbits;
 
 $manifest = Components::getManifest(__DIR__);
 $manifestInvalid = Components::getManifest(dirname(__DIR__, 2) . '/components/invalid');
@@ -40,9 +40,9 @@ if (!$isSettingsValid && $goodbitsFormServerSideRender) {
 				<path d="M13 13V16C13 17.3807 14.1193 18.5 15.5 18.5V18.5C16.8807 18.5 18 17.3807 18 16V13M13 13V10.5H14M13 13H18M18 13V10.5H17M14 10.5V5.5L13.5 3.5L14 1.5H17L17.5 3.5L17 5.5V10.5M14 10.5H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 			</svg>
 			<br />
-			<b><?php esc_html_e('The Goodbits integration is not configured correctly.', 'andbrand-block-forms-base'); ?></b>
+			<b><?php esc_html_e('The Goodbits integration is not configured correctly.', 'seb-forms'); ?></b>
 			<br />
-			<?php esc_html_e('Check the form settings and try again.', 'andbrand-block-forms-base'); ?>
+			<?php esc_html_e('Check the form settings and try again.', 'seb-forms'); ?>
 		</div>
 	<?php
 

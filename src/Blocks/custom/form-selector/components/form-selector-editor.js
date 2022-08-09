@@ -72,7 +72,7 @@ export const FormSelectorEditor = ({ attributes, clientId }) => {
 			{!hasInnerBlocks &&
 				<Placeholder
 					icon={<BlockIcon iconName='esf-form' />}
-					label={__('Andbrand Block Forms', 'productive')}
+					label={__('Seb FormsBlock Forms', 'productive')}
 					instructions={__('Select a form type below to start.', 'productive')}
 					className={attributes.blockClass}
 				>
@@ -92,7 +92,7 @@ export const FormSelectorEditor = ({ attributes, clientId }) => {
 									isTertiary
 									onClick={() => createFormType(slug)}
 								>
-									{sprintf(__('%s form', 'andbrand-block-forms-base'), label)}
+									{sprintf(__('%s form', 'seb-forms'), label)}
 								</Button>
 							);
 						})}

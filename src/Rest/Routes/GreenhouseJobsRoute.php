@@ -3,15 +3,15 @@
 /**
  * The class register route for getting Greenhouse Jobs endpoint
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\Exception\UnverifiedRequestException;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use SebFormsWpPlugin\Exception\UnverifiedRequestException;
+use SebFormsWpPlugin\Integrations\ClientInterface;
 use WP_REST_Request;
 
 /**

@@ -3,13 +3,13 @@
 namespace Tests\Unit\Integrations\Goodbits;
 
 use Brain\Monkey;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\Goodbits;
-use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\GoodbitsClient;
-use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\SettingsGoodbits;
-use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
-use AndbrandWpPluginBlockFormsBase\Labels\Labels;
-use AndbrandWpPluginBlockFormsBase\Validation\Validator;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Integrations\Goodbits\Goodbits;
+use SebFormsWpPlugin\Integrations\Goodbits\GoodbitsClient;
+use SebFormsWpPlugin\Integrations\Goodbits\SettingsGoodbits;
+use SebFormsWpPlugin\Integrations\MapperInterface;
+use SebFormsWpPlugin\Labels\Labels;
+use SebFormsWpPlugin\Validation\Validator;
 
 use function Tests\setupMocks;
 

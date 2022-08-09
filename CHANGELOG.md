@@ -1,4 +1,4 @@
-# Change Log for the Andbrand Wp Plugin Block Forms Base
+# Change Log for the Seb FormsWp Plugin Block Forms Base
 
 All notable changes to this project will be documented in this file.
 

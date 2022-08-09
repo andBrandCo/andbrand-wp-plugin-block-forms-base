@@ -3,14 +3,14 @@
 /**
  * The class for sending emails.
  *
- * @package AndbrandWpPluginBlockFormsBase\Mailers
+ * @package SebFormsWpPlugin\Mailers
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Mailer;
+namespace SebFormsWpPlugin\Mailer;
 
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use SebFormsWpPlugin\Settings\SettingsHelper;
 
 /**
  * Class Mailer

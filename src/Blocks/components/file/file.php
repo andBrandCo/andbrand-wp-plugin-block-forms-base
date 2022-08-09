@@ -3,13 +3,13 @@
 /**
  * Template for the file Component.
  *
- * @package AndbrandWpPluginBlockFormsBase
+ * @package SebFormsWpPlugin
  */
 
-use AndbrandWpPluginBlockFormsBase\Blocks\Blocks;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
+use SebFormsWpPlugin\Blocks\Blocks;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\Settings\SettingsGeneral;
 
 $manifest = Components::getManifest(__DIR__);
 

@@ -3,18 +3,18 @@
 /**
  * Clearbit Client integration class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Clearbit
+ * @package SebFormsWpPlugin\Integrations\Clearbit
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Clearbit;
+namespace SebFormsWpPlugin\Integrations\Clearbit;
 
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
 
 /**
  * ClearbitClient integration class.

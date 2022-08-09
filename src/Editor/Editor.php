@@ -3,16 +3,16 @@
 /**
  * Class that holds all filter used the Block Editor page.
  *
- * @package AndbrandWpPluginBlockFormsBase\Editor
+ * @package SebFormsWpPlugin\Editor
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Editor;
+namespace SebFormsWpPlugin\Editor;
 
-use AndbrandWpPluginBlockFormsBase\AdminMenus\FormAdminMenu;
-use AndbrandWpPluginBlockFormsBase\CustomPostType\Forms;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\AdminMenus\FormAdminMenu;
+use SebFormsWpPlugin\CustomPostType\Forms;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Editor class.

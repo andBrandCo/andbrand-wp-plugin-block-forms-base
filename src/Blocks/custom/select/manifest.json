@@ -2,7 +2,7 @@
 	"blockName": "select",
 	"title": "Select",
 	"description" : "An item selection field",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-select"
 	},
@@ -14,26 +14,26 @@
 		"select": "select"
 	},
 	"parent": [
-		"andbrand-block-forms-base/form"
+		"seb-forms/form"
 	],
 	"example": {
 		"innerBlocks": [
 			{
-				"name": "andbrand-block-forms-base/select-option",
+				"name": "seb-forms/select-option",
 				"attributes": {
 					"selectOptionLabel": "Label1",
 					"selectOptionValue": "Value1"
 				}
 			},
 			{
-				"name": "andbrand-block-forms-base/select-option",
+				"name": "seb-forms/select-option",
 				"attributes": {
 					"selectOptionLabel": "Label2",
 					"selectOptionValue": "Value2"
 				}
 			},
 			{
-				"name": "andbrand-block-forms-base/select-option",
+				"name": "seb-forms/select-option",
 				"attributes": {
 					"selectOptionLabel": "Label3",
 					"selectOptionValue": "Value3"
@@ -48,19 +48,19 @@
 				"type": "string"
 			},
 			"default": [
-				"andbrand-block-forms-base/select-option"
+				"seb-forms/select-option"
 			]
 		}
 	},
 	"template": [
 		[
-			"andbrand-block-forms-base/select-option",
+			"seb-forms/select-option",
 			{
 				"selectOptionSelectOptionLabel": "Option 1"
 			}
 		],
 		[
-			"andbrand-block-forms-base/select-option",
+			"seb-forms/select-option",
 			{
 				"selectOptionSelectOptionLabel": "Option 2"
 			}

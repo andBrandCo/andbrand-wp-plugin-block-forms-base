@@ -76,7 +76,7 @@ export const FormsOptions = ({ attributes, setAttributes, preview }) => {
 		{
 			processLabel: ({ label }) => label,
 			processId: ({ value }) => value,
-			routePrefix: 'andbrand-block-forms-base/v1',
+			routePrefix: 'seb-forms/v1',
 			fields: 'label, value',
 			perPage: 500,
 		}
@@ -128,10 +128,10 @@ export const FormsOptions = ({ attributes, setAttributes, preview }) => {
 	};
 
 	return (
-		<PanelBody title={__('Andbrand Block Forms', 'andbrand-block-forms-base')}>
+		<PanelBody title={__('Seb FormsBlock Forms', 'seb-forms')}>
 			<CustomSelect
-				label={<IconLabel icon={<BlockIcon iconName='esf-form-picker' />} label={__('Form to display', 'andbrand-block-forms-base')} />}
-				help={__('If you can\'t find a form, start typing its name while the dropdown is open.', 'andbrand-block-forms-base')}
+				label={<IconLabel icon={<BlockIcon iconName='esf-form-picker' />} label={__('Form to display', 'seb-forms')} />}
+				help={__('If you can\'t find a form, start typing its name while the dropdown is open.', 'seb-forms')}
 				value={parseInt(formsFormPostId)}
 				loadOptions={formSelectOptions}
 				onChange={(value) => setAttributes({ [getAttrKey('formsFormPostId', attributes, manifest)]: value.toString() })}
@@ -147,30 +147,30 @@ export const FormsOptions = ({ attributes, setAttributes, preview }) => {
 						icon={icons.edit}
 						href={`${wpAdminUrl}${editFormUrl}&post=${formsFormPostId}`}
 					>
-						{__('Edit fields', 'andbrand-block-forms-base')}
+						{__('Edit fields', 'seb-forms')}
 					</Button>
 
 					<Button
 						icon={icons.options}
 						href={`${wpAdminUrl}${settingsPageUrl}&formId=${formsFormPostId}`}
 					>
-						{__('Form settings', 'andbrand-block-forms-base')}
+						{__('Form settings', 'seb-forms')}
 					</Button>
 				</div>
 			}
 
-			<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
+			<FancyDivider label={__('Advanced', 'seb-forms')} />
 
 			<TextControl
-				label={<IconLabel icon={icons.code} label={__('Type selector', 'andbrand-block-forms-base')} />}
-				help={__('Additional data type selectors', 'andbrand-block-forms-base')}
+				label={<IconLabel icon={icons.code} label={__('Type selector', 'seb-forms')} />}
+				help={__('Additional data type selectors', 'seb-forms')}
 				value={formsFormDataTypeSelector}
 				onChange={(value) => setAttributes({ [getAttrKey('formsFormDataTypeSelector', attributes, manifest)]: value })}
 			/>
 
 			{formsStyleOptions?.length > 0 &&
 				<CustomSelect
-					label={<IconLabel icon={icons.paletteColor} label={__('Form style preset', 'andbrand-block-forms-base')} />}
+					label={<IconLabel icon={icons.paletteColor} label={__('Form style preset', 'seb-forms')} />}
 					value={formsStyle}
 					options={formsStyleOptions}
 					onChange={(value) => setAttributes({ [getAttrKey('formsStyle', attributes, manifest)]: value })}
@@ -182,16 +182,16 @@ export const FormsOptions = ({ attributes, setAttributes, preview }) => {
 
 			{formsUseGeolocation &&
 				<>
-					<FancyDivider label={__('Geolocation', 'andbrand-block-forms-base')} />
+					<FancyDivider label={__('Geolocation', 'seb-forms')} />
 
 					<CustomSelect
-						label={<IconLabel icon={icons.locationAllow} label={__('Show form only if in countries', 'andbrand-block-forms-base')} />}
+						label={<IconLabel icon={icons.locationAllow} label={__('Show form only if in countries', 'seb-forms')} />}
 						help={
 							geoRepeater?.length > 0
-								? __('Overriden by geolocation rules.', 'andbrand-block-forms-base')
+								? __('Overriden by geolocation rules.', 'seb-forms')
 								: (
 									<>
-										<p>{__('If you can\'t find a country, start typing its name while the dropdown is open.', 'andbrand-block-forms-base')}</p>
+										<p>{__('If you can\'t find a country, start typing its name while the dropdown is open.', 'seb-forms')}</p>
 									</>
 								)
 						}
@@ -220,7 +220,7 @@ export const FormsOptions = ({ attributes, setAttributes, preview }) => {
 								isPressed={isGeoPreview}
 								onClick={() => setIsGeoPreview(!isGeoPreview)}
 							>
-								{__('Preview geolocation rules', 'andbrand-block-forms-base')}
+								{__('Preview geolocation rules', 'seb-forms')}
 							</Button>
 						</div>
 					}
@@ -235,10 +235,10 @@ export const FormsOptions = ({ attributes, setAttributes, preview }) => {
 							isDismissible={false}
 							onRequestClose={() => setIsModalOpen(false)}
 						>
-							<p>{__('Geolocation rules allow you to display alternate forms based on the user\'s location.', 'andbrand-block-forms-base')}</p>
-							<p>{__('If no rules are added and the "Show form only if in countries" field is populated, the form will only be shown in these countries. Otherwise, the form is shown everywhere.', 'andbrand-block-forms-base')}</p>
+							<p>{__('Geolocation rules allow you to display alternate forms based on the user\'s location.', 'seb-forms')}</p>
+							<p>{__('If no rules are added and the "Show form only if in countries" field is populated, the form will only be shown in these countries. Otherwise, the form is shown everywhere.', 'seb-forms')}</p>
 							{geolocationApi && 
-								<p>{__('You can find complete list of countries and regions on this', 'andbrand-block-forms-base')} <ExternalLink href={geolocationApi}>{__('link', 'eightshift-form')}</ExternalLink>.</p>
+								<p>{__('You can find complete list of countries and regions on this', 'seb-forms')} <ExternalLink href={geolocationApi}>{__('link', 'eightshift-form')}</ExternalLink>.</p>
 							}
 
 							<br />
@@ -253,8 +253,8 @@ export const FormsOptions = ({ attributes, setAttributes, preview }) => {
 
 							{geoRepeater?.length > 0 &&
 								<div className='es-fifty-fifty-auto-h es-has-wp-field-t-space'>
-									<IconLabel icon={<BlockIcon iconName='esf-form' />} label={__('Form to display', 'andbrand-block-forms-base')} standalone />
-									<IconLabel icon={icons.locationAllow} label={__('Countries to show the form in', 'andbrand-block-forms-base')} standalone />
+									<IconLabel icon={<BlockIcon iconName='esf-form' />} label={__('Form to display', 'seb-forms')} standalone />
+									<IconLabel icon={icons.locationAllow} label={__('Countries to show the form in', 'seb-forms')} standalone />
 									<div style={{ width: '2.25rem' }}>&nbsp;</div>
 								</div>
 							}

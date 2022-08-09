@@ -3,17 +3,17 @@
 /**
  * Class that holds data for admin forms listing.
  *
- * @package AndbrandWpPluginBlockFormsBase\Settings\Listing
+ * @package SebFormsWpPlugin\Settings\Listing
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Settings\Listing;
+namespace SebFormsWpPlugin\Settings\Listing;
 
-use AndbrandWpPluginBlockFormsBase\CustomPostType\Forms;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsLocation;
+use SebFormsWpPlugin\CustomPostType\Forms;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\Settings\SettingsLocation;
 use WP_Query;
 
 /**

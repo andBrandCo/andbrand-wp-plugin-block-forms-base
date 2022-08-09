@@ -3,14 +3,14 @@
 /**
  * The class for form validation.
  *
- * @package AndbrandWpPluginBlockFormsBase\Validation
+ * @package SebFormsWpPlugin\Validation
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Validation;
+namespace SebFormsWpPlugin\Validation;
 
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use SebFormsWpPlugin\Hooks\Filters;
 use Throwable;
 
 /**

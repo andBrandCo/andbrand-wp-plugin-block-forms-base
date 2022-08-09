@@ -3,12 +3,12 @@
 /**
  * Interface that holds all methods for building single form settings form.
  *
- * @package AndbrandWpPluginBlockFormsBase\Settings\Settings
+ * @package SebFormsWpPlugin\Settings\Settings
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Settings\Settings;
+namespace SebFormsWpPlugin\Settings\Settings;
 
 /**
  * Interface for SettingsDataInterface

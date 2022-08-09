@@ -3,11 +3,11 @@
 /**
  * Template for the Custom Data Block view.
  *
- * @package AndbrandWpPluginBlockFormsBase
+ * @package SebFormsWpPlugin
  */
 
-use AndbrandWpPluginBlockFormsBase\Blocks\BlockCustomData;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Blocks\BlockCustomData;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
 
 $manifest = Components::getManifest(__DIR__);
 $manifestInvalid = Components::getManifest(dirname(__DIR__, 2) . '/components/invalid');
@@ -41,9 +41,9 @@ if (!$block) {
 			<path d="M17.25 3.93524V16.1117C17.25 17.5688 14.0041 18.7499 10 18.7499C5.99594 18.7499 2.75 17.5688 2.75 16.1117V3.93524" stroke="currentColor" stroke-width="1.5"/>
 		</svg>
 		<br />
-		<b><?php esc_html_e('Custom data is not configured correctly.', 'andbrand-block-forms-base'); ?></b>
+		<b><?php esc_html_e('Custom data is not configured correctly.', 'seb-forms'); ?></b>
 		<br />
-		<?php esc_html_e('For this block to work, data needs to be provided through filters. Check the documentation for more details.', 'andbrand-block-forms-base'); ?>
+		<?php esc_html_e('For this block to work, data needs to be provided through filters. Check the documentation for more details.', 'seb-forms'); ?>
 	</div>
 <?php }
 

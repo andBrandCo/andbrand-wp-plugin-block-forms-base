@@ -3,7 +3,7 @@
 namespace Tests\Unit\Mailer;
 
 use Brain\Monkey;
-use AndbrandWpPluginBlockFormsBase\Mailer\Mailer;
+use SebFormsWpPlugin\Mailer\Mailer;
 
 use function Tests\setupMocks;
 

@@ -3,17 +3,17 @@
 namespace Tests\Unit\Integrations\Hubspot;
 
 use Brain\Monkey;
-use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\ClearbitClient;
-use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\ClearbitClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\SettingsClearbit;
-use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\SettingsClearbitDataInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\Hubspot;
-use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\HubspotClient;
-use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\HubspotClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\SettingsHubspot;
-use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
-use AndbrandWpPluginBlockFormsBase\Labels\Labels;
-use AndbrandWpPluginBlockFormsBase\Validation\Validator;
+use SebFormsWpPlugin\Integrations\Clearbit\ClearbitClient;
+use SebFormsWpPlugin\Integrations\Clearbit\ClearbitClientInterface;
+use SebFormsWpPlugin\Integrations\Clearbit\SettingsClearbit;
+use SebFormsWpPlugin\Integrations\Clearbit\SettingsClearbitDataInterface;
+use SebFormsWpPlugin\Integrations\Hubspot\Hubspot;
+use SebFormsWpPlugin\Integrations\Hubspot\HubspotClient;
+use SebFormsWpPlugin\Integrations\Hubspot\HubspotClientInterface;
+use SebFormsWpPlugin\Integrations\Hubspot\SettingsHubspot;
+use SebFormsWpPlugin\Integrations\MapperInterface;
+use SebFormsWpPlugin\Labels\Labels;
+use SebFormsWpPlugin\Validation\Validator;
 
 use function Tests\setupMocks;
 

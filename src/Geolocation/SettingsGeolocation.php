@@ -3,17 +3,17 @@
 /**
  * Geolocation Settings class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Geolocation
+ * @package SebFormsWpPlugin\Geolocation
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Geolocation;
+namespace SebFormsWpPlugin\Geolocation;
 
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\Settings\SettingsDataInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsGeolocation class.
@@ -80,7 +80,7 @@ class SettingsGeolocation implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Geolocation', 'andbrand-block-forms-base'),
+			'label' => \__('Geolocation', 'seb-forms'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -108,8 +108,8 @@ class SettingsGeolocation implements SettingsDataInterface, ServiceInterface
 		return [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Geolocation', 'andbrand-block-forms-base'),
-				'introSubtitle' => \__('Allows conditionally rendering different forms based on the user\'s location. Uses a local geolocation API. Consult documentation for more info.', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Geolocation', 'seb-forms'),
+				'introSubtitle' => \__('Allows conditionally rendering different forms based on the user\'s location. Uses a local geolocation API. Consult documentation for more info.', 'seb-forms'),
 			],
 			[
 				'component' => 'checkboxes',
@@ -120,7 +120,7 @@ class SettingsGeolocation implements SettingsDataInterface, ServiceInterface
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use geolocation', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('Use geolocation', 'seb-forms'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GEOLOCATION_USE_KEY, self::SETTINGS_GEOLOCATION_USE_KEY),
 						'checkboxValue' => self::SETTINGS_GEOLOCATION_USE_KEY,
 						'checkboxSingleSubmit' => true,

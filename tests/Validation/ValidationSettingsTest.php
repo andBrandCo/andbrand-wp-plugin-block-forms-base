@@ -3,10 +3,10 @@
 namespace Tests\Unit\Validation;
 
 use Brain\Monkey;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Validation\SettingsValidation;
-use AndbrandWpPluginBlockFormsBase\Labels\Labels;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Validation\SettingsValidation;
+use SebFormsWpPlugin\Labels\Labels;
+use SebFormsWpPlugin\Labels\LabelsInterface;
 
 use function Tests\setupMocks;
 

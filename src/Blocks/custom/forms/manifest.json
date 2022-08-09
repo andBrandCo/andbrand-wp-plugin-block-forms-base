@@ -1,8 +1,8 @@
 {
 	"blockName": "forms",
-	"title": "Andbrand Block Forms",
+	"title": "Seb FormsBlock Forms",
 	"description" : "Allows selecting the form that should be displayed",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-form"
 	},
@@ -34,5 +34,5 @@
 			"default": false
 		}
 	},
-	"postType": "andbrand-block-forms-base"
+	"postType": "seb-forms"
 }

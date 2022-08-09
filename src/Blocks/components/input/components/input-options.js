@@ -46,7 +46,7 @@ export const InputOptions = (attributes) => {
 		showInputMax = true,
 		showInputStep = true,
 
-		title = __('Input', 'andbrand-block-forms-base'),
+		title = __('Input', 'seb-forms'),
 	} = attributes;
 
 	const inputName = checkAttr('inputName', attributes, manifest);
@@ -83,8 +83,8 @@ export const InputOptions = (attributes) => {
 
 				{showInputPlaceholder &&
 					<TextControl
-						label={<IconLabel icon={icons.fieldPlaceholder} label={__('Placeholder', 'andbrand-block-forms-base')} />}
-						help={__('Shown when the field is empty', 'andbrand-block-forms-base')}
+						label={<IconLabel icon={icons.fieldPlaceholder} label={__('Placeholder', 'seb-forms')} />}
+						help={__('Shown when the field is empty', 'seb-forms')}
 						value={inputPlaceholder}
 						onChange={(value) => setAttributes({ [getAttrKey('inputPlaceholder', attributes, manifest)]: value })}
 					/>
@@ -92,7 +92,7 @@ export const InputOptions = (attributes) => {
 
 				{showInputType &&
 					<CustomSelect
-						label={<IconLabel icon={icons.fieldType} label={__('Input value kind', 'andbrand-block-forms-base')} />}
+						label={<IconLabel icon={icons.fieldType} label={__('Input value kind', 'seb-forms')} />}
 						value={inputType}
 						options={getOption('inputType', attributes, manifest)}
 						onChange={(value) => {
@@ -122,12 +122,12 @@ export const InputOptions = (attributes) => {
 
 				{showInputAdvancedOptions &&
 					<>
-						<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
+						<FancyDivider label={__('Advanced', 'seb-forms')} />
 
 						{showInputName &&
 							<TextControl
-								label={<IconLabel icon={icons.fieldName} label={__('Name', 'andbrand-block-forms-base')} />}
-								help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'andbrand-block-forms-base')}
+								label={<IconLabel icon={icons.fieldName} label={__('Name', 'seb-forms')} />}
+								help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'seb-forms')}
 								value={inputName}
 								onChange={(value) => setAttributes({ [getAttrKey('inputName', attributes, manifest)]: value })}
 							/>
@@ -135,7 +135,7 @@ export const InputOptions = (attributes) => {
 
 						{showInputValue &&
 							<TextControl
-								label={<IconLabel icon={icons.fieldValue} label={__('Initial value', 'andbrand-block-forms-base')} />}
+								label={<IconLabel icon={icons.fieldValue} label={__('Initial value', 'seb-forms')} />}
 								value={inputValue}
 								onChange={(value) => setAttributes({ [getAttrKey('inputValue', attributes, manifest)]: value })}
 							/>
@@ -148,7 +148,7 @@ export const InputOptions = (attributes) => {
 									isPressed={inputIsReadOnly}
 									onClick={() => setAttributes({ [getAttrKey('inputIsReadOnly', attributes, manifest)]: !inputIsReadOnly })}
 								>
-									{__('Read-only', 'andbrand-block-forms-base')}
+									{__('Read-only', 'seb-forms')}
 								</Button>
 							}
 
@@ -159,7 +159,7 @@ export const InputOptions = (attributes) => {
 									isPressed={inputIsDisabled}
 									onClick={() => setAttributes({ [getAttrKey('inputIsDisabled', attributes, manifest)]: !inputIsDisabled })}
 								>
-									{__('Disabled', 'andbrand-block-forms-base')}
+									{__('Disabled', 'seb-forms')}
 								</Button>
 							}
 						</div>
@@ -168,7 +168,7 @@ export const InputOptions = (attributes) => {
 
 				{showInputValidationOptions &&
 					<>
-						<FancyDivider label={__('Validation', 'andbrand-block-forms-base')} />
+						<FancyDivider label={__('Validation', 'seb-forms')} />
 
 						<div className='es-h-spaced-wrap'>
 							{showInputIsRequired &&
@@ -177,7 +177,7 @@ export const InputOptions = (attributes) => {
 									isPressed={inputIsRequired}
 									onClick={() => setAttributes({ [getAttrKey('inputIsRequired', attributes, manifest)]: !inputIsRequired })}
 								>
-									{__('Required', 'andbrand-block-forms-base')}
+									{__('Required', 'seb-forms')}
 								</Button>
 							}
 
@@ -187,13 +187,13 @@ export const InputOptions = (attributes) => {
 									isPressed={inputValidationPattern?.length > 0}
 									onClick={() => setShowValidation(true)}
 								>
-									{__('Pattern validation', 'andbrand-block-forms-base')}
+									{__('Pattern validation', 'seb-forms')}
 
 									{showValidation &&
 										<Popover noArrow={false} onClose={() => setShowValidation(false)}>
 											<div className='es-popover-content'>
 												<SimpleVerticalSingleSelect
-													label={__('Validation pattern', 'andbrand-block-forms-base')}
+													label={__('Validation pattern', 'seb-forms')}
 													options={inputValidationPatternOptions.map(({ label, value }) => ({
 														onClick: () => setAttributes({ [getAttrKey('inputValidationPattern', attributes, manifest)]: value }),
 														label: label,
@@ -208,13 +208,13 @@ export const InputOptions = (attributes) => {
 						</div>
 
 						{(showInputMinLength || showInputMaxLength) &&
-							<FancyDivider label={__('Entry length', 'andbrand-block-forms-base')} />
+							<FancyDivider label={__('Entry length', 'seb-forms')} />
 						}
 
 						{showInputMinLength &&
 							<>
 								<CustomSlider
-									label={<IconLabel icon={icons.rangeMin} label={__('Smallest allowed length', 'andbrand-block-forms-base')} />}
+									label={<IconLabel icon={icons.rangeMin} label={__('Smallest allowed length', 'seb-forms')} />}
 									value={inputMinLength ?? 0}
 									onChange={(value) => setAttributes({ [getAttrKey('inputMinLength', attributes, manifest)]: value })}
 									min={options.inputMinLength.min}
@@ -222,7 +222,7 @@ export const InputOptions = (attributes) => {
 									hasValueDisplay
 									rightAddition={
 										<Button
-											label={__('Reset', 'andbrand-block-forms-base')}
+											label={__('Reset', 'seb-forms')}
 											icon={icons.rotateLeft}
 											onClick={() => setAttributes({ [getAttrKey('inputMinLength', attributes, manifest)]: undefined })}
 											isSmall
@@ -236,7 +236,7 @@ export const InputOptions = (attributes) => {
 
 						{showInputMaxLength &&
 							<CustomSlider
-								label={<IconLabel icon={icons.rangeMax} label={__('Largest allowed length', 'andbrand-block-forms-base')} />}
+								label={<IconLabel icon={icons.rangeMax} label={__('Largest allowed length', 'seb-forms')} />}
 								value={inputMaxLength ?? 0}
 								onChange={(value) => setAttributes({ [getAttrKey('inputMaxLength', attributes, manifest)]: value })}
 								min={options.inputMaxLength.min}
@@ -244,7 +244,7 @@ export const InputOptions = (attributes) => {
 								hasValueDisplay
 								rightAddition={
 									<Button
-										label={__('Reset', 'andbrand-block-forms-base')}
+										label={__('Reset', 'seb-forms')}
 										icon={icons.rotateLeft}
 										onClick={() => setAttributes({ [getAttrKey('inputMaxLength', attributes, manifest)]: undefined })}
 										isSmall
@@ -256,13 +256,13 @@ export const InputOptions = (attributes) => {
 						}
 
 						{inputType === 'number' &&
-							<FancyDivider label={__('Number entry', 'andbrand-block-forms-base')} />
+							<FancyDivider label={__('Number entry', 'seb-forms')} />
 						}
 
 						{(inputType === 'number' && showInputMin) &&
 							<>
 								<CustomSlider
-									label={<IconLabel icon={icons.rangeMin} label={__('Smallest allowed number', 'andbrand-block-forms-base')} />}
+									label={<IconLabel icon={icons.rangeMin} label={__('Smallest allowed number', 'seb-forms')} />}
 									value={inputMin ?? 0}
 									onChange={(value) => setAttributes({ [getAttrKey('inputMin', attributes, manifest)]: value })}
 									min={options.inputMin.min}
@@ -270,7 +270,7 @@ export const InputOptions = (attributes) => {
 									hasValueDisplay
 									rightAddition={
 										<Button
-											label={__('Reset', 'andbrand-block-forms-base')}
+											label={__('Reset', 'seb-forms')}
 											icon={icons.rotateLeft}
 											onClick={() => setAttributes({ [getAttrKey('inputMin', attributes, manifest)]: undefined })}
 											isSmall
@@ -284,7 +284,7 @@ export const InputOptions = (attributes) => {
 
 						{(inputType === 'number' && showInputMax) &&
 							<CustomSlider
-								label={<IconLabel icon={icons.rangeMax} label={__('Largest allowed number', 'andbrand-block-forms-base')} />}
+								label={<IconLabel icon={icons.rangeMax} label={__('Largest allowed number', 'seb-forms')} />}
 								value={inputMax ?? 0}
 								onChange={(value) => setAttributes({ [getAttrKey('inputMax', attributes, manifest)]: value })}
 								min={options.inputMax.min}
@@ -292,7 +292,7 @@ export const InputOptions = (attributes) => {
 								hasValueDisplay
 								rightAddition={
 									<Button
-										label={__('Reset', 'andbrand-block-forms-base')}
+										label={__('Reset', 'seb-forms')}
 										icon={icons.rotateLeft}
 										onClick={() => setAttributes({ [getAttrKey('inputMax', attributes, manifest)]: undefined })}
 										isSmall
@@ -305,7 +305,7 @@ export const InputOptions = (attributes) => {
 
 						{(inputType === 'number' && showInputStep) &&
 							<CustomSlider
-								label={<IconLabel icon={icons.step} label={__('Increment step', 'andbrand-block-forms-base')} />}
+								label={<IconLabel icon={icons.step} label={__('Increment step', 'seb-forms')} />}
 								value={inputStep ?? 1}
 								onChange={(value) => setAttributes({ [getAttrKey('inputStep', attributes, manifest)]: value })}
 								min={options.inputStep.min}
@@ -313,7 +313,7 @@ export const InputOptions = (attributes) => {
 								hasValueDisplay
 								rightAddition={
 									<Button
-										label={__('Reset', 'andbrand-block-forms-base')}
+										label={__('Reset', 'seb-forms')}
 										icon={icons.rotateLeft}
 										onClick={() => setAttributes({ [getAttrKey('inputStep', attributes, manifest)]: undefined })}
 										isSmall
@@ -328,11 +328,11 @@ export const InputOptions = (attributes) => {
 
 				{showInputAdvancedOptions &&
 					<>
-						<FancyDivider label={__('Tracking', 'andbrand-block-forms-base')} />
+						<FancyDivider label={__('Tracking', 'seb-forms')} />
 
 						{showInputTracking &&
 							<TextControl
-								label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'andbrand-block-forms-base')} />}
+								label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'seb-forms')} />}
 								value={inputTracking}
 								onChange={(value) => setAttributes({ [getAttrKey('inputTracking', attributes, manifest)]: value })}
 							/>

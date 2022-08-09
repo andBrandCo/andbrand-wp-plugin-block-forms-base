@@ -3,16 +3,16 @@
 /**
  * The class register route for deleting transient cache endpoint
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\AdminMenus\FormSettingsAdminSubMenu;
-use AndbrandWpPluginBlockFormsBase\Cache\SettingsCache;
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
+use SebFormsWpPlugin\AdminMenus\FormSettingsAdminSubMenu;
+use SebFormsWpPlugin\Cache\SettingsCache;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
 use WP_REST_Request;
 
 /**

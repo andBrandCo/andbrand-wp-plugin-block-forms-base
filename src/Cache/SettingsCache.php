@@ -3,22 +3,22 @@
 /**
  * Cache Settings class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Cache
+ * @package SebFormsWpPlugin\Cache
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Cache;
+namespace SebFormsWpPlugin\Cache;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\GreenhouseClient;
-use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\HubspotClient;
-use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\MailchimpClient;
-use AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite\MailerliteClient;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings\SettingsGlobalDataInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Integrations\Greenhouse\GreenhouseClient;
+use SebFormsWpPlugin\Integrations\Hubspot\HubspotClient;
+use SebFormsWpPlugin\Integrations\Mailchimp\MailchimpClient;
+use SebFormsWpPlugin\Integrations\Mailerlite\MailerliteClient;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Settings\GlobalSettings\SettingsGlobalDataInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsCache class.
@@ -87,7 +87,7 @@ class SettingsCache implements SettingsGlobalDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Clear cache', 'andbrand-block-forms-base'),
+			'label' => \__('Clear cache', 'seb-forms'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -103,8 +103,8 @@ class SettingsCache implements SettingsGlobalDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Clear cache', 'andbrand-block-forms-base'),
-				'introSubtitle' => \__('Use the buttons below to clear the cache if the entry you\'re looking for isn\'t available or has changed.', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Clear cache', 'seb-forms'),
+				'introSubtitle' => \__('Use the buttons below to clear the cache if the entry you\'re looking for isn\'t available or has changed.', 'seb-forms'),
 			]
 		];
 

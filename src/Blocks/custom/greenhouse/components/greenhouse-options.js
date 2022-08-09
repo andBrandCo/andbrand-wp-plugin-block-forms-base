@@ -14,16 +14,16 @@ export const GreenhouseOptions = ({ postId }) => {
 	const wpAdminUrl = esFormsBlocksLocalization.wpAdminUrl;
 
 	return (
-		<PanelBody title={__('Greenhouse', 'andbrand-block-forms-base')}>
+		<PanelBody title={__('Greenhouse', 'seb-forms')}>
 			<BaseControl
-				label={<IconLabel icon={icons.options} label={__('Settings', 'andbrand-block-forms-base')} />}
-				help={__('On Greenhouse settings page you can setup all details regarding you integration.', 'andbrand-block-forms-base')}
+				label={<IconLabel icon={icons.options} label={__('Settings', 'seb-forms')} />}
+				help={__('On Greenhouse settings page you can setup all details regarding you integration.', 'seb-forms')}
 			>
 				<Button
 					href={`${wpAdminUrl}${settingsPageUrl}&formId=${postId}&type=greenhouse`}
 					isSecondary
 				>
-					{__('Open Greenhouse Form Settings', 'andbrand-block-forms-base')}
+					{__('Open Greenhouse Form Settings', 'seb-forms')}
 				</Button>
 			</BaseControl>
 		</PanelBody>

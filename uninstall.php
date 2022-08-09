@@ -3,7 +3,7 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @package AndbrandWpPluginBlockFormsBase
+ * @package SebFormsWpPlugin
  */
 
 declare(strict_types=1);

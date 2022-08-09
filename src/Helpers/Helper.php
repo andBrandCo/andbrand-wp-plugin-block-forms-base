@@ -8,14 +8,14 @@
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Helpers;
+namespace SebFormsWpPlugin\Helpers;
 
-use AndbrandWpPluginBlockFormsBase\AdminMenus\FormGlobalSettingsAdminSubMenu;
-use AndbrandWpPluginBlockFormsBase\AdminMenus\FormSettingsAdminSubMenu;
-use AndbrandWpPluginBlockFormsBase\AdminMenus\FormListingAdminSubMenu;
-use AndbrandWpPluginBlockFormsBase\CustomPostType\Forms;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
+use SebFormsWpPlugin\AdminMenus\FormGlobalSettingsAdminSubMenu;
+use SebFormsWpPlugin\AdminMenus\FormSettingsAdminSubMenu;
+use SebFormsWpPlugin\AdminMenus\FormListingAdminSubMenu;
+use SebFormsWpPlugin\CustomPostType\Forms;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Settings\Settings\SettingsGeneral;
 
 /**
  * Helper class.

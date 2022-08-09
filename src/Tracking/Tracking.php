@@ -3,15 +3,15 @@
 /**
  * Tracking class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Tracking
+ * @package SebFormsWpPlugin\Tracking
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Tracking;
+namespace SebFormsWpPlugin\Tracking;
 
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
 
 /**
  * Tracking class.

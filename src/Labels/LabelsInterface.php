@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Labels;
+namespace SebFormsWpPlugin\Labels;
 
 /**
  * Labels Interface.

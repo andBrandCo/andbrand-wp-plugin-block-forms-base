@@ -2,7 +2,7 @@
 	"blockName": "goodbits",
 	"title": "Goodbits Form",
 	"description" : "A Goodbits subscription form",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-form-goodbits"
 	},
@@ -24,6 +24,6 @@
 		}
 	},
 	"parent": [
-		"andbrand-block-forms-base/form-selector"
+		"seb-forms/form-selector"
 	]
 }

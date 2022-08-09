@@ -6,7 +6,7 @@
 [![license](https://img.shields.io/github/license/infinum/eightshift-forms.svg?style=for-the-badge)](https://github.com/infinum/eightshift-forms)
 [![codecov](https://img.shields.io/codecov/c/gh/infinum/eightshift-forms/branch/develop?label=Codecov&style=for-the-badge&token=02Lfa2jjoK)](https://codecov.io/gh/infinum/eightshift-forms)
 
-# Andbrand Wp Plugin Block Forms Base Plugin
+# Seb FormsWp Plugin Block Forms Base Plugin
 
 This is a form builder plugin by Eightshift.
 

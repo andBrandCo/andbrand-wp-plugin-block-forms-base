@@ -3,15 +3,15 @@
 /**
  * The class register route for public form submiting endpoint - custom
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
+use SebFormsWpPlugin\Labels\LabelsInterface;
 
 /**
  * Class FormSubmitCustomRoute

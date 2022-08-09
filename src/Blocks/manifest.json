@@ -1,5 +1,5 @@
 {
-	"namespace": "andbrand-block-forms-base",
+	"namespace": "seb-forms",
 	"background": "#29A3A3",
 	"foreground": "#FBF9FF",
 	"blockClassPrefix": "es-block",
@@ -13,7 +13,7 @@
 		"useWrapper": false
 	},
 	"globalVariables": {
-		"customBlocksName": "eightshift-block",
+		"customBlocksName": "seb-forms-block",
 		"esMaxCols": 12,
 		"esSpacingVertical": "25px",
 		"esSpacingHorizontal": "30px",

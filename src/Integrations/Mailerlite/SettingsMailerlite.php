@@ -3,22 +3,22 @@
 /**
  * Mailerlite Settings class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite
+ * @package SebFormsWpPlugin\Integrations\Mailerlite
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite;
+namespace SebFormsWpPlugin\Integrations\Mailerlite;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Integrations\MapperInterface;
+use SebFormsWpPlugin\Settings\Settings\SettingsDataInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsMailerlite class.
@@ -162,7 +162,7 @@ class SettingsMailerlite implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('MailerLite', 'andbrand-block-forms-base'),
+			'label' => \__('MailerLite', 'seb-forms'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -181,9 +181,9 @@ class SettingsMailerlite implements SettingsDataInterface, ServiceInterface
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Some config required', 'andbrand-block-forms-base'),
+					'highlightedContentTitle' => \__('Some config required', 'seb-forms'),
 					// translators: %s will be replaced with the global settings url.
-					'highlightedContentSubtitle' => \sprintf(\__('Before using MailerLite you need to configure it in  <a href="%s">global settings</a>.', 'andbrand-block-forms-base'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
+					'highlightedContentSubtitle' => \sprintf(\__('Before using MailerLite you need to configure it in  <a href="%s">global settings</a>.', 'seb-forms'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
 					'highlightedContentIcon' => 'tools',
 				],
 			];
@@ -197,8 +197,8 @@ class SettingsMailerlite implements SettingsDataInterface, ServiceInterface
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Something went wrong', 'andbrand-block-forms-base'),
-					'highlightedContentSubtitle' => \__('Data from MailerLite couldn\'t be fetched. Check the API key.', 'andbrand-block-forms-base'),
+					'highlightedContentTitle' => \__('Something went wrong', 'seb-forms'),
+					'highlightedContentSubtitle' => \__('Data from MailerLite couldn\'t be fetched. Check the API key.', 'seb-forms'),
 					'highlightedContentIcon' => 'error',
 				],
 			];
@@ -232,15 +232,15 @@ class SettingsMailerlite implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('MailerLite', 'andbrand-block-forms-base'),
+				'introTitle' => \__('MailerLite', 'seb-forms'),
 			],
 			[
 				'component' => 'select',
 				'selectName' => $this->getSettingsName(self::SETTINGS_MAILERLITE_LIST_KEY),
 				'selectId' => $this->getSettingsName(self::SETTINGS_MAILERLITE_LIST_KEY),
-				'selectFieldLabel' => \__('Mailing list', 'andbrand-block-forms-base'),
+				'selectFieldLabel' => \__('Mailing list', 'seb-forms'),
 				// translators: %1$s will be replaced with js selector, %2$s will be replaced with the cache type, %3$s will be replaced with latest update time.
-				'selectFieldHelp' => \sprintf(\__('If a list isn\'t showing up or is missing some items, try <a href="#" class="%1$s" data-type="%2$s">clearing the cache</a>. Last updated: %3$s.', 'andbrand-block-forms-base'), $manifestForm['componentCacheJsClass'], self::SETTINGS_TYPE_KEY, $lastUpdatedTime),
+				'selectFieldHelp' => \sprintf(\__('If a list isn\'t showing up or is missing some items, try <a href="#" class="%1$s" data-type="%2$s">clearing the cache</a>. Last updated: %3$s.', 'seb-forms'), $manifestForm['componentCacheJsClass'], self::SETTINGS_TYPE_KEY, $lastUpdatedTime),
 				'selectOptions' => $itemOptions,
 				'selectIsRequired' => true,
 				'selectValue' => $selectedItem,
@@ -265,9 +265,9 @@ class SettingsMailerlite implements SettingsDataInterface, ServiceInterface
 					],
 					[
 						'component' => 'intro',
-						'introTitle' => \__('Form fields', 'andbrand-block-forms-base'),
+						'introTitle' => \__('Form fields', 'seb-forms'),
 						'introTitleSize' => 'medium',
-						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'andbrand-block-forms-base'),
+						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'seb-forms'),
 					],
 					[
 						'component' => 'group',
@@ -300,11 +300,11 @@ class SettingsMailerlite implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('MailerLite', 'andbrand-block-forms-base'),
+				'introTitle' => \__('MailerLite', 'seb-forms'),
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('How to get the API key?', 'andbrand-block-forms-base'),
+				'introTitle' => \__('How to get the API key?', 'seb-forms'),
 				'introTitleSize' => 'small',
 				'introSubtitle' => \__('
 					<ol>
@@ -312,7 +312,7 @@ class SettingsMailerlite implements SettingsDataInterface, ServiceInterface
 						<li>Go to <a target="_blank" href="https://app.mailerlite.com/integrations/api/">Developer API</a>.</li>
 						<li>Copy the API key into the field below or use the global constant.</li>
 					<ol>
-				', 'andbrand-block-forms-base'),
+				', 'seb-forms'),
 			],
 			[
 				'component' => 'divider',
@@ -326,7 +326,7 @@ class SettingsMailerlite implements SettingsDataInterface, ServiceInterface
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use MailerLite', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('Use MailerLite', 'seb-forms'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_MAILERLITE_USE_KEY, self::SETTINGS_MAILERLITE_USE_KEY),
 						'checkboxValue' => self::SETTINGS_MAILERLITE_USE_KEY,
 						'checkboxSingleSubmit' => true,
@@ -345,8 +345,8 @@ class SettingsMailerlite implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_MAILERLITE_API_KEY_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_MAILERLITE_API_KEY_KEY),
-						'inputFieldLabel' => \__('API key', 'andbrand-block-forms-base'),
-						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'andbrand-block-forms-base'),
+						'inputFieldLabel' => \__('API key', 'seb-forms'),
+						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'seb-forms'),
 						'inputType' => 'password',
 						'inputIsRequired' => true,
 						'inputValue' => !empty($apiKey) ? 'xxxxxxxxxxxxxxxx' : $this->getOptionValue(self::SETTINGS_MAILERLITE_API_KEY_KEY),

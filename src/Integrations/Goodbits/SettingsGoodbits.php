@@ -3,21 +3,21 @@
 /**
  * Goodbits Settings class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Goodbits
+ * @package SebFormsWpPlugin\Integrations\Goodbits
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Goodbits;
+namespace SebFormsWpPlugin\Integrations\Goodbits;
 
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Integrations\MapperInterface;
+use SebFormsWpPlugin\Settings\Settings\SettingsDataInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsGoodbits class.
@@ -161,7 +161,7 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Goodbits', 'andbrand-block-forms-base'),
+			'label' => \__('Goodbits', 'seb-forms'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -180,9 +180,9 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Some config required', 'andbrand-block-forms-base'),
+					'highlightedContentTitle' => \__('Some config required', 'seb-forms'),
 					// translators: %s will be replaced with the global settings url.
-					'highlightedContentSubtitle' => \sprintf(\__('Before using Goodbits you need to configure it in  <a href="%s">global settings</a>.', 'andbrand-block-forms-base'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
+					'highlightedContentSubtitle' => \sprintf(\__('Before using Goodbits you need to configure it in  <a href="%s">global settings</a>.', 'seb-forms'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
 					'highlightedContentIcon' => 'tools',
 				],
 			];
@@ -194,8 +194,8 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Something went wrong', 'andbrand-block-forms-base'),
-					'highlightedContentSubtitle' => \__('Data from Goodbits couldn\'t be fetched. Check the API key.', 'andbrand-block-forms-base'),
+					'highlightedContentTitle' => \__('Something went wrong', 'seb-forms'),
+					'highlightedContentSubtitle' => \__('Data from Goodbits couldn\'t be fetched. Check the API key.', 'seb-forms'),
 					'highlightedContentIcon' => 'error',
 				],
 			];
@@ -227,13 +227,13 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Goodbits', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Goodbits', 'seb-forms'),
 			],
 			[
 				'component' => 'select',
 				'selectName' => $this->getSettingsName(self::SETTINGS_GOODBITS_LIST_KEY),
 				'selectId' => $this->getSettingsName(self::SETTINGS_GOODBITS_LIST_KEY),
-				'selectFieldLabel' => \__('List', 'andbrand-block-forms-base'),
+				'selectFieldLabel' => \__('List', 'seb-forms'),
 				'selectOptions' => $itemOptions,
 				'selectIsRequired' => true,
 				'selectValue' => $selectedItem,
@@ -258,9 +258,9 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 					],
 					[
 						'component' => 'intro',
-						'introTitle' => \__('Form fields', 'andbrand-block-forms-base'),
+						'introTitle' => \__('Form fields', 'seb-forms'),
 						'introTitleSize' => 'medium',
-						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'andbrand-block-forms-base'),
+						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'seb-forms'),
 					],
 					[
 						'component' => 'group',
@@ -293,18 +293,18 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Goodbits', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Goodbits', 'seb-forms'),
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('How to get the API key?', 'andbrand-block-forms-base'),
+				'introTitle' => \__('How to get the API key?', 'seb-forms'),
 				'introTitleSize' => 'small',
 				// phpcs:ignore WordPress.WP.I18n.NoHtmlWrappedStrings
 				'introSubtitle' => \__('<ol>
 						<li>Log in to your Goodbits Account.</li>
 						<li>Go to <strong>Settings</strong>, then click <strong><a target="_blank" href="https://app.Goodbits.com/integrations/api/">API</a></strong>.</li>
 						<li>Copy the API key into the field below or use the global constant</li>
-					</ol>', 'andbrand-block-forms-base'),
+					</ol>', 'seb-forms'),
 			],
 			[
 				'component' => 'divider',
@@ -318,7 +318,7 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use Goodbits', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('Use Goodbits', 'seb-forms'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_GOODBITS_USE_KEY, self::SETTINGS_GOODBITS_USE_KEY),
 						'checkboxValue' => self::SETTINGS_GOODBITS_USE_KEY,
 						'checkboxSingleSubmit' => true,
@@ -337,8 +337,8 @@ class SettingsGoodbits implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_GOODBITS_API_KEY_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_GOODBITS_API_KEY_KEY),
-						'inputFieldLabel' => \__('API key', 'andbrand-block-forms-base'),
-						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'andbrand-block-forms-base'),
+						'inputFieldLabel' => \__('API key', 'seb-forms'),
+						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'seb-forms'),
 						'inputType' => 'password',
 						'inputIsRequired' => true,
 						'inputValue' => !empty($apiKey) ? 'xxxxxxxxxxxxxxxx' : $this->getOptionValue(self::SETTINGS_GOODBITS_API_KEY_KEY),

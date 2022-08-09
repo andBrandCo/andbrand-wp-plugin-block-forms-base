@@ -3,16 +3,16 @@
 /**
  * Class that holds data for admin forms settings.
  *
- * @package AndbrandWpPluginBlockFormsBase\Settings\Settings
+ * @package SebFormsWpPlugin\Settings\Settings
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Settings\Settings;
+namespace SebFormsWpPlugin\Settings\Settings;
 
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
-use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use SebFormsWpPlugin\Settings\Settings\SettingsGeneral;
+use SebFormsWpPlugin\Form\AbstractFormBuilder;
+use SebFormsWpPlugin\Hooks\Filters;
 
 /**
  * SettingsAll class.

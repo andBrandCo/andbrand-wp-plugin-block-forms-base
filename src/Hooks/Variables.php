@@ -3,12 +3,12 @@
 /**
  * The Variables class, used for defining available variables.
  *
- * @package AndbrandWpPluginBlockFormsBase\Hooks
+ * @package SebFormsWpPlugin\Hooks
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Hooks;
+namespace SebFormsWpPlugin\Hooks;
 
 /**
  * The Variables class, used for defining available Variables.

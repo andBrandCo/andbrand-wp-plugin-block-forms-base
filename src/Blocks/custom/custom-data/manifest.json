@@ -2,7 +2,7 @@
 	"blockName": "custom-data",
 	"title": "Custom data",
 	"description" : "A field that displays custom data from a data source",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-custom-data"
 	},
@@ -33,7 +33,7 @@
 		}
 	},
 	"parent": [
-		"andbrand-block-forms-base/form"
+		"seb-forms/form"
 	],
 	"components": {
 		"select": "select",

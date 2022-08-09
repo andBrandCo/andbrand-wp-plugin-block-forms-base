@@ -3,14 +3,14 @@
 /**
  * Class that holds class for FormsPostType custom post type registration.
  *
- * @package AndbrandWpPluginBlockFormsBase\CustomPostType
+ * @package SebFormsWpPlugin\CustomPostType
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\CustomPostType;
+namespace SebFormsWpPlugin\CustomPostType;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\CustomPostType\AbstractPostType;
+use SebFormsWpPluginVendor\EightshiftLibs\CustomPostType\AbstractPostType;
 
 /**
  * Class FormsPostType.
@@ -22,35 +22,35 @@ class Forms extends AbstractPostType
 	 *
 	 * @var string
 	 */
-	public const POST_TYPE_SLUG = 'andbrand-block-forms';
+	public const POST_TYPE_SLUG = 'seb-block-forms';
 
 	/**
 	 * URL slug for the custom post type.
 	 *
 	 * @var string
 	 */
-	public const POST_TYPE_URL_SLUG = 'andbrand-block-forms';
+	public const POST_TYPE_URL_SLUG = 'seb-block-forms';
 
 	/**
 	 * Rest API Endpoint slug constant.
 	 *
 	 * @var string
 	 */
-	public const REST_API_ENDPOINT_SLUG = 'andbrand-block-forms';
+	public const REST_API_ENDPOINT_SLUG = 'seb-block-forms';
 
 	/**
 	 * Post type slug constant.
 	 *
 	 * @var string
 	 */
-	public const POST_CAPABILITY_TYPE = 'andbrand_block_forms';
+	public const POST_CAPABILITY_TYPE = 'seb_block_forms';
 
 	/**
 	 * Browser url slug constant.
 	 *
 	 * @var string
 	 */
-	public const URL_SLUG = 'andbrand-block-forms';
+	public const URL_SLUG = 'seb-block-forms';
 
 	/**
 	 * Location of menu in sidebar.
@@ -85,12 +85,12 @@ class Forms extends AbstractPostType
 	{
 		$template = [
 			[
-				'andbrand-block-forms-base/form-selector', [], []
+				'seb-forms/form-selector', [], []
 			]
 		];
 
 		return [
-			'label' => \esc_html__('Andbrand Block Forms', 'andbrand-block-forms'),
+			'label' => \esc_html__('Seb FormsBlock Forms', 'seb-block-forms'),
 			'public' => true,
 			'menu_position' => static::MENU_POSITION,
 			'menu_icon' => static::MENU_ICON,

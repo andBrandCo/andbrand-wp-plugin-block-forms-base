@@ -24,14 +24,14 @@ export const SubmitOptions = (attributes) => {
 
 	return (
 		<>
-			<PanelBody title={__('Submit', 'andbrand-block-forms-base')}>
+			<PanelBody title={__('Submit', 'seb-forms')}>
 				<FieldOptions
 					{...props('field', attributes)}
 					showFieldLabel={false}
 				/>
 
 				<TextControl
-					label={<IconLabel icon={icons.buttonOutline} label={__('Button label', 'andbrand-block-forms-base')} />}
+					label={<IconLabel icon={icons.buttonOutline} label={__('Button label', 'seb-forms')} />}
 					value={submitValue}
 					onChange={(value) => setAttributes({ [getAttrKey('submitValue', attributes, manifest)]: value })}
 				/>
@@ -41,13 +41,13 @@ export const SubmitOptions = (attributes) => {
 					isPressed={submitIsDisabled}
 					onClick={() => setAttributes({ [getAttrKey('submitIsDisabled', attributes, manifest)]: !submitIsDisabled })}
 				>
-					{__('Disabled', 'andbrand-block-forms-base')}
+					{__('Disabled', 'seb-forms')}
 				</Button>
 
-				<FancyDivider label={__('Tracking', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Tracking', 'seb-forms')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'andbrand-block-forms-base')} />}
+					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'seb-forms')} />}
 					value={submitTracking}
 					onChange={(value) => setAttributes({ [getAttrKey('submitTracking', attributes, manifest)]: value })}
 				/>

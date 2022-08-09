@@ -6,14 +6,14 @@
  * A class definition that includes attributes and functions used across both the
  * public side of the site and the admin area.
  *
- * @package AndbrandWpPluginBlockFormsBase\Config
+ * @package SebFormsWpPlugin\Config
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Config;
+namespace SebFormsWpPlugin\Config;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Config\AbstractConfigData;
+use SebFormsWpPluginVendor\EightshiftLibs\Config\AbstractConfigData;
 
 /**
  * The project config class.
@@ -27,7 +27,7 @@ class Config extends AbstractConfigData
 	 */
 	public static function getProjectName(): string
 	{
-		return "andbrand-block-forms-base";
+		return "seb-forms";
 	}
 
 	/**

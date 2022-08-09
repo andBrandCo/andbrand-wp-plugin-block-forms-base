@@ -23,26 +23,26 @@ export const RadiosOptions = (attributes) => {
 
 	return (
 		<>
-			<PanelBody title={__('Radio buttons', 'andbrand-block-forms-base')}>
+			<PanelBody title={__('Radio buttons', 'seb-forms')}>
 				<FieldOptions
 					{...props('field', attributes)}
 				/>
 
-				<FancyDivider label={__('Validation', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Validation', 'seb-forms')} />
 
 				<Button
 					icon={icons.fieldRequired}
 					isPressed={radiosIsRequired}
 					onClick={() => setAttributes({ [getAttrKey('radiosIsRequired', attributes, manifest)]: !radiosIsRequired })}
 				>
-					{__('Required', 'andbrand-block-forms-base')}
+					{__('Required', 'seb-forms')}
 				</Button>
 
-				<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Advanced', 'seb-forms')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.fieldName} label={__('Name', 'andbrand-block-forms-base')} />}
-					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'andbrand-block-forms-base')}
+					label={<IconLabel icon={icons.fieldName} label={__('Name', 'seb-forms')} />}
+					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'seb-forms')}
 					value={radiosName}
 					onChange={(value) => setAttributes({ [getAttrKey('radiosName', attributes, manifest)]: value })}
 				/>

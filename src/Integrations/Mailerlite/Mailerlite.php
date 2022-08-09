@@ -3,20 +3,20 @@
 /**
  * Mailerlite integration class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite
+ * @package SebFormsWpPlugin\Integrations\Mailerlite
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite;
+namespace SebFormsWpPlugin\Integrations\Mailerlite;
 
-use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Form\AbstractFormBuilder;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Integrations\MapperInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Mailerlite integration class.

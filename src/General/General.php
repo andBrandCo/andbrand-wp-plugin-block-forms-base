@@ -3,15 +3,15 @@
 /**
  * File containing an class for general configuration.
  *
- * @package AndbrandWpPluginBlockFormsBase\General
+ * @package SebFormsWpPlugin\General
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\General;
+namespace SebFormsWpPlugin\General;
 
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Class General

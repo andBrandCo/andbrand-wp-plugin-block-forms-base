@@ -3,22 +3,22 @@
 /**
  * Enqueue class used to define all script and style enqueues for Gutenberg blocks.
  *
- * @package AndbrandWpPluginBlockFormsBase\Enqueue\Blocks
+ * @package SebFormsWpPlugin\Enqueue\Blocks
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Enqueue\Blocks;
+namespace SebFormsWpPlugin\Enqueue\Blocks;
 
-use AndbrandWpPluginBlockFormsBase\Config\Config;
-use AndbrandWpPluginBlockFormsBase\Geolocation\SettingsGeolocation;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Rest\Routes\GeolocationCountriesRoute;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Enqueue\Blocks\AbstractEnqueueBlocks;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Manifest\ManifestInterface;
+use SebFormsWpPlugin\Config\Config;
+use SebFormsWpPlugin\Geolocation\SettingsGeolocation;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Rest\Routes\GeolocationCountriesRoute;
+use SebFormsWpPlugin\Settings\Settings\SettingsGeneral;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Enqueue\Blocks\AbstractEnqueueBlocks;
+use SebFormsWpPluginVendor\EightshiftLibs\Manifest\ManifestInterface;
 
 /**
  * Enqueue_Blocks class.

@@ -3,15 +3,15 @@
 /**
  * The file that defines actions on plugin activation.
  *
- * @package AndbrandWpPluginBlockFormsBase
+ * @package SebFormsWpPlugin
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase;
+namespace SebFormsWpPlugin;
 
-use AndbrandWpPluginBlockFormsBase\Permissions\Permissions;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Plugin\HasActivationInterface;
+use SebFormsWpPlugin\Permissions\Permissions;
+use SebFormsWpPluginVendor\EightshiftLibs\Plugin\HasActivationInterface;
 use WP_Role;
 
 /**

@@ -3,16 +3,16 @@
 /**
  * BlockCustomData integration class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Blocks
+ * @package SebFormsWpPlugin\Blocks
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Blocks;
+namespace SebFormsWpPlugin\Blocks;
 
-use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Form\AbstractFormBuilder;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * BlockCustomData integration class.

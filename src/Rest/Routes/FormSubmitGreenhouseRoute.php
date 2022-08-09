@@ -3,19 +3,19 @@
 /**
  * The class register route for public form submiting endpoint - Greenhouse
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Helpers\UploadHelper;
-use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\SettingsGreenhouse;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Helpers\UploadHelper;
+use SebFormsWpPlugin\Integrations\Greenhouse\SettingsGreenhouse;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Labels\LabelsInterface;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
 
 /**
  * Class FormSubmitGreenhouseRoute

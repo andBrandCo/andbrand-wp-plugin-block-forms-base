@@ -3,15 +3,15 @@
 /**
  * The file that holds WpCli command to copy stylessheet set from form to your project.
  *
- * @package AndbrandWpPluginBlockFormsBase\WpCli
+ * @package SebFormsWpPlugin\WpCli
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\WpCli;
+namespace SebFormsWpPlugin\WpCli;
 
-use AndbrandWpPluginBlockFormsBase\Config\Config;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceCliInterface;
+use SebFormsWpPlugin\Config\Config;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceCliInterface;
 use WP_CLI;
 
 /**

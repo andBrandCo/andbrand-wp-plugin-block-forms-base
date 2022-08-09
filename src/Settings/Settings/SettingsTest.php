@@ -3,16 +3,16 @@
 /**
  * Test Settings class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Settings\Settings
+ * @package SebFormsWpPlugin\Settings\Settings
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Settings\Settings;
+namespace SebFormsWpPlugin\Settings\Settings;
 
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsTest class.
@@ -58,7 +58,7 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Test', 'andbrand-block-forms-base'),
+			'label' => \__('Test', 'seb-forms'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -87,16 +87,16 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 			[
 				'component' => 'input',
 				'inputId' => $this->getSettingsName('input-id'),
-				'inputFieldLabel' => \__('input label', 'andbrand-block-forms-base'),
-				'inputFieldHelp' => \__('help field input', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('input label', 'seb-forms'),
+				'inputFieldHelp' => \__('help field input', 'seb-forms'),
 				'inputType' => 'text',
 				'inputValue' => $this->getOptionValue('input-id'),
 			],
 			[
 				'component' => 'input',
 				'inputId' => $this->getSettingsName('input-email-id'),
-				'inputFieldLabel' => \__('input email label', 'andbrand-block-forms-base'),
-				'inputFieldHelp' => \__('help field input email', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('input email label', 'seb-forms'),
+				'inputFieldHelp' => \__('help field input email', 'seb-forms'),
 				'inputType' => 'text',
 				'inputValue' => $this->getOptionValue('input-email-id'),
 				'inputIsEmail' => true,
@@ -104,16 +104,16 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 			[
 				'component' => 'input',
 				'inputId' => $this->getSettingsName('input-number-id'),
-				'inputFieldLabel' => \__('input number label', 'andbrand-block-forms-base'),
-				'inputFieldHelp' => \__('help field input number', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('input number label', 'seb-forms'),
+				'inputFieldHelp' => \__('help field input number', 'seb-forms'),
 				'inputType' => 'number',
 				'inputValue' => $this->getOptionValue('input-number-id'),
 			],
 			[
 				'component' => 'input',
 				'inputId' => $this->getSettingsName('input-url-id'),
-				'inputFieldLabel' => \__('input url label', 'andbrand-block-forms-base'),
-				'inputFieldHelp' => \__('help field input url', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('input url label', 'seb-forms'),
+				'inputFieldHelp' => \__('help field input url', 'seb-forms'),
 				'inputType' => 'text',
 				'inputValue' => $this->getOptionValue('input-url-id'),
 				'inputIsUrl' => true,
@@ -121,16 +121,16 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 			[
 				'component' => 'input',
 				'inputId' => $this->getSettingsName('input-hidden-id'),
-				'inputFieldLabel' => \__('input hidden label', 'andbrand-block-forms-base'),
-				'inputFieldHelp' => \__('help field input hidden', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('input hidden label', 'seb-forms'),
+				'inputFieldHelp' => \__('help field input hidden', 'seb-forms'),
 				'inputType' => 'hidden',
 				'inputValue' => $this->getOptionValue('input-hidden-id'),
 			],
 			[
 				'component' => 'input',
 				'inputId' => $this->getSettingsName('input-required-id'),
-				'inputFieldLabel' => \__('input required label', 'andbrand-block-forms-base'),
-				'inputFieldHelp' => \__('help field input required', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('input required label', 'seb-forms'),
+				'inputFieldHelp' => \__('help field input required', 'seb-forms'),
 				'inputType' => 'text',
 				'inputValue' => $this->getOptionValue('input-required-id'),
 				'inputIsRequired' => true,
@@ -138,23 +138,23 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 			[
 				'component' => 'textarea',
 				'textareaId' => $this->getSettingsName('textarea-id'),
-				'textareaFieldLabel' => \__('textarea label', 'andbrand-block-forms-base'),
-				'textareaFieldHelp' => \__('help field textarea', 'andbrand-block-forms-base'),
+				'textareaFieldLabel' => \__('textarea label', 'seb-forms'),
+				'textareaFieldHelp' => \__('help field textarea', 'seb-forms'),
 				'textareaValue' => $this->getOptionValue('textarea-id'),
 			],
 			[
 				'component' => 'textarea',
 				'textareaId' => $this->getSettingsName('textarea-required-id'),
-				'textareaFieldLabel' => \__('textarea required label', 'andbrand-block-forms-base'),
-				'textareaFieldHelp' => \__('help field textarea required', 'andbrand-block-forms-base'),
+				'textareaFieldLabel' => \__('textarea required label', 'seb-forms'),
+				'textareaFieldHelp' => \__('help field textarea required', 'seb-forms'),
 				'textareaValue' => $this->getOptionValue('textarea-required-id'),
 				'textareaIsRequired' => true,
 			],
 			[
 				'component' => 'select',
 				'selectId' => $this->getSettingsName('select-id'),
-				'selectFieldLabel' => \__('select label', 'andbrand-block-forms-base'),
-				'selectFieldHelp' => \__('help field select', 'andbrand-block-forms-base'),
+				'selectFieldLabel' => \__('select label', 'seb-forms'),
+				'selectFieldHelp' => \__('help field select', 'seb-forms'),
 				'selectValue' => $this->getOptionValue('select-id'),
 				'selectOptions' => [
 					[
@@ -174,8 +174,8 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 			[
 				'component' => 'select',
 				'selectId' => $this->getSettingsName('select-required-id'),
-				'selectFieldLabel' => \__('select required label', 'andbrand-block-forms-base'),
-				'selectFieldHelp' => \__('help field select required', 'andbrand-block-forms-base'),
+				'selectFieldLabel' => \__('select required label', 'seb-forms'),
+				'selectFieldHelp' => \__('help field select required', 'seb-forms'),
 				'selectValue' => $this->getOptionValue('select-required-id'),
 				'selectIsRequired' => true,
 				'selectOptions' => [
@@ -201,35 +201,35 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 			],
 			[
 				'component' => 'checkboxes',
-				'checkboxesFieldLabel' => \__('checkboxes', 'andbrand-block-forms-base'),
-				'checkboxesFieldHelp' => \__('help field checkboxes', 'andbrand-block-forms-base'),
+				'checkboxesFieldLabel' => \__('checkboxes', 'seb-forms'),
+				'checkboxesFieldHelp' => \__('help field checkboxes', 'seb-forms'),
 				'checkboxesId' => $this->getSettingsName('checkbox-id'),
 				'checkboxesName' => $this->getSettingsName('checkbox-name'),
 				'checkboxesIsRequired' => true,
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('checkbox label 1', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('checkbox label 1', 'seb-forms'),
 						'checkboxValue' => 'checkbox-id1',
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked('checkbox-id1', 'checkbox-id'),
 						'checkboxSingleSubmit' => true,
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('checkbox required label 2', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('checkbox required label 2', 'seb-forms'),
 						'checkboxValue' => 'checkbox-required-id2',
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked('checkbox-required-id2', 'checkbox-id'),
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('checkbox disabled label 3', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('checkbox disabled label 3', 'seb-forms'),
 						'checkboxValue' => 'checkbox-disabled-id3',
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked('checkbox-disabled-id3', 'checkbox-id'),
 						'checkboxIsDisabled' => true,
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('checkbox readonly label 4', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('checkbox readonly label 4', 'seb-forms'),
 						'checkboxValue' => 'checkbox-readonly-id4',
 						'checkboxIsReadOnly' => true,
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked('checkbox-readonly-id4', 'checkbox-id'),
@@ -238,8 +238,8 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 			],
 			[
 				'component' => 'checkboxes',
-				'checkboxesFieldLabel' => \__('checkboxes count', 'andbrand-block-forms-base'),
-				'checkboxesFieldHelp' => \__('help field checkboxes', 'andbrand-block-forms-base'),
+				'checkboxesFieldLabel' => \__('checkboxes count', 'seb-forms'),
+				'checkboxesFieldHelp' => \__('help field checkboxes', 'seb-forms'),
 				'checkboxesId' => $this->getSettingsName('checkbox-count-id'),
 				'checkboxesName' => $this->getSettingsName('checkbox-count-name'),
 				'checkboxesIsRequired' => true,
@@ -247,25 +247,25 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('checkbox label 1', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('checkbox label 1', 'seb-forms'),
 						'checkboxValue' => 'checkbox-id1',
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked('checkbox-required-id1', 'checkbox-count-id'),
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('checkbox required label 2', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('checkbox required label 2', 'seb-forms'),
 						'checkboxValue' => 'checkbox-required-id2',
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked('checkbox-required-id2', 'checkbox-count-id'),
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('checkbox disabled label 3', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('checkbox disabled label 3', 'seb-forms'),
 						'checkboxValue' => 'checkbox-disabled-id3',
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked('checkbox-required-id3', 'checkbox-count-id'),
 					],
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('checkbox readonly label 4', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('checkbox readonly label 4', 'seb-forms'),
 						'checkboxValue' => 'checkbox-readonly-id4',
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked('checkbox-required-id4', 'checkbox-count-id'),
 					],
@@ -273,27 +273,27 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 			],
 			[
 				'component' => 'radios',
-				'radiosFieldLabel' => \__('radios', 'andbrand-block-forms-base'),
-				'radiosFieldHelp' => \__('help field radios', 'andbrand-block-forms-base'),
+				'radiosFieldLabel' => \__('radios', 'seb-forms'),
+				'radiosFieldHelp' => \__('help field radios', 'seb-forms'),
 				'radiosId' => $this->getSettingsName('radio-id'),
 				'radiosName' => $this->getSettingsName('radio-name'),
 				'radiosContent' => [
 					[
 						'component' => 'radio',
-						'radioLabel' => \__('radio label 1', 'andbrand-block-forms-base'),
+						'radioLabel' => \__('radio label 1', 'seb-forms'),
 						'radioValue' => 'radio-id1',
 						'radioIsChecked' => $this->isCheckedOption('radio-id1', 'radio-id'),
 					],
 					[
 						'component' => 'radio',
-						'radioLabel' => \__('radio disabled label 2', 'andbrand-block-forms-base'),
+						'radioLabel' => \__('radio disabled label 2', 'seb-forms'),
 						'radioValue' => 'radio-disabled-id2',
 						'radioIsChecked' => $this->isCheckedOption('radio-disabled-id2', 'radio-id'),
 						'radioIsDisabled' => true,
 					],
 					[
 						'component' => 'radio',
-						'radioLabel' => \__('radio disabled checked label 3', 'andbrand-block-forms-base'),
+						'radioLabel' => \__('radio disabled checked label 3', 'seb-forms'),
 						'radioValue' => 'radio-disabled-checked-id3',
 						'radioIsChecked' => $this->isCheckedOption('radio-disabled-checked-id3', 'radio-id'),
 						'radioIsDisabled' => true,
@@ -302,21 +302,21 @@ class SettingsTest implements SettingsDataInterface, ServiceInterface
 			],
 			[
 				'component' => 'radios',
-				'radiosFieldLabel' => \__('radios required', 'andbrand-block-forms-base'),
-				'radiosFieldHelp' => \__('help field radios required', 'andbrand-block-forms-base'),
+				'radiosFieldLabel' => \__('radios required', 'seb-forms'),
+				'radiosFieldHelp' => \__('help field radios required', 'seb-forms'),
 				'radiosId' => $this->getSettingsName('radio-required-id'),
 				'radiosName' => $this->getSettingsName('radio-required-name'),
 				'radiosIsRequired' => true,
 				'radiosContent' => [
 					[
 						'component' => 'radio',
-						'radioLabel' => \__('radio required label 1', 'andbrand-block-forms-base'),
+						'radioLabel' => \__('radio required label 1', 'seb-forms'),
 						'radioValue' => 'radio-required-id1',
 						'radioIsChecked' => $this->isCheckedOption('radio-required-id1', 'radio-required-id'),
 					],
 					[
 						'component' => 'radio',
-						'radioLabel' => \__('radio required label 2', 'andbrand-block-forms-base'),
+						'radioLabel' => \__('radio required label 2', 'seb-forms'),
 						'radioValue' => 'radio-required-id2',
 						'radioIsChecked' => $this->isCheckedOption('radio-required-id2', 'radio-required-id'),
 					],

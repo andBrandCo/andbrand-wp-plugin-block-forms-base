@@ -3,16 +3,16 @@
 /**
  * The file that defines actions on plugin deactivation.
  *
- * @package AndbrandWpPluginBlockFormsBase
+ * @package SebFormsWpPlugin
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase;
+namespace SebFormsWpPlugin;
 
-use AndbrandWpPluginBlockFormsBase\Cache\SettingsCache;
-use AndbrandWpPluginBlockFormsBase\Permissions\Permissions;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Plugin\HasDeactivationInterface;
+use SebFormsWpPlugin\Cache\SettingsCache;
+use SebFormsWpPlugin\Permissions\Permissions;
+use SebFormsWpPluginVendor\EightshiftLibs\Plugin\HasDeactivationInterface;
 use WP_Role;
 
 /**

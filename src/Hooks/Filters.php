@@ -3,34 +3,34 @@
 /**
  * The Filters class, used for defining settings and integrations filter variables.
  *
- * @package AndbrandWpPluginBlockFormsBase\Hooks
+ * @package SebFormsWpPlugin\Hooks
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Hooks;
+namespace SebFormsWpPlugin\Hooks;
 
-use AndbrandWpPluginBlockFormsBase\Cache\SettingsCache;
-use AndbrandWpPluginBlockFormsBase\Exception\MissingFilterInfoException;
-use AndbrandWpPluginBlockFormsBase\Geolocation\SettingsGeolocation;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\SettingsClearbit;
-use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\SettingsGoodbits;
-use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\Goodbits;
-use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\Greenhouse;
-use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\SettingsGreenhouse;
-use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\Hubspot;
-use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\SettingsHubspot;
-use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\Mailchimp;
-use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\SettingsMailchimp;
-use AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite\Mailerlite;
-use AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite\SettingsMailerlite;
-use AndbrandWpPluginBlockFormsBase\Mailer\SettingsMailer;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsLocation;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsTest;
-use AndbrandWpPluginBlockFormsBase\Validation\SettingsCaptcha;
-use AndbrandWpPluginBlockFormsBase\Validation\SettingsValidation;
+use SebFormsWpPlugin\Cache\SettingsCache;
+use SebFormsWpPlugin\Exception\MissingFilterInfoException;
+use SebFormsWpPlugin\Geolocation\SettingsGeolocation;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Integrations\Clearbit\SettingsClearbit;
+use SebFormsWpPlugin\Integrations\Goodbits\SettingsGoodbits;
+use SebFormsWpPlugin\Integrations\Goodbits\Goodbits;
+use SebFormsWpPlugin\Integrations\Greenhouse\Greenhouse;
+use SebFormsWpPlugin\Integrations\Greenhouse\SettingsGreenhouse;
+use SebFormsWpPlugin\Integrations\Hubspot\Hubspot;
+use SebFormsWpPlugin\Integrations\Hubspot\SettingsHubspot;
+use SebFormsWpPlugin\Integrations\Mailchimp\Mailchimp;
+use SebFormsWpPlugin\Integrations\Mailchimp\SettingsMailchimp;
+use SebFormsWpPlugin\Integrations\Mailerlite\Mailerlite;
+use SebFormsWpPlugin\Integrations\Mailerlite\SettingsMailerlite;
+use SebFormsWpPlugin\Mailer\SettingsMailer;
+use SebFormsWpPlugin\Settings\Settings\SettingsGeneral;
+use SebFormsWpPlugin\Settings\Settings\SettingsLocation;
+use SebFormsWpPlugin\Settings\Settings\SettingsTest;
+use SebFormsWpPlugin\Validation\SettingsCaptcha;
+use SebFormsWpPlugin\Validation\SettingsValidation;
 
 /**
  * The Filters class, used for defining settings and integrations filter variables.

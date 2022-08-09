@@ -3,19 +3,19 @@
 /**
  * HubSpot Client integration class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Hubspot
+ * @package SebFormsWpPlugin\Integrations\Hubspot
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Hubspot;
+namespace SebFormsWpPlugin\Integrations\Hubspot;
 
 use CURLFile;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Integrations\ClientInterface;
 
 /**
  * HubspotClient integration class.

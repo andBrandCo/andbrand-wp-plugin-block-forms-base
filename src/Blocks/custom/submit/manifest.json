@@ -2,7 +2,7 @@
 	"blockName": "submit",
 	"title": "Submit",
 	"description" : "A form submission button",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-submit"
 	},
@@ -13,6 +13,6 @@
 		"submit": "submit"
 	},
 	"parent": [
-		"andbrand-block-forms-base/form"
+		"seb-forms/form"
 	]
 }

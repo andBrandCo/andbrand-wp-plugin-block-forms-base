@@ -14,16 +14,16 @@ export const HubspotOptions = ({ postId }) => {
 	const wpAdminUrl = esFormsBlocksLocalization.wpAdminUrl;
 
 	return (
-		<PanelBody title={__('HubSpot', 'andbrand-block-forms-base')}>
+		<PanelBody title={__('HubSpot', 'seb-forms')}>
 			<BaseControl
-				label={<IconLabel icon={icons.options} label={__('Settings', 'andbrand-block-forms-base')} />}
-				help={__('On HubSpot settings page you can setup all details regarding you integration.', 'andbrand-block-forms-base')}
+				label={<IconLabel icon={icons.options} label={__('Settings', 'seb-forms')} />}
+				help={__('On HubSpot settings page you can setup all details regarding you integration.', 'seb-forms')}
 			>
 				<Button
 					href={`${wpAdminUrl}${settingsPageUrl}&formId=${postId}&type=hubspot`}
 					isSecondary
 				>
-					{__('Open HubSpot Form Settings', 'andbrand-block-forms-base')}
+					{__('Open HubSpot Form Settings', 'seb-forms')}
 				</Button>
 			</BaseControl>
 		</PanelBody>

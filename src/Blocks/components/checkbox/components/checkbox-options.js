@@ -25,7 +25,7 @@ export const CheckboxOptions = (attributes) => {
 	return (
 		<>
 			<TextControl
-				label={<IconLabel icon={icons.textUppercase} label={__('Checkbox label', 'andbrand-block-forms-base')} />}
+				label={<IconLabel icon={icons.textUppercase} label={__('Checkbox label', 'seb-forms')} />}
 				value={checkboxLabel}
 				onChange={(value) => setAttributes({ [getAttrKey('checkboxLabel', attributes, manifest)]: value })}
 			/>
@@ -36,15 +36,15 @@ export const CheckboxOptions = (attributes) => {
 					isPressed={checkboxIsChecked}
 					onClick={() => setAttributes({ [getAttrKey('checkboxIsChecked', attributes, manifest)]: !checkboxIsChecked })}
 				>
-					{__('Check by default', 'andbrand-block-forms-base')}
+					{__('Check by default', 'seb-forms')}
 				</Button>
 			</div>
 
-			<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
+			<FancyDivider label={__('Advanced', 'seb-forms')} />
 
 			<TextControl
-				label={<IconLabel icon={icons.fieldValue} label={__('Value', 'andbrand-block-forms-base')} />}
-				help={__('Internal value, sent if checked.', 'andbrand-block-forms-base')}
+				label={<IconLabel icon={icons.fieldValue} label={__('Value', 'seb-forms')} />}
+				help={__('Internal value, sent if checked.', 'seb-forms')}
 				value={checkboxValue}
 				onChange={(value) => setAttributes({ [getAttrKey('checkboxValue', attributes, manifest)]: value })}
 			/>
@@ -55,7 +55,7 @@ export const CheckboxOptions = (attributes) => {
 					isPressed={checkboxIsReadOnly}
 					onClick={() => setAttributes({ [getAttrKey('checkboxIsReadOnly', attributes, manifest)]: !checkboxIsReadOnly })}
 				>
-					{__('Read-only', 'andbrand-block-forms-base')}
+					{__('Read-only', 'seb-forms')}
 				</Button>
 
 				<Button
@@ -63,14 +63,14 @@ export const CheckboxOptions = (attributes) => {
 					isPressed={checkboxIsDisabled}
 					onClick={() => setAttributes({ [getAttrKey('checkboxIsDisabled', attributes, manifest)]: !checkboxIsDisabled })}
 				>
-					{__('Disabled', 'andbrand-block-forms-base')}
+					{__('Disabled', 'seb-forms')}
 				</Button>
 			</div>
 
-			<FancyDivider label={__('Tracking', 'andbrand-block-forms-base')} />
+			<FancyDivider label={__('Tracking', 'seb-forms')} />
 
 			<TextControl
-				label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'andbrand-block-forms-base')} />}
+				label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'seb-forms')} />}
 				value={checkboxTracking}
 				onChange={(value) => setAttributes({ [getAttrKey('checkboxTracking', attributes, manifest)]: value })}
 			/>

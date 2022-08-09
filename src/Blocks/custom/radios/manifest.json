@@ -2,7 +2,7 @@
 	"blockName": "radios",
 	"title": "Radio buttons",
 	"description" : "A group of radio buttons",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-radios"
 	},
@@ -14,7 +14,7 @@
 		"radios": "radios"
 	},
 	"parent": [
-		"andbrand-block-forms-base/form"
+		"seb-forms/form"
 	],
 	"attributes": {
 		"radiosAllowedBlocks": {
@@ -23,19 +23,19 @@
 				"type": "string"
 			},
 			"default": [
-				"andbrand-block-forms-base/radio"
+				"seb-forms/radio"
 			]
 		}
 	},
 	"template": [
 		[
-			"andbrand-block-forms-base/radio",
+			"seb-forms/radio",
 			{
 				"radioRadioLabel": "Radio 1"
 			}
 		],
 		[
-			"andbrand-block-forms-base/radio",
+			"seb-forms/radio",
 			{
 				"radioRadioLabel": "Radio 2"
 			}

@@ -3,8 +3,8 @@
 namespace Tests\Unit\Hooks;
 
 use Brain\Monkey;
-use AndbrandWpPluginBlockFormsBase\Exception\MissingFilterInfoException;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use SebFormsWpPlugin\Exception\MissingFilterInfoException;
+use SebFormsWpPlugin\Hooks\Filters;
 
 use function Tests\setupMocks;
 

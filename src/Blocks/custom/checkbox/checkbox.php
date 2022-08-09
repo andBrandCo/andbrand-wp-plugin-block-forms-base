@@ -3,11 +3,11 @@
 /**
  * Template for the checkbox item Block view.
  *
- * @package AndbrandWpPluginBlockFormsBase
+ * @package SebFormsWpPlugin
  */
 
-use AndbrandWpPluginBlockFormsBase\Blocks\Blocks;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Blocks\Blocks;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
 
 $unique = Components::getUnique();
 

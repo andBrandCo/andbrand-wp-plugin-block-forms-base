@@ -15,7 +15,7 @@ export const FormSelectorOptions = () => {
 	const wpAdminUrl = esFormsBlocksLocalization.wpAdminUrl;
 
 	return (
-		<PanelBody title={__('Andbrand Wp Plugin Block Forms Base', 'andbrand-block-forms-base')}>
+		<PanelBody title={__('Seb FormsWp Plugin Block Forms Base', 'seb-forms')}>
 			<Button
 				isPrimary
 				icon={icons.options}
@@ -23,9 +23,9 @@ export const FormSelectorOptions = () => {
 				style={{ height: '3rem', paddingLeft: '0.5rem', paddingRight: '0.5rem', }}
 			>
 				<span>
-					<span>{__('Form settings', 'andbrand-block-forms-base')}</span>
+					<span>{__('Form settings', 'seb-forms')}</span>
 					<br />
-					<small>{__('Configure the form and integrations', 'andbrand-block-forms-base')}</small>
+					<small>{__('Configure the form and integrations', 'seb-forms')}</small>
 				</span>
 			</Button>
 		</PanelBody>

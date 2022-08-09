@@ -3,13 +3,13 @@
 namespace Tests\Unit\Integrations\Greenhouse;
 
 use Brain\Monkey;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\Greenhouse;
-use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\GreenhouseClient;
-use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\SettingsGreenhouse;
-use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
-use AndbrandWpPluginBlockFormsBase\Labels\Labels;
-use AndbrandWpPluginBlockFormsBase\Validation\Validator;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Integrations\Greenhouse\Greenhouse;
+use SebFormsWpPlugin\Integrations\Greenhouse\GreenhouseClient;
+use SebFormsWpPlugin\Integrations\Greenhouse\SettingsGreenhouse;
+use SebFormsWpPlugin\Integrations\MapperInterface;
+use SebFormsWpPlugin\Labels\Labels;
+use SebFormsWpPlugin\Validation\Validator;
 
 use function Tests\setupMocks;
 

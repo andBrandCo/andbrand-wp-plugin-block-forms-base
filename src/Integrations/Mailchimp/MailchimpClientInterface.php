@@ -3,12 +3,12 @@
 /**
  * File containing Mailchimp specific interface.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp
+ * @package SebFormsWpPlugin\Integrations\Mailchimp
  */
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp;
+namespace SebFormsWpPlugin\Integrations\Mailchimp;
 
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use SebFormsWpPlugin\Integrations\ClientInterface;
 
 /**
  * Interface for a Client

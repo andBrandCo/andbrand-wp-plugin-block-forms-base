@@ -5,15 +5,15 @@
  *
  * It is used to provide manifest.json file location used with Webpack to fetch correct file locations.
  *
- * @package AndbrandWpPluginBlockFormsBase\Manifest
+ * @package SebFormsWpPlugin\Manifest
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Manifest;
+namespace SebFormsWpPlugin\Manifest;
 
-use AndbrandWpPluginBlockFormsBase\Config\Config;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Manifest\AbstractManifest;
+use SebFormsWpPlugin\Config\Config;
+use SebFormsWpPluginVendor\EightshiftLibs\Manifest\AbstractManifest;
 
 /**
  * Class Manifest

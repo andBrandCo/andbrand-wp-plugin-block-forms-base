@@ -3,12 +3,12 @@
 /**
  * The class for form validator.
  *
- * @package AndbrandWpPluginBlockFormsBase\Validation
+ * @package SebFormsWpPlugin\Validation
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Validation;
+namespace SebFormsWpPlugin\Validation;
 
 /**
  * Class Validator

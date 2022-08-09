@@ -3,10 +3,10 @@
 /**
  * File containing Clearbit specific interface.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Clearbit
+ * @package SebFormsWpPlugin\Integrations\Clearbit
  */
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Clearbit;
+namespace SebFormsWpPlugin\Integrations\Clearbit;
 
 /**
  * Interface for a Client

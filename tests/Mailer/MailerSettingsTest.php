@@ -3,8 +3,8 @@
 namespace Tests\Unit\Mailer;
 
 use Brain\Monkey;
-use AndbrandWpPluginBlockFormsBase\Mailer\SettingsMailer;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
+use SebFormsWpPlugin\Mailer\SettingsMailer;
+use SebFormsWpPlugin\Labels\LabelsInterface;
 
 use function Tests\setupMocks;
 
@@ -24,9 +24,9 @@ afterAll(function() {
 
 test('Register method will call sidebar hook', function () {
 	$this->mailerSettings->register();
-	expect(\has_filter(SettingsMailer::FILTER_SETTINGS_SIDEBAR_NAME, 'AndbrandWpPluginBlockFormsBase\Mailer\SettingsMailer->getSettingsSidebar()'))->toBe(10);
-	expect(\has_filter(SettingsMailer::FILTER_SETTINGS_NAME, 'AndbrandWpPluginBlockFormsBase\Mailer\SettingsMailer->getSettingsData()'))->toBe(10);
-	expect(\has_filter(SettingsMailer::FILTER_SETTINGS_IS_VALID_NAME, 'AndbrandWpPluginBlockFormsBase\Mailer\SettingsMailer->isSettingsValid()'))->toBe(10);
+	expect(\has_filter(SettingsMailer::FILTER_SETTINGS_SIDEBAR_NAME, 'SebFormsWpPlugin\Mailer\SettingsMailer->getSettingsSidebar()'))->toBe(10);
+	expect(\has_filter(SettingsMailer::FILTER_SETTINGS_NAME, 'SebFormsWpPlugin\Mailer\SettingsMailer->getSettingsData()'))->toBe(10);
+	expect(\has_filter(SettingsMailer::FILTER_SETTINGS_IS_VALID_NAME, 'SebFormsWpPlugin\Mailer\SettingsMailer->isSettingsValid()'))->toBe(10);
 });
 
 test('isSettingsValid method returns correct values', function () {

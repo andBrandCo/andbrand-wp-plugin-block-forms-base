@@ -3,18 +3,18 @@
 /**
  * Class that holds class for admin sub menu - Global Settings.
  *
- * @package AndbrandWpPluginBlockFormsBase\AdminMenus
+ * @package SebFormsWpPlugin\AdminMenus
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\AdminMenus;
+namespace SebFormsWpPlugin\AdminMenus;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings\SettingsGlobalInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Settings\GlobalSettings\SettingsGlobalInterface;
+use SebFormsWpPlugin\Settings\Settings\SettingsGeneral;
+use SebFormsWpPluginVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
 
 /**
  * FormGlobalSettingsAdminSubMenu class.
@@ -66,7 +66,7 @@ class FormGlobalSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 *
 	 * @var string
 	 */
-	public const ADMIN_MENU_CAPABILITY = 'andbrand_block_forms_global_settings';
+	public const ADMIN_MENU_CAPABILITY = 'seb_block_forms_global_settings';
 
 	/**
 	 * Menu slug for this admin sub menu.
@@ -89,7 +89,7 @@ class FormGlobalSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 */
 	protected function getTitle(): string
 	{
-		return \esc_html__('Settings', 'andbrand-block-forms-base');
+		return \esc_html__('Settings', 'seb-forms');
 	}
 
 	/**
@@ -99,7 +99,7 @@ class FormGlobalSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 */
 	protected function getMenuTitle(): string
 	{
-		return \esc_html__('Settings', 'andbrand-block-forms-base');
+		return \esc_html__('Settings', 'seb-forms');
 	}
 
 	/**
@@ -175,8 +175,8 @@ class FormGlobalSettingsAdminSubMenu extends AbstractAdminSubMenu
 
 		return [
 			// translators: %s replaces form title name.
-			'adminSettingsPageTitle' => \esc_html__('Settings', 'andbrand-block-forms-base'),
-			'adminSettingsSubTitle' => \esc_html__('These settings apply to all forms.', 'andbrand-block-forms-base'),
+			'adminSettingsPageTitle' => \esc_html__('Settings', 'seb-forms'),
+			'adminSettingsSubTitle' => \esc_html__('These settings apply to all forms.', 'seb-forms'),
 			'adminSettingsBackLink' => Helper::getListingPageUrl(),
 			'adminSettingsLink' => Helper::getSettingsGlobalPageUrl(''),
 			'adminSettingsSidebar' => $this->settingsGlobal->getSettingsSidebar($type),

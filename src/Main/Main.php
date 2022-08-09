@@ -6,14 +6,14 @@
  * A class definition that includes attributes and functions used across both the
  * theme-facing side of the site and the admin area.
  *
- * @package AndbrandWpPluginBlockFormsBase\Main
+ * @package SebFormsWpPlugin\Main
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Main;
+namespace SebFormsWpPlugin\Main;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Main\AbstractMain;
+use SebFormsWpPluginVendor\EightshiftLibs\Main\AbstractMain;
 
 /**
  * The main start class.

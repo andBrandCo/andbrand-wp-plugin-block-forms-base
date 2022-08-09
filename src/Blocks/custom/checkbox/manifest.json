@@ -2,7 +2,7 @@
 	"blockName": "checkbox",
 	"title": "Checkbox",
 	"description" : "A simple true/false toggle",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-checkbox"
 	},
@@ -13,6 +13,6 @@
 		"checkbox": "checkbox"
 	},
 	"parent": [
-		"andbrand-block-forms-base/checkbox"
+		"seb-forms/checkbox"
 	]
 }

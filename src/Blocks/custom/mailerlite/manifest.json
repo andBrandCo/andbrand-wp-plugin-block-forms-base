@@ -2,7 +2,7 @@
 	"blockName": "mailerlite",
 	"title": "Mailerlite Form",
 	"description" : "A MailerLite subscription form",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-form-mailerlite"
 	},
@@ -24,6 +24,6 @@
 		}
 	},
 	"parent": [
-		"andbrand-block-forms-base/form-selector"
+		"seb-forms/form-selector"
 	]
 }

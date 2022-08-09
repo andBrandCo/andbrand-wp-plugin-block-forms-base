@@ -3,19 +3,19 @@
 /**
  * Mailchimp integration class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp
+ * @package SebFormsWpPlugin\Integrations\Mailchimp
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp;
+namespace SebFormsWpPlugin\Integrations\Mailchimp;
 
-use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Form\AbstractFormBuilder;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Integrations\MapperInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Mailchimp integration class.
@@ -159,7 +159,7 @@ class Mailchimp extends AbstractFormBuilder implements MapperInterface, ServiceI
 		$output[] = [
 			'component' => 'input',
 			'inputName' => 'email_address',
-			'inputFieldLabel' => \__('Email address', 'andbrand-block-forms-base'),
+			'inputFieldLabel' => \__('Email address', 'seb-forms'),
 			'inputId' => 'email_address',
 			'inputType' => 'text',
 			'inputIsEmail' => true,
@@ -323,7 +323,7 @@ class Mailchimp extends AbstractFormBuilder implements MapperInterface, ServiceI
 					case 'select':
 						$output[] = [
 							'component' => 'select',
-							'selectFieldLabel' => \__('Tags', 'andbrand-block-forms-base'),
+							'selectFieldLabel' => \__('Tags', 'seb-forms'),
 							'selectId' => self::FIELD_MAILCHIMP_TAGS_KEY,
 							'selectName' => self::FIELD_MAILCHIMP_TAGS_KEY,
 							'selectTracking' => self::FIELD_MAILCHIMP_TAGS_KEY,
@@ -363,7 +363,7 @@ class Mailchimp extends AbstractFormBuilder implements MapperInterface, ServiceI
 
 						$output[] = [
 							'component' => 'checkboxes',
-							'checkboxesFieldLabel' => \__('Tags', 'andbrand-block-forms-base'),
+							'checkboxesFieldLabel' => \__('Tags', 'seb-forms'),
 							'checkboxesId' => $checkboxesFieldName,
 							'checkboxesName' => $checkboxesFieldName,
 							'checkboxesContent' => \array_map(

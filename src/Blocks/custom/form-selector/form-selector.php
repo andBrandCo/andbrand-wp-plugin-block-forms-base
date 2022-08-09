@@ -3,10 +3,10 @@
 /**
  * Template for the Form Selector Block view.
  *
- * @package AndbrandWpPluginBlockFormsBase
+ * @package SebFormsWpPlugin
  */
 
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
+use SebFormsWpPlugin\Hooks\Filters;
 
 // Add custom additional content filter.
 $filterName = Filters::getBlockFilterName('formSelector', 'additionalContent');

@@ -3,10 +3,10 @@
 /**
  * File containing Connect interface
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations
+ * @package SebFormsWpPlugin\Integrations
  */
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations;
+namespace SebFormsWpPlugin\Integrations;
 
 /**
  * Interface for a Client

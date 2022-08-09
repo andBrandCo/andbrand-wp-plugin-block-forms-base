@@ -4,15 +4,15 @@
  * Class Blocks is the base class for Gutenberg blocks registration.
  * It provides the ability to register custom blocks using manifest.json.
  *
- * @package AndbrandWpPluginBlockFormsBase\Blocks
+ * @package SebFormsWpPlugin\Blocks
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Blocks;
+namespace SebFormsWpPlugin\Blocks;
 
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Blocks\AbstractBlocks;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPluginVendor\EightshiftLibs\Blocks\AbstractBlocks;
 
 /**
  * Class Blocks

@@ -3,12 +3,12 @@
 /**
  * The file that defines a factory for activating / deactivating plugin.
  *
- * @package AndbrandWpPluginBlockFormsBase
+ * @package SebFormsWpPlugin
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase;
+namespace SebFormsWpPlugin;
 
 /**
  * The plugin factory class.

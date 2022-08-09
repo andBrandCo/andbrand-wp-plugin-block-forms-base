@@ -3,12 +3,12 @@
 /**
  * The media upload helper specific functionality.
  *
- * @package AndbrandWpPluginBlockFormsBase\Helpers
+ * @package SebFormsWpPlugin\Helpers
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Helpers;
+namespace SebFormsWpPlugin\Helpers;
 
 /**
  * Trait UploadHelper

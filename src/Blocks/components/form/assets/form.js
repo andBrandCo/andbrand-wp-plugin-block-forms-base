@@ -65,6 +65,9 @@ export class Form {
 		this.CLASS_LOADING = FORM_SELECTORS.CLASS_LOADING;
 		this.CLASS_HAS_ERROR = FORM_SELECTORS.CLASS_HAS_ERROR;
 
+		// LocalStorage
+		this.STORAGE_NAME = 'es-storage';
+
 		// Settings options.
 		this.formDisableScrollToFieldOnError = options.formDisableScrollToFieldOnError ?? true;
 		this.formDisableScrollToGlobalMessageOnSuccess = options.formDisableScrollToGlobalMessageOnSuccess ?? true;
@@ -74,6 +77,7 @@ export class Form {
 		this.hideLoadingStateTimeout = options.hideLoadingStateTimeout ?? 600;
 		this.fileCustomRemoveLabel = options.fileCustomRemoveLabel ?? '';
 		this.captcha = options.captcha ?? '';
+		this.storageConfig = options.storageConfig ?? '';
 
 		// Internal state.
 		this.files = {};
@@ -127,13 +131,13 @@ export class Form {
 			[...inputs].forEach((input) => {
 				this.setupInputField(input);
 			});
-	
+
 			// Setup select inputs.
 			this.customSelects[formId] = [];
 			[...selects].forEach((select) => {
 				this.setupSelectField(select, formId);
 			});
-	
+
 			// Setup textarea inputs.
 			this.customTextareas[formId] = [];
 			[...textareas].forEach((textarea) => {
@@ -146,6 +150,9 @@ export class Form {
 				this.setupFileField(file, formId, index);
 			});
 		});
+
+		// Set localStorage data from global variable.
+		this.setLocalStorage();
 	}
 
 	// Handle form submit and all logic.
@@ -227,7 +234,6 @@ export class Form {
 
 	// Handle form submit and all logic.
 	formSubmit = (element, singleSubmit = false) => {
-
 		// Dispatch event.
 		this.dispatchFormEvent(element, FORM_EVENTS.BEFORE_FORM_SUBMIT);
 
@@ -382,7 +388,7 @@ export class Form {
 						if (disabled) {
 							continue;
 						}
-		
+
 						groupInnerItems[id] = value;
 					}
 
@@ -401,6 +407,7 @@ export class Form {
 		`);
 
 		const formType = element.getAttribute(this.DATA_ATTR_FORM_TYPE);
+		const formAction = element.getAttribute('action');
 
 		// If single submit override items and pass only one item to submit.
 		if (singleSubmit) {
@@ -484,6 +491,12 @@ export class Form {
 			type: 'hidden',
 		}));
 
+		// Add form action field.
+		formData.append('action', JSON.stringify({
+			value: formAction,
+			type: 'hidden',
+		}));
+
 		// Add additional options for HubSpot only.
 		if (formType === 'hubspot' && !this.formIsAdmin) {
 			formData.append('es-form-hubspot-cookie', JSON.stringify({
@@ -508,6 +521,15 @@ export class Form {
 				type: 'hidden',
 			}));
 		}
+
+		// Set localStorage to hidden field.
+	 const storage = this.getLocalStorage();
+	 if (storage) {
+		formData.append('es-form-storage', JSON.stringify({
+			value: storage,
+			type: 'hidden',
+		}));
+	 }
 
 		return formData;
 	}
@@ -876,8 +898,6 @@ export class Form {
 		const index = event.currentTarget.getAttribute('dropzone-index');
 		const formId = event.currentTarget.getAttribute('dropzone-form-id');
 
-		console.log(formId);
-
 		this.customFiles[formId][index].hiddenFileInput.click();
 	}
 
@@ -1022,5 +1042,103 @@ export class Form {
 
 			this.dispatchFormEvent(element, FORM_EVENTS.AFTER_FORM_EVENTS_CLEAR);
 		});
+	}
+
+	setLocalStorage() {
+		// If storage is not set in the backend bailout.
+		// Backend provides the ability to limit what tags are allowed to store in local storage.
+		if (this.storageConfig === '') {
+			return;
+		}
+
+		const storageConfig = JSON.parse(this.storageConfig);
+
+		const allowedTags = storageConfig?.allowed;
+		const expiration = storageConfig?.expiration ?? '30';
+
+		// Missing data from backend, bailout.
+		if (!allowedTags) {
+			return;
+		}
+
+		// Bailout if nothing is set in the url.
+		if (!window.location.search) {
+			return;
+		}
+
+		// Find url params.
+		const searchParams = new URLSearchParams(window.location.search);
+
+		// Get storage from backend this is considered new by the page request.
+		const newStorage = searchParams.entries().filter(([key, value]) => allowedTags.includes(key) && value !== '');
+
+		// Bailout if nothing is set from allowed tags or everything is empty.
+		if (Object.keys(newStorage).length === 0) {
+			return;
+		}
+
+		// Add current timestamp to new storage.
+		newStorage.timestamp = Date.now();
+
+		// Store in a new variable for later usage.
+		const newStorageFinal = {...newStorage};
+		delete newStorageFinal.timestamp;
+
+		// current storage is got from local storage.
+		const currentStorage = JSON.parse(this.getLocalStorage());
+
+		// Store in a new variable for later usage.
+		const currentStorageFinal = {...currentStorage};
+		delete currentStorageFinal.timestamp;
+
+		// If storage exists check if it is expired.
+		if (this.getLocalStorage() !== null) {
+			// Update expiration date by number of days from the current
+			let expirationDate = new Date(currentStorage.timestamp);
+			expirationDate.setDate(expirationDate.getDate() + parseInt(expiration, 10));
+
+			// Remove expired storage if it exists.
+			if (expirationDate.getTime() < currentStorage.timestamp) {
+				localStorage.removeItem(this.STORAGE_NAME);
+			}
+		}
+
+		// Create new storage if this is the first visit or it was expired.
+		if (this.getLocalStorage() === null) {
+			localStorage.setItem(
+				this.STORAGE_NAME,
+				JSON.stringify(newStorage)
+			);
+			return;
+		}
+
+		// Prepare new output.
+		const output = {
+			...currentStorageFinal,
+			...newStorageFinal,
+		};
+
+		// If output is empty something was wrong here and just bailout.
+		if (Object.keys(output).length === 0) {
+			return;
+		}
+
+		// If nothing has changed bailout.
+		if (JSON.stringify(currentStorageFinal) === JSON.stringify(output)) {
+			return;
+		}
+
+		// Add timestamp to the new output.
+		const finalOutput = {
+			...output,
+			timestamp: newStorage.timestamp,
+		};
+
+		// Update localStorage with the new item.
+		localStorage.setItem(this.STORAGE_NAME, JSON.stringify(finalOutput));
+	}
+
+	getLocalStorage() {
+		return localStorage.getItem(this.STORAGE_NAME);
 	}
 }

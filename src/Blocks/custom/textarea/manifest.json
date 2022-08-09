@@ -2,7 +2,7 @@
 	"blockName": "textarea",
 	"title": "Multiline text",
 	"description" : "A multiline text input field",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-textarea"
 	},
@@ -13,6 +13,6 @@
 		"textarea": "textarea"
 	},
 	"parent": [
-		"andbrand-block-forms-base/form"
+		"seb-forms/form"
 	]
 }

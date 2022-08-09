@@ -3,18 +3,18 @@
 /**
  * Class that holds class for admin sub menu - Form Settings.
  *
- * @package AndbrandWpPluginBlockFormsBase\AdminMenus
+ * @package SebFormsWpPlugin\AdminMenus
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\AdminMenus;
+namespace SebFormsWpPlugin\AdminMenus;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsAllInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Settings\Settings\SettingsAllInterface;
+use SebFormsWpPlugin\Settings\Settings\SettingsGeneral;
+use SebFormsWpPluginVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
 
 /**
  * FormSettingsAdminSubMenu class.
@@ -68,7 +68,7 @@ class FormSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 *
 	 * @var string
 	 */
-	public const ADMIN_MENU_CAPABILITY = 'andbrand_block_forms_form_settings';
+	public const ADMIN_MENU_CAPABILITY = 'seb_block_forms_form_settings';
 
 	/**
 	 * Menu slug for this admin sub menu
@@ -91,7 +91,7 @@ class FormSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 */
 	protected function getTitle(): string
 	{
-		return \esc_html__('Form Settings', 'andbrand-block-forms-base');
+		return \esc_html__('Form Settings', 'seb-forms');
 	}
 
 	/**
@@ -101,7 +101,7 @@ class FormSettingsAdminSubMenu extends AbstractAdminSubMenu
 	 */
 	protected function getMenuTitle(): string
 	{
-		return \esc_html__('Form Settings', 'andbrand-block-forms-base');
+		return \esc_html__('Form Settings', 'seb-forms');
 	}
 
 	/**
@@ -183,12 +183,12 @@ class FormSettingsAdminSubMenu extends AbstractAdminSubMenu
 		$formTitle = \get_the_title((int) $formId);
 
 		if (!$formTitle) {
-			$formTitle = \esc_html__('No form title', 'andbrand-block-forms-base');
+			$formTitle = \esc_html__('No form title', 'seb-forms');
 		}
 
 		return [
 			// translators: %s replaces the form name.
-			'adminSettingsPageTitle' => \sprintf(\esc_html__('Form settings: %s', 'andbrand-block-forms-base'), $formTitle),
+			'adminSettingsPageTitle' => \sprintf(\esc_html__('Form settings: %s', 'seb-forms'), $formTitle),
 			'adminSettingsBackLink' => Helper::getListingPageUrl(),
 			'adminSettingsFormEditLink' => Helper::getFormEditPageUrl($formId),
 			'adminSettingsLink' => Helper::getSettingsPageUrl($formId, ''),

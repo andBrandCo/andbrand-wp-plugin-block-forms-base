@@ -3,12 +3,12 @@
 /**
  * The class for Mapper interface.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations
+ * @package SebFormsWpPlugin\Integrations
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations;
+namespace SebFormsWpPlugin\Integrations;
 
 /**
  * Class Mapper

@@ -3,17 +3,17 @@
 /**
  * Location Settings class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Settings\Settings
+ * @package SebFormsWpPlugin\Settings\Settings
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Settings\Settings;
+namespace SebFormsWpPlugin\Settings\Settings;
 
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsLocation class.
@@ -59,7 +59,7 @@ class SettingsLocation implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Display locations', 'andbrand-block-forms-base'),
+			'label' => \__('Display locations', 'seb-forms'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -77,8 +77,8 @@ class SettingsLocation implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Display locations', 'andbrand-block-forms-base'),
-				'introSubtitle' => \__('See where your form appears throughout the website.', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Display locations', 'seb-forms'),
+				'introSubtitle' => \__('See where your form appears throughout the website.', 'seb-forms'),
 			],
 		];
 
@@ -87,8 +87,8 @@ class SettingsLocation implements SettingsDataInterface, ServiceInterface
 		if (!$locations) {
 			$output[] = [
 				'component' => 'highlighted-content',
-				'highlightedContentTitle' => \__('Nothing to see here...', 'andbrand-block-forms-base'),
-				'highlightedContentSubtitle' => \__('The form isn\'t used anywhere on this website.', 'andbrand-block-forms-base'),
+				'highlightedContentTitle' => \__('Nothing to see here...', 'seb-forms'),
+				'highlightedContentSubtitle' => \__('The form isn\'t used anywhere on this website.', 'seb-forms'),
 				'highlightedContentIcon' => 'empty',
 			];
 		} else {

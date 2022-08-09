@@ -3,24 +3,24 @@
 /**
  * HubSpot Settings class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Hubspot
+ * @package SebFormsWpPlugin\Integrations\Hubspot
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Hubspot;
+namespace SebFormsWpPlugin\Integrations\Hubspot;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\ClearbitClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\SettingsClearbitDataInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Integrations\Clearbit\ClearbitClientInterface;
+use SebFormsWpPlugin\Integrations\Clearbit\SettingsClearbitDataInterface;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Integrations\MapperInterface;
+use SebFormsWpPlugin\Settings\Settings\SettingsDataInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsHubspot class.
@@ -205,7 +205,7 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('HubSpot', 'andbrand-block-forms-base'),
+			'label' => \__('HubSpot', 'seb-forms'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -225,9 +225,9 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Some config required', 'andbrand-block-forms-base'),
+					'highlightedContentTitle' => \__('Some config required', 'seb-forms'),
 					// translators: %s will be replaced with the global settings url.
-					'highlightedContentSubtitle' => \sprintf(\__('Before using HubSpot you need to configure it in  <a href="%s">global settings</a>.', 'andbrand-block-forms-base'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
+					'highlightedContentSubtitle' => \sprintf(\__('Before using HubSpot you need to configure it in  <a href="%s">global settings</a>.', 'seb-forms'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
 					'highlightedContentIcon' => 'tools',
 				]
 			];
@@ -240,8 +240,8 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Something went wrong', 'andbrand-block-forms-base'),
-					'highlightedContentSubtitle' => \__('Data from HubSpot couldn\'t be fetched. Check the API key.', 'andbrand-block-forms-base'),
+					'highlightedContentTitle' => \__('Something went wrong', 'seb-forms'),
+					'highlightedContentSubtitle' => \__('Data from HubSpot couldn\'t be fetched. Check the API key.', 'seb-forms'),
 					'highlightedContentIcon' => 'error',
 				],
 			];
@@ -286,11 +286,11 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('HubSpot', 'andbrand-block-forms-base'),
+				'introTitle' => \__('HubSpot', 'seb-forms'),
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('How to get the API key?', 'andbrand-block-forms-base'),
+				'introTitle' => \__('How to get the API key?', 'seb-forms'),
 				'introTitleSize' => 'small',
 				// phpcs:ignore WordPress.WP.I18n.NoHtmlWrappedStrings
 				'introSubtitle' => \__('<ol>
@@ -299,7 +299,7 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 						<li>In the menu on the left, under <strong>Integrations</strong> click <strong>API Key</strong></li>
 						<li>On the page that loads in the <strong>Active API key</strong> panel, click on <strong>Show</strong>, verify the captcha if needed, then click <strong>Copy</strong></li>
 						<li>Copy the API key into the field below or use the global constant.</li>
-					</ol>', 'andbrand-block-forms-base'),
+					</ol>', 'seb-forms'),
 			],
 			[
 				'component' => 'divider',
@@ -313,7 +313,7 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use HubSpot', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('Use HubSpot', 'seb-forms'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_HUBSPOT_USE_KEY, self::SETTINGS_HUBSPOT_USE_KEY),
 						'checkboxValue' => self::SETTINGS_HUBSPOT_USE_KEY,
 						'checkboxSingleSubmit' => true,
@@ -333,8 +333,8 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_HUBSPOT_API_KEY_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_HUBSPOT_API_KEY_KEY),
-						'inputFieldLabel' => \__('API key', 'andbrand-block-forms-base'),
-						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'andbrand-block-forms-base'),
+						'inputFieldLabel' => \__('API key', 'seb-forms'),
+						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'seb-forms'),
 						'inputType' => 'password',
 						'inputIsRequired' => true,
 						'inputValue' => !empty($apiKey) ? 'xxxxxxxxxxxxxxxx' : $this->getOptionValue(self::SETTINGS_HUBSPOT_API_KEY_KEY),
@@ -375,15 +375,15 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 		return [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('HubSpot', 'andbrand-block-forms-base'),
+				'introTitle' => \__('HubSpot', 'seb-forms'),
 			],
 			[
 				'component' => 'select',
 				'selectName' => $this->getSettingsName(self::SETTINGS_HUBSPOT_ITEM_ID_KEY),
 				'selectId' => $this->getSettingsName(self::SETTINGS_HUBSPOT_ITEM_ID_KEY),
-				'selectFieldLabel' => \__('Form', 'andbrand-block-forms-base'),
+				'selectFieldLabel' => \__('Form', 'seb-forms'),
 				// translators: %1$s will be replaced with js selector, %2$s will be replaced with the cache type, %3$s will be replaced with latest update time.
-				'selectFieldHelp' => \sprintf(\__('If a list isn\'t showing up or is missing some items, try <a href="#" class="%1$s" data-type="%2$s">clearing the cache</a>. Last updated: %3$s.', 'andbrand-block-forms-base'), $manifestForm['componentCacheJsClass'], self::SETTINGS_TYPE_KEY, $lastUpdatedTime),
+				'selectFieldHelp' => \sprintf(\__('If a list isn\'t showing up or is missing some items, try <a href="#" class="%1$s" data-type="%2$s">clearing the cache</a>. Last updated: %3$s.', 'seb-forms'), $manifestForm['componentCacheJsClass'], self::SETTINGS_TYPE_KEY, $lastUpdatedTime),
 				'selectOptions' => \array_merge(
 					[
 						[
@@ -428,7 +428,7 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('File manager', 'andbrand-block-forms-base'),
+				'introTitle' => \__('File manager', 'seb-forms'),
 				'introTitleSize' => 'medium',
 			],
 			[
@@ -436,8 +436,8 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 				'inputName' => $this->getSettingsName(self::SETTINGS_HUBSPOT_FILEMANAGER_FOLDER_KEY),
 				'inputId' => $this->getSettingsName(self::SETTINGS_HUBSPOT_FILEMANAGER_FOLDER_KEY),
 				'inputPlaceholder' => HubspotClient::HUBSPOT_FILEMANAGER_DEFAULT_FOLDER_KEY,
-				'inputFieldLabel' => \__('Folder', 'andbrand-block-forms-base'),
-				'inputFieldHelp' => \__('If you use file input field all files will be uploaded to the specified folder.', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('Folder', 'seb-forms'),
+				'inputFieldHelp' => \__('If you use file input field all files will be uploaded to the specified folder.', 'seb-forms'),
 				'inputType' => 'text',
 				'inputValue' => $this->getSettingsValue(self::SETTINGS_HUBSPOT_FILEMANAGER_FOLDER_KEY, $formId),
 			],
@@ -467,9 +467,9 @@ class SettingsHubspot implements SettingsDataInterface, ServiceInterface
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Form fields', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Form fields', 'seb-forms'),
 				'introTitleSize' => 'medium',
-				'introSubtitle' => \__('Controls which fields show up on the frontend, set up how they look and work.', 'andbrand-block-forms-base'),
+				'introSubtitle' => \__('Controls which fields show up on the frontend, set up how they look and work.', 'seb-forms'),
 			],
 			[
 				'component' => 'group',

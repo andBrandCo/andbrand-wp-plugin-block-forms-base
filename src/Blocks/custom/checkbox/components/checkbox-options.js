@@ -6,7 +6,7 @@ import { CheckboxOptions as CheckboxOptionsComponent } from '../../../components
 
 export const CheckboxOptions = ({ attributes, setAttributes }) => {
 	return (
-		<PanelBody title={__('Checkbox', 'andbrand-block-forms-base')}>
+		<PanelBody title={__('Checkbox', 'seb-forms')}>
 			<CheckboxOptionsComponent
 				{...props('checkbox', attributes, {
 					setAttributes,

@@ -3,17 +3,17 @@
 /**
  * The class register route for public form submiting endpoint - mailchimp
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\MailchimpClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\SettingsMailchimp;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
+use SebFormsWpPlugin\Integrations\Mailchimp\MailchimpClientInterface;
+use SebFormsWpPlugin\Integrations\Mailchimp\SettingsMailchimp;
+use SebFormsWpPlugin\Labels\LabelsInterface;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
 
 /**
  * Class FormSubmitMailchimpRoute

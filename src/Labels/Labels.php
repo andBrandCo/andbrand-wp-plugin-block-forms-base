@@ -8,15 +8,15 @@
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Labels;
+namespace SebFormsWpPlugin\Labels;
 
-use AndbrandWpPluginBlockFormsBase\Integrations\Goodbits\SettingsGoodbits;
-use AndbrandWpPluginBlockFormsBase\Integrations\Greenhouse\SettingsGreenhouse;
-use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\SettingsHubspot;
-use AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp\SettingsMailchimp;
-use AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite\SettingsMailerlite;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Validation\SettingsCaptcha;
+use SebFormsWpPlugin\Integrations\Goodbits\SettingsGoodbits;
+use SebFormsWpPlugin\Integrations\Greenhouse\SettingsGreenhouse;
+use SebFormsWpPlugin\Integrations\Hubspot\SettingsHubspot;
+use SebFormsWpPlugin\Integrations\Mailchimp\SettingsMailchimp;
+use SebFormsWpPlugin\Integrations\Mailerlite\SettingsMailerlite;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Validation\SettingsCaptcha;
 
 /**
  * Labels class.

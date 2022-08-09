@@ -31,7 +31,7 @@ export const FileOptions = (attributes) => {
 
 	return (
 		<>
-			<PanelBody title={__('File', 'andbrand-block-forms-base')}>
+			<PanelBody title={__('File', 'seb-forms')}>
 				<FieldOptions
 					{...props('field', attributes)}
 				/>
@@ -41,10 +41,10 @@ export const FileOptions = (attributes) => {
 					isPressed={fileIsMultiple}
 					onClick={() => setAttributes({ [getAttrKey('fileIsMultiple', attributes, manifest)]: !fileIsMultiple })}
 				>
-					{__('Allow uploading multiple files', 'andbrand-block-forms-base')}
+					{__('Allow uploading multiple files', 'seb-forms')}
 				</Button>
 
-				<FancyDivider label={__('Validation', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Validation', 'seb-forms')} />
 
 				<div className='es-h-spaced es-has-wp-field-b-space'>
 					<Button
@@ -52,22 +52,22 @@ export const FileOptions = (attributes) => {
 						isPressed={fileIsRequired}
 						onClick={() => setAttributes({ [getAttrKey('fileIsRequired', attributes, manifest)]: !fileIsRequired })}
 					>
-						{__('Required', 'andbrand-block-forms-base')}
+						{__('Required', 'seb-forms')}
 					</Button>
 				</div>
 
 				<TextControl
-					label={<IconLabel icon={icons.fileType} label={__('Accepted file types', 'andbrand-block-forms-base')} />}
+					label={<IconLabel icon={icons.fileType} label={__('Accepted file types', 'seb-forms')} />}
 					value={fileAccept}
-					help={__('Separate items with a comma.', 'andbrand-block-forms-base')}
+					help={__('Separate items with a comma.', 'seb-forms')}
 					placeholder='e.g. .jpg,.png,.pdf'
 					onChange={(value) => setAttributes({ [getAttrKey('fileAccept', attributes, manifest)]: value })}
 				/>
 
-				<BaseControl label={<IconLabel icon={icons.fileSizeMin} label={__('Allowed file size', 'andbrand-block-forms-base')} />}>
+				<BaseControl label={<IconLabel icon={icons.fileSizeMin} label={__('Allowed file size', 'seb-forms')} />}>
 					<div className='es-fifty-fifty-h'>
 						<TextControl
-							label={__('Minimum (kB)', 'andbrand-block-forms-base')}
+							label={__('Minimum (kB)', 'seb-forms')}
 							value={fileMinSize}
 							type={'number'}
 							onChange={(value) => setAttributes({ [getAttrKey('fileMinSize', attributes, manifest)]: value })}
@@ -75,7 +75,7 @@ export const FileOptions = (attributes) => {
 						/>
 
 						<TextControl
-							label={__('Maximum (kB)', 'andbrand-block-forms-base')}
+							label={__('Maximum (kB)', 'seb-forms')}
 							value={fileMaxSize}
 							type={'number'}
 							onChange={(value) => setAttributes({ [getAttrKey('fileMaxSize', attributes, manifest)]: value })}
@@ -84,13 +84,13 @@ export const FileOptions = (attributes) => {
 					</div>
 				</BaseControl>
 
-				<FancyDivider label={__('Custom uploader', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Custom uploader', 'seb-forms')} />
 
 				<BaseControl
 					className={fileCustomInfoTextUse ? '' : 'es-no-field-spacing'}
 					label={
 						<div className='es-flex-between'>
-							<IconLabel icon={icons.textSize} label={__('Prompt text', 'andbrand-block-forms-base')} />
+							<IconLabel icon={icons.textSize} label={__('Prompt text', 'seb-forms')} />
 
 							<Button
 								icon={icons.visible}
@@ -103,32 +103,32 @@ export const FileOptions = (attributes) => {
 					{fileCustomInfoTextUse &&
 						<TextControl
 							value={fileCustomInfoText}
-							placeholder={__('Drag and drop files here', 'andbrand-block-forms-base')}
+							placeholder={__('Drag and drop files here', 'seb-forms')}
 							onChange={(value) => setAttributes({ [getAttrKey('fileCustomInfoText', attributes, manifest)]: value })}
 						/>
 					}
 				</BaseControl>
 
 				<TextControl
-					label={<IconLabel icon={icons.buttonOutline} label={__('Upload button text', 'andbrand-block-forms-base')} />}
+					label={<IconLabel icon={icons.buttonOutline} label={__('Upload button text', 'seb-forms')} />}
 					value={fileCustomInfoButtonText}
-					placeholder={__('Add files', 'andbrand-block-forms-base')}
+					placeholder={__('Add files', 'seb-forms')}
 					onChange={(value) => setAttributes({ [getAttrKey('fileCustomInfoButtonText', attributes, manifest)]: value })}
 				/>
 
-				<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Advanced', 'seb-forms')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.fieldName} label={__('Name', 'andbrand-block-forms-base')} />}
-					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'andbrand-block-forms-base')}
+					label={<IconLabel icon={icons.fieldName} label={__('Name', 'seb-forms')} />}
+					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'seb-forms')}
 					value={fileName}
 					onChange={(value) => setAttributes({ [getAttrKey('fileName', attributes, manifest)]: value })}
 				/>
 
-				<FancyDivider label={__('Tracking', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Tracking', 'seb-forms')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'andbrand-block-forms-base')} />}
+					label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'seb-forms')} />}
 					value={fileTracking}
 					onChange={(value) => setAttributes({ [getAttrKey('fileTracking', attributes, manifest)]: value })}
 				/>

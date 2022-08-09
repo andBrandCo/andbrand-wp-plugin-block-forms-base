@@ -8,11 +8,11 @@
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Form;
+namespace SebFormsWpPlugin\Form;
 
-use AndbrandWpPluginBlockFormsBase\Mailer\SettingsMailer;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Mailer\SettingsMailer;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Form class.

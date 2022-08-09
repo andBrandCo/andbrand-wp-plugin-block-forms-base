@@ -2,7 +2,7 @@
 	"blockName": "checkboxes",
 	"title": "Checkboxes",
 	"description" : "A group of checkboxes",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-checkboxes"
 	},
@@ -14,7 +14,7 @@
 		"checkboxes": "checkboxes"
 	},
 	"parent": [
-		"andbrand-block-forms-base/form"
+		"seb-forms/form"
 	],
 	"attributes": {
 		"checkboxesAllowedBlocks": {
@@ -23,19 +23,19 @@
 				"type": "string"
 			},
 			"default": [
-				"andbrand-block-forms-base/checkbox"
+				"seb-forms/checkbox"
 			]
 		}
 	},
 	"template": [
 		[
-			"andbrand-block-forms-base/checkbox",
+			"seb-forms/checkbox",
 			{
 				"checkboxCheckboxLabel": "Checkbox 1"
 			}
 		],
 		[
-			"andbrand-block-forms-base/checkbox",
+			"seb-forms/checkbox",
 			{
 				"checkboxCheckboxLabel": "Checkbox 2"
 			}

@@ -3,18 +3,18 @@
 /**
  * Class that holds all methods for building form settings pages, integrations forms, etc.
  *
- * @package AndbrandWpPluginBlockFormsBase\Form
+ * @package SebFormsWpPlugin\Form
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Form;
+namespace SebFormsWpPlugin\Form;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components as HelpersComponents;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\Settings\SettingsGeneral;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components as HelpersComponents;
 
 /**
  * FormBuilder class.
@@ -64,7 +64,7 @@ abstract class AbstractFormBuilder
 			'submit',
 			Components::props('submit', [
 				'additionalClass' => 'es-submit--global',
-				'submitValue' => \__('Save settings', 'andbrand-block-forms-base'),
+				'submitValue' => \__('Save settings', 'seb-forms'),
 				'submitIcon' => 'save',
 			]),
 			'',

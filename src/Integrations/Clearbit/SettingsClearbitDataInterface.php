@@ -3,14 +3,14 @@
 /**
  * Interface that holds all methods for building single form settings form - Clearbit specific.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Clearbit
+ * @package SebFormsWpPlugin\Integrations\Clearbit
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Clearbit;
+namespace SebFormsWpPlugin\Integrations\Clearbit;
 
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
+use SebFormsWpPlugin\Settings\Settings\SettingsDataInterface;
 
 /**
  * Interface for SettingsClearbitDataInterface.

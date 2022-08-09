@@ -3,18 +3,18 @@
 /**
  * The class register route for public form submiting endpoint - Captcha
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
-use AndbrandWpPluginBlockFormsBase\Validation\SettingsCaptcha;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Labels\LabelsInterface;
+use SebFormsWpPlugin\Validation\SettingsCaptcha;
 use Throwable;
 use WP_REST_Request;
 

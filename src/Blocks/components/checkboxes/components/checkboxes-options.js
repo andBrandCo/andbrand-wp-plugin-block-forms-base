@@ -45,12 +45,12 @@ export const CheckboxesOptions = (attributes) => {
 
 	return (
 		<>
-			<PanelBody title={__('Checkboxes', 'andbrand-block-forms-base')}>
+			<PanelBody title={__('Checkboxes', 'seb-forms')}>
 				<FieldOptions
 					{...props('field', attributes)}
 				/>
 
-				<FancyDivider label={__('Validation', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Validation', 'seb-forms')} />
 
 				<Button
 					icon={icons.fieldRequired}
@@ -65,7 +65,7 @@ export const CheckboxesOptions = (attributes) => {
 						}
 					}}
 				>
-					{__('Required', 'andbrand-block-forms-base')}
+					{__('Required', 'seb-forms')}
 				</Button>
 
 				{checkboxesIsRequired &&
@@ -80,16 +80,16 @@ export const CheckboxesOptions = (attributes) => {
 								type='number'
 								className='es-no-field-spacing'
 							/>
-							<span>{checkboxesIsRequiredCount > 1 ? __('items need to be selected', 'andbrand-block-forms-base') : __('item needs to be checked', 'andbrand-block-forms-base')}</span>
+							<span>{checkboxesIsRequiredCount > 1 ? __('items need to be selected', 'seb-forms') : __('item needs to be checked', 'seb-forms')}</span>
 						</div>
 					</>
 				}
 
-				<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
+				<FancyDivider label={__('Advanced', 'seb-forms')} />
 
 				<TextControl
-					label={<IconLabel icon={icons.fieldName} label={__('Name', 'andbrand-block-forms-base')} />}
-					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'andbrand-block-forms-base')}
+					label={<IconLabel icon={icons.fieldName} label={__('Name', 'seb-forms')} />}
+					help={__('Should be unique! Used to identify the field within form submission data. If not set, a random name will be generated.', 'seb-forms')}
 					value={checkboxesName}
 					onChange={(value) => setAttributes({ [getAttrKey('checkboxesName', attributes, manifest)]: value })}
 				/>

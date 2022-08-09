@@ -2,7 +2,7 @@
 	"blockName": "select-option",
 	"title": "Select option",
 	"description" : "A select field option",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-select-option"
 	},
@@ -14,6 +14,6 @@
 		"selectOption": "selectOption"
 	},
 	"parent": [
-		"andbrand-block-forms-base/select"
+		"seb-forms/select"
 	]
 }

@@ -3,17 +3,18 @@
 /**
  * Mailerlite Client integration class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite
+ * @package SebFormsWpPlugin\Integrations\Mailerlite
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailerlite;
+namespace SebFormsWpPlugin\Integrations\Mailerlite;
 
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+
 
 /**
  * MailerliteClient integration class.
@@ -269,10 +270,16 @@ class MailerliteClient implements ClientInterface
 	{
 		$output = [];
 
-		unset($params['email']);
+		if (isset($params['email'])) {
+			unset($params['email']);
+		}
 
 		foreach ($params as $key => $value) {
 			$output[$key] = $value['value'] ?? '';
+		}
+
+		if (isset($params['es-form-storage'])) {
+			unset($params['es-form-storage']);
 		}
 
 		return $output;

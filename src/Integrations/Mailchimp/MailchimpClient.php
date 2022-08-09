@@ -3,17 +3,17 @@
 /**
  * Mailchimp Client integration class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp
+ * @package SebFormsWpPlugin\Integrations\Mailchimp
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp;
+namespace SebFormsWpPlugin\Integrations\Mailchimp;
 
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
 
 /**
  * MailchimpClient integration class.

@@ -24,7 +24,7 @@ export const RadioOptions = (attributes) => {
 	return (
 		<>
 			<TextControl
-				label={<IconLabel icon={icons.textSize} label={__('Radio button label', 'andbrand-block-forms-base')} />}
+				label={<IconLabel icon={icons.textSize} label={__('Radio button label', 'seb-forms')} />}
 				value={radioLabel}
 				onChange={(value) => setAttributes({ [getAttrKey('radioLabel', attributes, manifest)]: value })}
 			/>
@@ -34,14 +34,14 @@ export const RadioOptions = (attributes) => {
 				isPressed={radioIsChecked}
 				onClick={() => setAttributes({ [getAttrKey('radioIsChecked', attributes, manifest)]: !radioIsChecked })}
 			>
-				{__('Select by default', 'andbrand-block-forms-base')}
+				{__('Select by default', 'seb-forms')}
 			</Button>
 
-			<FancyDivider label={__('Advanced', 'andbrand-block-forms-base')} />
+			<FancyDivider label={__('Advanced', 'seb-forms')} />
 
 			<TextControl
-				label={<IconLabel icon={icons.fieldValue} label={__('Value', 'andbrand-block-forms-base')} />}
-				help={__('Internal value, sent if the radio button is selected.', 'andbrand-block-forms-base')}
+				label={<IconLabel icon={icons.fieldValue} label={__('Value', 'seb-forms')} />}
+				help={__('Internal value, sent if the radio button is selected.', 'seb-forms')}
 				value={radioValue}
 				onChange={(value) => setAttributes({ [getAttrKey('radioValue', attributes, manifest)]: value })}
 			/>
@@ -51,13 +51,13 @@ export const RadioOptions = (attributes) => {
 				isPressed={radioIsDisabled}
 				onClick={() => setAttributes({ [getAttrKey('radioIsDisabled', attributes, manifest)]: !radioIsDisabled })}
 			>
-				{__('Disabled', 'andbrand-block-forms-base')}
+				{__('Disabled', 'seb-forms')}
 			</Button>
 
-			<FancyDivider label={__('Tracking', 'andbrand-block-forms-base')} />
+			<FancyDivider label={__('Tracking', 'seb-forms')} />
 
 			<TextControl
-				label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'andbrand-block-forms-base')} />}
+				label={<IconLabel icon={icons.code} label={__('GTM tracking code', 'seb-forms')} />}
 				value={radioTracking}
 				onChange={(value) => setAttributes({ [getAttrKey('radioTracking', attributes, manifest)]: value })}
 			/>

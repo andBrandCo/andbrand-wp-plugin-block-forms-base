@@ -3,10 +3,10 @@
 /**
  * Template for admin settings page.
  *
- * @package AndbrandWpPluginBlockFormsBase\Blocks.
+ * @package SebFormsWpPlugin\Blocks.
  */
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
 
 $manifest = Components::getManifest(__DIR__);
 $manifestSection = Components::getManifest(dirname(__DIR__, 1) . '/admin-settings-section');
@@ -43,7 +43,7 @@ if (!$adminSettingsSidebar || !$adminSettingsForm) {
 		<div class="<?php echo esc_attr("{$sectionClass}__section {$sectionClass}__section--clean"); ?>">
 			<a href="<?php echo esc_url($adminSettingsBackLink); ?>" class="<?php echo esc_attr("{$sectionClass}__link"); ?>">
 				<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 10H4m4-5-5 5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-				<?php echo esc_html__('All forms', 'andbrand-block-forms-base'); ?>
+				<?php echo esc_html__('All forms', 'seb-forms'); ?>
 			</a>
 		</div>
 
@@ -84,7 +84,7 @@ if (!$adminSettingsSidebar || !$adminSettingsForm) {
 						<div class="<?php echo esc_attr("{$sectionClass}__actions"); ?>">
 							<a href="<?php echo esc_url($adminSettingsFormEditLink); ?>" class="<?php echo esc_attr("{$sectionClass}__link"); ?> <?php echo esc_attr("{$sectionClass}__link--cta"); ?>">
 								<svg class="<?php echo esc_attr("{$sectionClass}__link-icon"); ?>" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.5 7.5-3-3-8.665 8.184a1.5 1.5 0 0 0-.435.765l-.708 3.189a.5.5 0 0 0 .646.583l3.326-1.109a1.5 1.5 0 0 0 .586-.362L15.5 7.5z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="m12.5 4.5 1.44-1.44a1.5 1.5 0 0 1 2.12 0l.88.88a1.5 1.5 0 0 1 0 2.12L15.5 7.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
-								<?php echo esc_html__('Edit form', 'andbrand-block-forms-base'); ?>
+								<?php echo esc_html__('Edit form', 'seb-forms'); ?>
 							</a>
 						</div>
 					<?php } ?>

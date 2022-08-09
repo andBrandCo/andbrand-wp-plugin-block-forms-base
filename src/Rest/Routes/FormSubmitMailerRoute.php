@@ -3,19 +3,19 @@
 /**
  * The class register route for public form submiting endpoint - Mailer
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Helpers\UploadHelper;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
-use AndbrandWpPluginBlockFormsBase\Mailer\MailerInterface;
-use AndbrandWpPluginBlockFormsBase\Mailer\SettingsMailer;
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Helpers\UploadHelper;
+use SebFormsWpPlugin\Labels\LabelsInterface;
+use SebFormsWpPlugin\Mailer\MailerInterface;
+use SebFormsWpPlugin\Mailer\SettingsMailer;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
 
 /**
  * Class FormSubmitMailerRoute

@@ -3,19 +3,19 @@
 /**
  * Captcha Settings class - Google reCaptcha.
  *
- * @package AndbrandWpPluginBlockFormsBase\Validation
+ * @package SebFormsWpPlugin\Validation
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Validation;
+namespace SebFormsWpPlugin\Validation;
 
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Labels\LabelsInterface;
+use SebFormsWpPlugin\Settings\Settings\SettingsDataInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsCaptcha class.
@@ -127,7 +127,7 @@ class SettingsCaptcha implements SettingsDataInterface, ServiceInterface
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Captcha', 'andbrand-block-forms-base'),
+			'label' => \__('Captcha', 'seb-forms'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -157,7 +157,7 @@ class SettingsCaptcha implements SettingsDataInterface, ServiceInterface
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Google reCaptcha', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Google reCaptcha', 'seb-forms'),
 				'introSubtitle' => \__("To get the Google reCaptcha site key please visit this <a href='https://www.google.com/recaptcha/admin/create' target='_blank' rel='noopener noreferrer'>link</a>. <br /> <br /> <strong>Important:</strong> Make sure to select <strong>reCaptcha version 3</strong>!"),
 			],
 			[
@@ -172,7 +172,7 @@ class SettingsCaptcha implements SettingsDataInterface, ServiceInterface
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use Google reCaptcha', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('Use Google reCaptcha', 'seb-forms'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_CAPTCHA_USE_KEY, self::SETTINGS_CAPTCHA_USE_KEY),
 						'checkboxValue' => self::SETTINGS_CAPTCHA_USE_KEY,
 						'checkboxSingleSubmit' => true,
@@ -192,7 +192,7 @@ class SettingsCaptcha implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_CAPTCHA_SITE_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_CAPTCHA_SITE_KEY),
-						'inputFieldLabel' => \__('Site key', 'andbrand-block-forms-base'),
+						'inputFieldLabel' => \__('Site key', 'seb-forms'),
 						'inputType' => 'password',
 						'inputIsRequired' => true,
 						'inputValue' => !empty($siteKey) ? 'xxxxxxxxxxxxxxxx' : $this->getOptionValue(self::SETTINGS_CAPTCHA_SITE_KEY),
@@ -202,7 +202,7 @@ class SettingsCaptcha implements SettingsDataInterface, ServiceInterface
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_CAPTCHA_SECRET_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_CAPTCHA_SECRET_KEY),
-						'inputFieldLabel' => \__('Secret key', 'andbrand-block-forms-base'),
+						'inputFieldLabel' => \__('Secret key', 'seb-forms'),
 						'inputType' => 'password',
 						'inputIsRequired' => true,
 						'inputValue' => !empty($secretKey) ? 'xxxxxxxxxxxxxxxx' : $this->getOptionValue(self::SETTINGS_CAPTCHA_SECRET_KEY),
@@ -211,8 +211,8 @@ class SettingsCaptcha implements SettingsDataInterface, ServiceInterface
 					[
 						'component' => 'input',
 						'inputId' => $this->getSettingsName(self::SETTINGS_CAPTCHA_SCORE_KEY),
-						'inputFieldLabel' => \__('"Spam unlikely" threshold', 'andbrand-block-forms-base'),
-						'inputFieldHelp' => \__('This number determines the level above which a submission is <strong>not</strong> considered spam. <br /> <br /> The value should be between 0.0 and 1.0 (default is 0.5).', 'andbrand-block-forms-base'),
+						'inputFieldLabel' => \__('"Spam unlikely" threshold', 'seb-forms'),
+						'inputFieldHelp' => \__('This number determines the level above which a submission is <strong>not</strong> considered spam. <br /> <br /> The value should be between 0.0 and 1.0 (default is 0.5).', 'seb-forms'),
 						'inputType' => 'number',
 						'inputValue' => $this->getOptionValue(self::SETTINGS_CAPTCHA_SCORE_KEY),
 						'inputMin' => 0,

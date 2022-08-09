@@ -3,19 +3,19 @@
 /**
  * The file that is an Geolocation class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Geolocation;
+ * @package SebFormsWpPlugin\Geolocation;
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Geolocation;
+namespace SebFormsWpPlugin\Geolocation;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 use Throwable;
 
 /**
@@ -219,7 +219,7 @@ class Geolocation implements ServiceInterface, GeolocationInterface
 	{
 		$output = [
 			[
-				'label' => \__('Europe', 'andbrand-block-forms-base'),
+				'label' => \__('Europe', 'seb-forms'),
 				'value' => 'europe',
 				'group' => [
 					'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR',
@@ -230,7 +230,7 @@ class Geolocation implements ServiceInterface, GeolocationInterface
 				],
 			],
 			[
-				'label' => \__('European Union', 'andbrand-block-forms-base'),
+				'label' => \__('European Union', 'seb-forms'),
 				'value' => 'european-union',
 				'group' => [
 					'BE', 'EL', 'LT', 'PT', 'BG', 'ES', 'LU', 'RO', 'CZ',
@@ -239,7 +239,7 @@ class Geolocation implements ServiceInterface, GeolocationInterface
 				],
 			],
 			[
-				'label' => \__('Ex Yugoslavia', 'andbrand-block-forms-base'),
+				'label' => \__('Ex Yugoslavia', 'seb-forms'),
 				'value' => 'ex-yugoslavia',
 				'group' => [
 					'HR', 'RS', 'BA', 'ME', 'SI', 'MK'

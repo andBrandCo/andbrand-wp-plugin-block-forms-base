@@ -3,20 +3,20 @@
 /**
  * Goodbits integration class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Goodbits
+ * @package SebFormsWpPlugin\Integrations\Goodbits
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Goodbits;
+namespace SebFormsWpPlugin\Integrations\Goodbits;
 
-use AndbrandWpPluginBlockFormsBase\Form\AbstractFormBuilder;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPlugin\Form\AbstractFormBuilder;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Integrations\MapperInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * Goodbits integration class.
@@ -142,7 +142,7 @@ class Goodbits extends AbstractFormBuilder implements MapperInterface, ServiceIn
 				'component' => 'input',
 				'inputName' => 'email',
 				'inputTracking' => 'email',
-				'inputFieldLabel' => \__('Email', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('Email', 'seb-forms'),
 				'inputId' => 'email',
 				'inputType' => 'text',
 				'inputIsRequired' => true,
@@ -153,7 +153,7 @@ class Goodbits extends AbstractFormBuilder implements MapperInterface, ServiceIn
 				'component' => 'input',
 				'inputName' => 'first_name',
 				'inputTracking' => 'first_name',
-				'inputFieldLabel' => \__('First Name', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('First Name', 'seb-forms'),
 				'inputId' => 'first_name',
 				'inputType' => 'text',
 				'blockSsr' => $ssr,
@@ -162,7 +162,7 @@ class Goodbits extends AbstractFormBuilder implements MapperInterface, ServiceIn
 				'component' => 'input',
 				'inputName' => 'last_name',
 				'inputTracking' => 'last_name',
-				'inputFieldLabel' => \__('Last Name', 'andbrand-block-forms-base'),
+				'inputFieldLabel' => \__('Last Name', 'seb-forms'),
 				'inputId' => 'last_name',
 				'inputType' => 'text',
 				'blockSsr' => $ssr,

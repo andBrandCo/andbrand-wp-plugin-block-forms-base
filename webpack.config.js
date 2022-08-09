@@ -31,7 +31,7 @@ module.exports = (env, argv) => {
     output: {
       // Load all output config from eightshift-frontend-libs.
       ...project.output,
-      library: "AndbrandWpPluginBlockFormsBase",
+      library: "SebFormsWpPlugin",
     },
 
     entry: {

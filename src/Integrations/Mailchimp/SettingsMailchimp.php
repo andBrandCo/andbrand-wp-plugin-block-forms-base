@@ -3,23 +3,23 @@
 /**
  * Mailchimp Settings class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp
+ * @package SebFormsWpPlugin\Integrations\Mailchimp
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Mailchimp;
+namespace SebFormsWpPlugin\Integrations\Mailchimp;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\Components;
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\MapperInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings\SettingsGlobalDataInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsDataInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Services\ServiceInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\Components;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Integrations\MapperInterface;
+use SebFormsWpPlugin\Settings\GlobalSettings\SettingsGlobalDataInterface;
+use SebFormsWpPlugin\Settings\Settings\SettingsDataInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Services\ServiceInterface;
 
 /**
  * SettingsMailchimp class.
@@ -179,7 +179,7 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 	public function getSettingsSidebar(): array
 	{
 		return [
-			'label' => \__('Mailchimp', 'andbrand-block-forms-base'),
+			'label' => \__('Mailchimp', 'seb-forms'),
 			'value' => self::SETTINGS_TYPE_KEY,
 			'icon' => Filters::ALL[self::SETTINGS_TYPE_KEY]['icon'],
 		];
@@ -198,9 +198,9 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Some config required', 'andbrand-block-forms-base'),
+					'highlightedContentTitle' => \__('Some config required', 'seb-forms'),
 					// translators: %s will be replaced with the global settings url.
-					'highlightedContentSubtitle' => \sprintf(\__('Before using Mailchimp you need to configure it in  <a href="%s">global settings</a>.', 'andbrand-block-forms-base'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
+					'highlightedContentSubtitle' => \sprintf(\__('Before using Mailchimp you need to configure it in  <a href="%s">global settings</a>.', 'seb-forms'), Helper::getSettingsGlobalPageUrl(self::SETTINGS_TYPE_KEY)),
 					'highlightedContentIcon' => 'tools',
 				],
 			];
@@ -214,8 +214,8 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 			return [
 				[
 					'component' => 'highlighted-content',
-					'highlightedContentTitle' => \__('Something went wrong', 'andbrand-block-forms-base'),
-					'highlightedContentSubtitle' => \__('Data from Mailchimp couldn\'t be fetched. Check the API key.', 'andbrand-block-forms-base'),
+					'highlightedContentTitle' => \__('Something went wrong', 'seb-forms'),
+					'highlightedContentSubtitle' => \__('Data from Mailchimp couldn\'t be fetched. Check the API key.', 'seb-forms'),
 					'highlightedContentIcon' => 'error',
 				],
 			];
@@ -249,15 +249,15 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Mailchimp', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Mailchimp', 'seb-forms'),
 			],
 			[
 				'component' => 'select',
 				'selectName' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_LIST_KEY),
 				'selectId' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_LIST_KEY),
-				'selectFieldLabel' => \__('Subscription list', 'andbrand-block-forms-base'),
+				'selectFieldLabel' => \__('Subscription list', 'seb-forms'),
 				// translators: %1$s will be replaced with js selector, %2$s will be replaced with the cache type, %3$s will be replaced with latest update time.
-				'selectFieldHelp' => \sprintf(\__('If a list isn\'t showing up or is missing some items, try <a href="#" class="%1$s" data-type="%2$s">clearing the cache</a>. Last updated: %3$s.', 'andbrand-block-forms-base'), $manifestForm['componentCacheJsClass'], self::SETTINGS_TYPE_KEY, $lastUpdatedTime),
+				'selectFieldHelp' => \sprintf(\__('If a list isn\'t showing up or is missing some items, try <a href="#" class="%1$s" data-type="%2$s">clearing the cache</a>. Last updated: %3$s.', 'seb-forms'), $manifestForm['componentCacheJsClass'], self::SETTINGS_TYPE_KEY, $lastUpdatedTime),
 				'selectOptions' => $itemOptions,
 				'selectIsRequired' => true,
 				'selectValue' => $selectedItem,
@@ -275,9 +275,9 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 				],
 				[
 					'component' => 'intro',
-					'introTitle' => \__('Audience tags', 'andbrand-block-forms-base'),
+					'introTitle' => \__('Audience tags', 'seb-forms'),
 					'introTitleSize' => 'medium',
-					'introSubtitle' => \__('Control which tags wil show up on the frontend and set up how will they look and work.', 'andbrand-block-forms-base'),
+					'introSubtitle' => \__('Control which tags wil show up on the frontend and set up how will they look and work.', 'seb-forms'),
 				],
 			];
 
@@ -289,7 +289,7 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 				if (!$isTagsShowHidden) {
 					$tagsLabelsOverrides = [
 						'component' => 'group',
-						'groupHelp' => \__('Provide override label that will be displayed on the frontend.', 'andbrand-block-forms-base'),
+						'groupHelp' => \__('Provide override label that will be displayed on the frontend.', 'seb-forms'),
 						'groupSaveOneField' => true,
 						'groupContent' => \array_map(
 							function ($tag, $index) use ($formId) {
@@ -317,26 +317,26 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 						[
 							'component' => 'select',
 							'selectId' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_LIST_TAGS_SHOW_KEY),
-							'selectFieldLabel' => \__('Tag visibility', 'andbrand-block-forms-base'),
-							'selectFieldHelp' => $isTagsShowHidden ? \__('Tags you select bellow will be added to you form as a hidden field.', 'andbrand-block-forms-base') : \__('Tags you select bellow will be displayed in the form.', 'andbrand-block-forms-base'),
+							'selectFieldLabel' => \__('Tag visibility', 'seb-forms'),
+							'selectFieldHelp' => $isTagsShowHidden ? \__('Tags you select bellow will be added to you form as a hidden field.', 'seb-forms') : \__('Tags you select bellow will be displayed in the form.', 'seb-forms'),
 							'selectValue' => $this->getOptionValue(self::SETTINGS_MAILCHIMP_LIST_TAGS_SHOW_KEY),
 							'selectSingleSubmit' => true,
 							'selectOptions' => [
 								[
 									'component' => 'select-option',
-									'selectOptionLabel' => \__('Don\'t show tags', 'andbrand-block-forms-base'),
+									'selectOptionLabel' => \__('Don\'t show tags', 'seb-forms'),
 									'selectOptionValue' => 'hidden',
 									'selectOptionIsSelected' => $isTagsShowHidden,
 								],
 								[
 									'component' => 'select-option',
-									'selectOptionLabel' => \__('Show as a select menu', 'andbrand-block-forms-base'),
+									'selectOptionLabel' => \__('Show as a select menu', 'seb-forms'),
 									'selectOptionValue' => 'select',
 									'selectOptionIsSelected' => $this->isCheckedSettings('select', self::SETTINGS_MAILCHIMP_LIST_TAGS_SHOW_KEY, $formId),
 								],
 								[
 									'component' => 'select-option',
-									'selectOptionLabel' => \__('Show as checkboxes', 'andbrand-block-forms-base'),
+									'selectOptionLabel' => \__('Show as checkboxes', 'seb-forms'),
 									'selectOptionValue' => 'checkboxes',
 									'selectOptionIsSelected' => $this->isCheckedSettings('checkboxes', self::SETTINGS_MAILCHIMP_LIST_TAGS_SHOW_KEY, $formId),
 								],
@@ -345,13 +345,13 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 						[
 							'component' => 'group',
 							'groupId' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_LIST_TAGS_LABELS_KEY),
-							'groupLabel' => \__('Tags list', 'andbrand-block-forms-base'),
+							'groupLabel' => \__('Tags list', 'seb-forms'),
 							'groupStyle' => 'tags',
 							'groupContent' => [
 								[
 									'component' => 'group',
 									'groupName' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_LIST_TAGS_KEY),
-									'groupHelp' => $isTagsShowHidden ? \__('Select tags that will be added to you form as a hidden field. If nothing is selected nothing will be sent.', 'andbrand-block-forms-base') : \__('Select tags that will be displayed in the form field. If nothing is selected everything will be displayed.', 'andbrand-block-forms-base'),
+									'groupHelp' => $isTagsShowHidden ? \__('Select tags that will be added to you form as a hidden field. If nothing is selected nothing will be sent.', 'seb-forms') : \__('Select tags that will be displayed in the form field. If nothing is selected everything will be displayed.', 'seb-forms'),
 									'groupContent' => [
 										[
 											'component' => 'checkboxes',
@@ -395,9 +395,9 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 					],
 					[
 						'component' => 'intro',
-						'introTitle' => \__('Form fields', 'andbrand-block-forms-base'),
+						'introTitle' => \__('Form fields', 'seb-forms'),
 						'introTitleSize' => 'medium',
-						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'andbrand-block-forms-base'),
+						'introSubtitle' => \__('Control which fields show up on the frontend, set up how they look and work.', 'seb-forms'),
 					],
 					[
 						'component' => 'group',
@@ -433,11 +433,11 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 		$output = [
 			[
 				'component' => 'intro',
-				'introTitle' => \__('Mailchimp', 'andbrand-block-forms-base'),
+				'introTitle' => \__('Mailchimp', 'seb-forms'),
 			],
 			[
 				'component' => 'intro',
-				'introTitle' => \__('How to get the API key?', 'andbrand-block-forms-base'),
+				'introTitle' => \__('How to get the API key?', 'seb-forms'),
 				'introTitleSize' => 'small',
 				// phpcs:ignore WordPress.WP.I18n.NoHtmlWrappedStrings
 				'introSubtitle' => \__('<ol>
@@ -447,7 +447,7 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 						<li>Click on <strong>Extras</strong> and <strong>API Keys</strong> in the tabs section.</li>
 						<li>Click on the <strong>Create a Key</strong> button.<br/></li>
 						<li>Copy the API key into the field below or use the global constant.</li>
-					</ol>', 'andbrand-block-forms-base'),
+					</ol>', 'seb-forms'),
 			],
 			[
 				'component' => 'divider',
@@ -461,7 +461,7 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 				'checkboxesContent' => [
 					[
 						'component' => 'checkbox',
-						'checkboxLabel' => \__('Use Mailchimp', 'andbrand-block-forms-base'),
+						'checkboxLabel' => \__('Use Mailchimp', 'seb-forms'),
 						'checkboxIsChecked' => $this->isCheckboxOptionChecked(self::SETTINGS_MAILCHIMP_USE_KEY, self::SETTINGS_MAILCHIMP_USE_KEY),
 						'checkboxValue' => self::SETTINGS_MAILCHIMP_USE_KEY,
 						'checkboxSingleSubmit' => true,
@@ -480,8 +480,8 @@ class SettingsMailchimp implements SettingsDataInterface, SettingsGlobalDataInte
 						'component' => 'input',
 						'inputName' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_API_KEY_KEY),
 						'inputId' => $this->getSettingsName(self::SETTINGS_MAILCHIMP_API_KEY_KEY),
-						'inputFieldLabel' => \__('API key', 'andbrand-block-forms-base'),
-						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'andbrand-block-forms-base'),
+						'inputFieldLabel' => \__('API key', 'seb-forms'),
+						'inputFieldHelp' => \__('Can also be provided via a global variable.', 'seb-forms'),
 						'inputType' => 'password',
 						'inputIsRequired' => true,
 						'inputValue' => !empty($apiKey) ? 'xxxxxxxxxxxxxxxx' : $this->getOptionValue(self::SETTINGS_MAILCHIMP_API_KEY_KEY),

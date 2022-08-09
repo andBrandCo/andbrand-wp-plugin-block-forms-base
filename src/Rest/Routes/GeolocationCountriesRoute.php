@@ -3,15 +3,15 @@
 /**
  * The class register route for getting Geolocation list of countries endpoint.
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\Exception\UnverifiedRequestException;
-use AndbrandWpPluginBlockFormsBase\Geolocation\GeolocationInterface;
+use SebFormsWpPlugin\Exception\UnverifiedRequestException;
+use SebFormsWpPlugin\Geolocation\GeolocationInterface;
 use WP_REST_Request;
 
 /**

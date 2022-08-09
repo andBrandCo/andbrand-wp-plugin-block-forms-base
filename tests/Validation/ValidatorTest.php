@@ -7,10 +7,10 @@ use Brain\Monkey\Functions;
 
 use function Tests\setupMocks;
 
-use AndbrandWpPluginBlockFormsBase\Validation\Validator;
-use AndbrandWpPluginBlockFormsBase\Labels\Labels;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
-use AndbrandWpPluginBlockFormsBase\Validation\SettingsValidation;
+use SebFormsWpPlugin\Validation\Validator;
+use SebFormsWpPlugin\Labels\Labels;
+use SebFormsWpPlugin\Labels\LabelsInterface;
+use SebFormsWpPlugin\Validation\SettingsValidation;
 
 class ValidatorMock extends Validator {
 	public function __construct(LabelsInterface $labels) {

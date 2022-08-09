@@ -14,16 +14,16 @@ export const GoodbitsOptions = ({ postId }) => {
 	const wpAdminUrl = esFormsBlocksLocalization.wpAdminUrl;
 	
 	return (
-		<PanelBody title={__('Goodbits', 'andbrand-block-forms-base')}>
+		<PanelBody title={__('Goodbits', 'seb-forms')}>
 			<BaseControl
-				label={<IconLabel icon={icons.options} label={__('Settings', 'andbrand-block-forms-base')} />}
-				help={__('On Goodbits settings page you can setup all details regarding you integration.', 'andbrand-block-forms-base')}
+				label={<IconLabel icon={icons.options} label={__('Settings', 'seb-forms')} />}
+				help={__('On Goodbits settings page you can setup all details regarding you integration.', 'seb-forms')}
 			>
 				<Button
 					href={`${wpAdminUrl}${settingsPageUrl}&formId=${postId}&type=goodbits`}
 					isSecondary
 				>
-					{__('Open Goodbits Form Settings', 'andbrand-block-forms-base')}
+					{__('Open Goodbits Form Settings', 'seb-forms')}
 				</Button>
 			</BaseControl>
 		</PanelBody>

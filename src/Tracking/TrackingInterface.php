@@ -3,12 +3,12 @@
 /**
  * Tracking data interface.
  *
- * @package AndbrandWpPluginBlockFormsBase\Tracking
+ * @package SebFormsWpPlugin\Tracking
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Tracking;
+namespace SebFormsWpPlugin\Tracking;
 
 /**
  * Interface TrackingInterface

@@ -3,19 +3,19 @@
 /**
  * The class register route for Form Settings endpoint
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\AdminMenus\FormGlobalSettingsAdminSubMenu;
-use AndbrandWpPluginBlockFormsBase\Cache\SettingsCache;
-use AndbrandWpPluginBlockFormsBase\Exception\UnverifiedRequestException;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
+use SebFormsWpPlugin\AdminMenus\FormGlobalSettingsAdminSubMenu;
+use SebFormsWpPlugin\Cache\SettingsCache;
+use SebFormsWpPlugin\Exception\UnverifiedRequestException;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
 use WP_REST_Request;
 
 /**

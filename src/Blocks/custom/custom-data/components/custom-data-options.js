@@ -30,17 +30,17 @@ export const CustomDataOptions = ({ attributes, setAttributes, clientId }) => {
 
 	if (customDataDataOptions?.length < 1) {
 		return (
-			<PanelBody title={__('Custom data', 'andbrand-block-forms-base')}>
-				{__('Configure a custom data source to display the block options.', 'andbrand-block-forms-base')}
+			<PanelBody title={__('Custom data', 'seb-forms')}>
+				{__('Configure a custom data source to display the block options.', 'seb-forms')}
 			</PanelBody>
 		);
 	}
 
 	return (
 		<>
-			<PanelBody title={__('Custom data', 'andbrand-block-forms-base')}>
+			<PanelBody title={__('Custom data', 'seb-forms')}>
 				<CustomSelect
-					label={<IconLabel icon={icons.fieldType} label={__('Field type', 'andbrand-block-forms-base')} />}
+					label={<IconLabel icon={icons.fieldType} label={__('Field type', 'seb-forms')} />}
 					value={customDataFieldType}
 					options={getOption('customDataFieldType', attributes, manifest)}
 					onChange={(value) => setAttributes({ [getAttrKey('customDataFieldType', attributes, manifest)]: value })}
@@ -50,7 +50,7 @@ export const CustomDataOptions = ({ attributes, setAttributes, clientId }) => {
 				/>
 
 				<CustomSelect
-					label={<IconLabel icon={icons.data} label={__('Dataset', 'andbrand-block-forms-base')} />}
+					label={<IconLabel icon={icons.data} label={__('Dataset', 'seb-forms')} />}
 					value={customDataData}
 					options={customDataDataOptions}
 					onChange={(value) => setAttributes({ [getAttrKey('customDataData', attributes, manifest)]: value })}

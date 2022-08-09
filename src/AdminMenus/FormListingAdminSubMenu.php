@@ -3,15 +3,15 @@
 /**
  * Class that holds class for admin sub menu - Form Listing.
  *
- * @package AndbrandWpPluginBlockFormsBase\AdminMenus
+ * @package SebFormsWpPlugin\AdminMenus
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\AdminMenus;
+namespace SebFormsWpPlugin\AdminMenus;
 
-use AndbrandWpPluginBlockFormsBase\Settings\Listing\FormListingInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
+use SebFormsWpPlugin\Settings\Listing\FormListingInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\AdminMenus\AbstractAdminSubMenu;
 
 /**
  * FormListingAdminSubMenu class.
@@ -96,7 +96,7 @@ class FormListingAdminSubMenu extends AbstractAdminSubMenu
 	 */
 	protected function getMenuTitle(): string
 	{
-		return \esc_html__('Forms', 'andbrand-block-forms-base');
+		return \esc_html__('Forms', 'seb-forms');
 	}
 
 	/**

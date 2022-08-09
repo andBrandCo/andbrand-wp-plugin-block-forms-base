@@ -3,12 +3,12 @@
 /**
  * Geolocation interface.
  *
- * @package AndbrandWpPluginBlockFormsBase\Geolocation;
+ * @package SebFormsWpPlugin\Geolocation;
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Geolocation;
+namespace SebFormsWpPlugin\Geolocation;
 
 /**
  * GeolocationInterface interface.

@@ -3,12 +3,12 @@
 /**
  * File containing Hubspot specific interface.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Hubspot
+ * @package SebFormsWpPlugin\Integrations\Hubspot
  */
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Hubspot;
+namespace SebFormsWpPlugin\Integrations\Hubspot;
 
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
+use SebFormsWpPlugin\Integrations\ClientInterface;
 
 /**
  * Interface for a Client

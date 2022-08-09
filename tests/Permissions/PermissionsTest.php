@@ -3,7 +3,7 @@
 namespace Tests\Unit\Permissions;
 
 use Brain\Monkey;
-use AndbrandWpPluginBlockFormsBase\Permissions\Permissions;
+use SebFormsWpPlugin\Permissions\Permissions;
 
 use function Tests\setupMocks;
 

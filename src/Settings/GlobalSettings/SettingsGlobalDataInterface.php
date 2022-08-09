@@ -3,12 +3,12 @@
 /**
  * Class that holds data for global forms settings.
  *
- * @package AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings
+ * @package SebFormsWpPlugin\Settings\GlobalSettings
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Settings\GlobalSettings;
+namespace SebFormsWpPlugin\Settings\GlobalSettings;
 
 /**
  * Interface for SettingsGlobalDataInterface

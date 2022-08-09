@@ -3,22 +3,22 @@
 /**
  * The class register route for public form submiting endpoint - HubSpot
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Helpers\UploadHelper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\ClearbitClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\Clearbit\SettingsClearbit;
-use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\HubspotClientInterface;
-use AndbrandWpPluginBlockFormsBase\Integrations\Hubspot\SettingsHubspot;
-use AndbrandWpPluginBlockFormsBase\Labels\LabelsInterface;
-use AndbrandWpPluginBlockFormsBase\Validation\ValidatorInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Helpers\UploadHelper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Integrations\Clearbit\ClearbitClientInterface;
+use SebFormsWpPlugin\Integrations\Clearbit\SettingsClearbit;
+use SebFormsWpPlugin\Integrations\Hubspot\HubspotClientInterface;
+use SebFormsWpPlugin\Integrations\Hubspot\SettingsHubspot;
+use SebFormsWpPlugin\Labels\LabelsInterface;
+use SebFormsWpPlugin\Validation\ValidatorInterface;
 
 /**
  * Class FormSubmitHubspotRoute

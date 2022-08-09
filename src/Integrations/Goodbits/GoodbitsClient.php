@@ -3,18 +3,18 @@
 /**
  * Goodbits Client integration class.
  *
- * @package AndbrandWpPluginBlockFormsBase\Integrations\Goodbits
+ * @package SebFormsWpPlugin\Integrations\Goodbits
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Integrations\Goodbits;
+namespace SebFormsWpPlugin\Integrations\Goodbits;
 
-use AndbrandWpPluginBlockFormsBase\Helpers\Helper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Integrations\ClientInterface;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
+use SebFormsWpPlugin\Helpers\Helper;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Integrations\ClientInterface;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPluginVendor\EightshiftLibs\Helpers\ObjectHelperTrait;
 
 /**
  * GoodbitsClient integration class.

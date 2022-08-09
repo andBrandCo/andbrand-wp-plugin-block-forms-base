@@ -3,18 +3,18 @@
 /**
  * The class register route for public/admin form submiting endpoint
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\Exception\UnverifiedRequestException;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Helpers\UploadHelper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use SebFormsWpPlugin\Exception\UnverifiedRequestException;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Helpers\UploadHelper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Hooks\Variables;
 use WP_REST_Request;
 
 /**

@@ -1,6 +1,6 @@
 {
   "name": "eightshift/eightshift-forms",
-  "description": "Andbrand Block Forms plugin for building developer-friendly Gutenberg-ready forms in WordPress",
+  "description": "Seb FormsBlock Forms plugin for building developer-friendly Gutenberg-ready forms in WordPress",
   "keywords": [
     "composer",
     "form",
@@ -54,7 +54,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AndbrandWpPluginBlockFormsBase\\": "src/"
+      "SebFormsWpPlugin\\": "src/"
     }
   },
   "autoload-dev": {
@@ -83,7 +83,7 @@
   },
   "extra": {
     "imposter": {
-      "namespace": "AndbrandWpPluginBlockFormsBaseVendor"
+      "namespace": "SebFormsWpPluginVendor"
     }
   }
 }

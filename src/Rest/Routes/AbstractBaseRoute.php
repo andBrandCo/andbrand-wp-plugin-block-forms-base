@@ -3,18 +3,18 @@
 /**
  * The class register route for Base endpoint used on all forms.
  *
- * @package AndbrandWpPluginBlockFormsBase\Rest\Routes
+ * @package SebFormsWpPlugin\Rest\Routes
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Rest\Routes;
+namespace SebFormsWpPlugin\Rest\Routes;
 
-use AndbrandWpPluginBlockFormsBase\Config\Config;
-use AndbrandWpPluginBlockFormsBase\Exception\UnverifiedRequestException;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Rest\Routes\AbstractRoute;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Rest\CallableRouteInterface;
-use AndbrandWpPluginBlockFormsBase\Validation\Validator; // phpcs:ignore
+use SebFormsWpPlugin\Config\Config;
+use SebFormsWpPlugin\Exception\UnverifiedRequestException;
+use SebFormsWpPluginVendor\EightshiftLibs\Rest\Routes\AbstractRoute;
+use SebFormsWpPluginVendor\EightshiftLibs\Rest\CallableRouteInterface;
+use SebFormsWpPlugin\Validation\Validator; // phpcs:ignore
 
 /**
  * Class FormSubmitRoute

@@ -3,14 +3,14 @@
 /**
  * UnverifiedRequestException
  *
- * @package AndbrandWpPluginBlockFormsBase\Exception
+ * @package SebFormsWpPlugin\Exception
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Exception;
+namespace SebFormsWpPlugin\Exception;
 
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Exception\GeneralExceptionInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Exception\GeneralExceptionInterface;
 use InvalidArgumentException;
 
 /**

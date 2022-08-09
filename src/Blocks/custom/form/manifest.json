@@ -2,7 +2,7 @@
 	"blockName": "form",
 	"title": "Custom form",
 	"description" : "A form with customizable fields",
-	"category": "andbrand-block-forms-base",
+	"category": "seb-forms",
 	"icon": {
 		"src": "esf-form"
 	},
@@ -14,19 +14,19 @@
 		"form": "form"
 	},
 	"parent": [
-		"andbrand-block-forms-base/form-selector"
+		"seb-forms/form-selector"
 	],
 	"attributes": {
 		"formAllowedBlocks": {
 			"type": "array",
 			"default": [
-				"andbrand-block-forms-base/file",
-				"andbrand-block-forms-base/input",
-				"andbrand-block-forms-base/radios",
-				"andbrand-block-forms-base/select",
-				"andbrand-block-forms-base/submit",
-				"andbrand-block-forms-base/textarea",
-				"andbrand-block-forms-base/checkboxes"
+				"seb-forms/file",
+				"seb-forms/input",
+				"seb-forms/radios",
+				"seb-forms/select",
+				"seb-forms/submit",
+				"seb-forms/textarea",
+				"seb-forms/checkboxes"
 			]
 		},
 		"formFormPostId": {

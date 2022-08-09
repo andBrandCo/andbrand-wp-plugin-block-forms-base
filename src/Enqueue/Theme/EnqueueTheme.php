@@ -3,22 +3,22 @@
 /**
  * The Theme/Frontend Enqueue specific functionality.
  *
- * @package AndbrandWpPluginBlockFormsBase\Enqueue\Theme
+ * @package SebFormsWpPlugin\Enqueue\Theme
  */
 
 declare(strict_types=1);
 
-namespace AndbrandWpPluginBlockFormsBase\Enqueue\Theme;
+namespace SebFormsWpPlugin\Enqueue\Theme;
 
-use AndbrandWpPluginBlockFormsBase\Config\Config;
-use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
-use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
-use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
-use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
-use AndbrandWpPluginBlockFormsBase\Tracking\TrackingInterface;
-use AndbrandWpPluginBlockFormsBase\Validation\SettingsCaptcha;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Manifest\ManifestInterface;
-use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Enqueue\Theme\AbstractEnqueueTheme;
+use SebFormsWpPlugin\Config\Config;
+use SebFormsWpPlugin\Settings\Settings\SettingsGeneral;
+use SebFormsWpPlugin\Settings\SettingsHelper;
+use SebFormsWpPlugin\Hooks\Filters;
+use SebFormsWpPlugin\Hooks\Variables;
+use SebFormsWpPlugin\Tracking\TrackingInterface;
+use SebFormsWpPlugin\Validation\SettingsCaptcha;
+use SebFormsWpPluginVendor\EightshiftLibs\Manifest\ManifestInterface;
+use SebFormsWpPluginVendor\EightshiftLibs\Enqueue\Theme\AbstractEnqueueTheme;
 
 /**
  * Class EnqueueTheme

@@ -15,6 +15,7 @@ use AndbrandWpPluginBlockFormsBase\Settings\Settings\SettingsGeneral;
 use AndbrandWpPluginBlockFormsBase\Settings\SettingsHelper;
 use AndbrandWpPluginBlockFormsBase\Hooks\Filters;
 use AndbrandWpPluginBlockFormsBase\Hooks\Variables;
+use AndbrandWpPluginBlockFormsBase\Tracking\TrackingInterface;
 use AndbrandWpPluginBlockFormsBase\Validation\SettingsCaptcha;
 use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Manifest\ManifestInterface;
 use AndbrandWpPluginBlockFormsBaseVendor\EightshiftLibs\Enqueue\Theme\AbstractEnqueueTheme;
@@ -30,13 +31,22 @@ class EnqueueTheme extends AbstractEnqueueTheme
 	use SettingsHelper;
 
 	/**
+	 * Instance variable of tracking data.
+	 *
+	 * @var TrackingInterface
+	 */
+	protected TrackingInterface $tracking;
+
+	/**
 	 * Create a new admin instance.
 	 *
 	 * @param ManifestInterface $manifest Inject manifest which holds data about assets from manifest.json.
+	 * @param TrackingInterface $tracking Inject tracking which holds data about for storing to localstorage.
 	 */
-	public function __construct(ManifestInterface $manifest)
+	public function __construct(ManifestInterface $manifest, TrackingInterface $tracking)
 	{
 		$this->manifest = $manifest;
+		$this->tracking = $tracking;
 	}
 
 	/**
@@ -148,7 +158,7 @@ class EnqueueTheme extends AbstractEnqueueTheme
 			'hideGlobalMessageTimeout' => \apply_filters($hideGlobalMsgTimeoutFilterName, 6000),
 			'redirectionTimeout' => \apply_filters($redirectionTimeoutFilterName, 300),
 			'hideLoadingStateTimeout' => \apply_filters($hideLoadingStateTimeoutFilterName, 600),
-			'fileCustomRemoveLabel' => \apply_filters($previewRemoveLabelFilterName, \esc_html__('Remove', 'andbrand-block-forms-base')),
+			'fileCustomRemoveLabel' => \apply_filters($previewRemoveLabelFilterName, \esc_html__('Remove', 'eightshift-forms')),
 			'formDisableScrollToFieldOnError' => $this->isCheckboxOptionChecked(
 				SettingsGeneral::SETTINGS_GENERAL_DISABLE_SCROLL_TO_FIELD_ON_ERROR,
 				SettingsGeneral::SETTINGS_GENERAL_DISABLE_SCROLL_KEY
@@ -163,6 +173,7 @@ class EnqueueTheme extends AbstractEnqueueTheme
 			),
 			'formResetOnSuccess' => !Variables::isDevelopMode(),
 			'captcha' => '',
+			'storageConfig' => '',
 		];
 
 		// Check if Captcha data is set and valid.
@@ -170,6 +181,16 @@ class EnqueueTheme extends AbstractEnqueueTheme
 
 		if ($isCaptchaSettingsGlobalValid) {
 			$output['captcha'] = !empty(Variables::getGoogleReCaptchaSiteKey()) ? Variables::getGoogleReCaptchaSiteKey() : $this->getOptionValue(SettingsCaptcha::SETTINGS_CAPTCHA_SITE_KEY);
+		}
+
+		// Localstorage allowed tags.
+		$allowedTrackingTags = $this->tracking->getAllowedTags();
+
+		if ($allowedTrackingTags) {
+			$output['storageConfig'] = \wp_json_encode([
+				'allowed' => $allowedTrackingTags,
+				'expiration' => $this->tracking->getTrackingExpiration(),
+			]);
 		}
 
 		return [

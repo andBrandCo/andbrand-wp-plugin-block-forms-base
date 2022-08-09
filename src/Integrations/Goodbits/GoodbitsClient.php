@@ -68,7 +68,7 @@ class GoodbitsClient implements ClientInterface
 
 		return [
 			'Goodbits' => [
-				'title' => \__('Goodbits', 'andbrand-block-forms-base'),
+				'title' => \__('Goodbits', 'eightshift-forms'),
 				'id' => $key,
 			],
 		];
@@ -222,6 +222,10 @@ class GoodbitsClient implements ClientInterface
 
 		foreach ($params as $key => $value) {
 			$output[$key] = $value['value'] ?? '';
+		}
+
+		if (isset($params['es-form-storage'])) {
+			unset($params['es-form-storage']);
 		}
 
 		return $output;
